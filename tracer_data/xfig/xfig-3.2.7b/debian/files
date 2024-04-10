@@ -1,0 +1,5 @@
+xfig-dbgsym_3.2.7b-2_amd64.ddeb debug optional automatic=yes
+xfig-doc_3.2.7b-2_all.deb doc optional
+xfig-libs_3.2.7b-2_all.deb graphics optional
+xfig_3.2.7b-2_amd64.buildinfo graphics optional
+xfig_3.2.7b-2_amd64.deb graphics optional

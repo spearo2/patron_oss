@@ -1,0 +1,32 @@
+This is the sane-frontends package. 
+
+To find out more about SANE (Scanner Access Now Easy) look at the SANE
+website: http://www.sane-project.org/. There is also information on how to
+subscribe the SANE mailing list (sane-devel).
+
+These SANE applications (frontends) are included in this package (together
+with their documentation):
+
+    Frontend               Documentation (man page) 
+--------------------------------------------------------------------------
+    xscanimage	           xscanimage(1)
+    xcam		   xcam(1)
+    scanadf                scanadf(1)
+
+For general information about SANE, read man sane(7).
+
+You must install the sane-backends package before you can compile the
+frontends. sane-backends also includes the command-line frontend scanimage
+and the network daemon saned.
+
+For details about installation please read the INSTALL file.
+
+For a list of other SANE frontends look at
+http://www.sane-project.org//sane-frontends.html.
+
+Developers may wish to look at the SANE standard (sane.tex). It can be found
+in the sane-backends distribution or in various file formats at the website:
+http://www.sane-project.org/docs.html
+
+Please report bugs and missing features at our bug-tracking system:
+http://www.sane-project.org/bugs.html

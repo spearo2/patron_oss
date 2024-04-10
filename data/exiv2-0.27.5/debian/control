@@ -1,0 +1,96 @@
+Source: exiv2
+Section: graphics
+Priority: optional
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+XSBC-Original-Maintainer: Debian KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>
+Uploaders: Mark Purcell <msp@debian.org>,
+           Steve M. Robbins <smr@debian.org>
+Build-Depends: chrpath,
+               cmake,
+               debhelper-compat (= 13),
+               gettext,
+               libexpat1-dev,
+               pkg-kde-tools,
+               zlib1g-dev,
+Build-Depends-Indep: doxygen, graphviz, libjs-jquery, xsltproc
+Standards-Version: 4.6.0
+Rules-Requires-Root: no
+Homepage: https://www.exiv2.org/
+Vcs-Browser: https://salsa.debian.org/qt-kde-team/extras/exiv2
+Vcs-Git: https://salsa.debian.org/qt-kde-team/extras/exiv2.git
+
+Package: exiv2
+Architecture: any
+Depends: libexiv2-27 (= ${binary:Version}), ${misc:Depends}, ${shlibs:Depends}
+Description: EXIF/IPTC/XMP metadata manipulation tool
+ Exiv2 is a C++ library and a command line utility to manage image metadata.
+ It provides fast and easy read and write access to the Exif, IPTC and XMP
+ metadata of images in various formats
+ .
+ Exiv2 command line utility to:
+ .
+  * print Exif, IPTC and XMP image metadata in different formats:
+    - Exif summary info, interpreted values, or the plain data for each tag
+  * set, add and delete Exif, IPTC and XMP image metadata from command line
+    modify commands or command scripts
+  * adjust the Exif timestamp (that's how it all started...)
+  * rename Exif image files according to the Exif timestamp
+  * extract, insert and delete Exif, IPTC and XMP metadata and JPEG comments
+  * extract previews from RAW images and thumbnails from the Exif metadata
+  * insert and delete the thumbnail image embedded in the Exif metadata
+  * print, set and delete the JPEG comment of JPEG images
+  * fix the Exif ISO setting of picture taken with Canon and Nikon cameras
+
+Package: libexiv2-27
+Section: libs
+Architecture: any
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Breaks: libexiv2-dev (<< 0.27.2-7~)
+Replaces: libexiv2-dev (<< 0.27.2-7~)
+Suggests: exiv2
+Multi-Arch: same
+Description: EXIF/IPTC/XMP metadata manipulation library
+ Exiv2 is a C++ library and a command line utility to manage image metadata.
+ It provides fast and easy read and write access to the Exif, IPTC and XMP
+ metadata of images in various formats
+ .
+ Exiv2 library provides:
+  * fast read and write access to the Exif, IPTC, and XMP metadata of an image
+  * an easy to use and extensively documented API
+  * conversions of Exif and IPTC metadata to XMP and vice versa
+  * a smart IPTC implementation that does not affect data that programs like
+    Photoshop store in the same image segment
+  * Exif Makernote support:
+    - Makernote tags can be read and written just like any other metadata
+    - a sophisticated write algorithm avoids corrupting the Makernote
+  * a simple interface to extract previews embedded in RAW images and Exif
+    thumbnails
+  * set and delete methods for Exif thumbnails
+
+Package: libexiv2-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends: libexiv2-27 (= ${binary:Version}), ${misc:Depends}
+Breaks: libexiv2-27 (<< 0.27.2-8~)
+Replaces: libexiv2-27 (<< 0.27.2-8~)
+Suggests: libexiv2-doc
+Description: EXIF/IPTC/XMP metadata manipulation library - development files
+ Exiv2 is a C++ library and a command line utility to manage image metadata.
+ It provides fast and easy read and write access to the Exif, IPTC and XMP
+ metadata of images in various formats
+ .
+ This package provides the development files for using exiv2.
+
+Package: libexiv2-doc
+Depends: libjs-jquery, ${misc:Depends}
+Section: doc
+Architecture: all
+Multi-Arch: foreign
+Description: EXIF/IPTC/XMP metadata manipulation library - HTML documentation
+ Exiv2 is a C++ library and a command line utility to manage image metadata.
+ It provides fast and easy read and write access to the Exif, IPTC and XMP
+ metadata of images in various formats
+ .
+ This package provides the Exiv2 HTML documentation.

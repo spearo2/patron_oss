@@ -1,0 +1,8 @@
+#!/bin/sh
+if [ "${STK_REALTIME}" = "yes" ] ; then
+	echo debian/STKDemo usr/bin
+	echo projects/demo/stk-demo usr/bin
+	echo projects/demo/tcl usr/share/stk
+fi
+echo projects/examples/rawwaves/* usr/share/stk/rawwaves
+echo rawwaves/* usr/share/stk/rawwaves

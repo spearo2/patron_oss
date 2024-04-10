@@ -1,0 +1,15 @@
+Author: <jblache@debian.org>
+Description: Fix an off-by-one.
+Index: trunk/src/xcam.c
+===================================================================
+--- trunk.orig/src/xcam.c
++++ trunk/src/xcam.c
+@@ -1287,7 +1287,7 @@ save_frame_button (GtkWidget * widget, g
+ 
+       /* test for pnm formats */
+       strncpy (testfilename, preferences.filename, sizeof (testfilename));
+-      testfilename[sizeof (testfilename)] = 0;
++      testfilename[sizeof (testfilename) - 1] = 0;
+       g_strreverse (testfilename);
+       if (!((!strncmp (testfilename, "mnp.", 4)) ||
+ 	    (!strncmp (testfilename, "mgp.", 4)) ||

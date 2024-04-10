@@ -1,0 +1,135 @@
+#!/usr/bin/make -f
+#
+# (C) 1999-2021 Roland Rosenfeld <roland@debian.org>, based on
+# sample debian/rules that uses debhelper.
+# This file is public domain software, originally written by Joey Hess.
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+#export DH_OPTIONS=-v
+
+INSTDIR=`pwd`/debian/xfig
+DOCINSTDIR=`pwd`/debian/xfig-doc
+LIBINSTDIR=`pwd`/debian/xfig-libs
+
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+
+%:
+	dh $@
+
+override_dh_autoreconf:
+#       preserve files overwritten by dh_autoreconf:
+	tar cf debian/autoreconf.tar Makefile.in aclocal.m4 ar-lib compile \
+		configure depcomp doc/Makefile.in install-sh missing \
+		src/Makefile.in tests/Makefile.in config.h.in
+	dh_autoreconf
+
+override_dh_auto_configure:
+#	preserve some files from upstream tarball:
+	tar cf debian/preserve.tar doc/xfig_man.html.in \
+		doc/html/images/xfig-title.fig doc/html/images/xfig-title.png \
+		src/splash.xpm src/splash.xbm \
+		src/version.xbm version.m4 doc/xfig_ref_en.pdf
+
+	dh_auto_configure -- --enable-splash --enable-tablet
+
+override_dh_auto_build-arch:
+	dh_auto_build
+#	Build test programs, despite of "nocheck":
+	(cd tests; make test1 test2 test3)
+
+override_dh_auto_build-indep:
+ifeq (,$(filter nodoc,$(DEB_BUILD_OPTIONS)))
+#	regenerate xfig-title.png:
+	rm -f doc/html/images/xfig-title.png
+	make -C doc html/images/xfig-title.png
+
+#	regenerate xfig_man.html.in:
+	rm -f doc/xfig_man.html.in
+
+#	create new pdf documentation:
+	(cd doc/html; \
+	htmldoc -f ../xfig_ref_en.pdf --no-title --webpage --header ... \
+	contents.html $(shell grep '<a href=' doc/html/contents.html \
+	  	| sed 's/.*a href="//;s/["#].*//;' | uniq | grep -v japanese))
+endif
+	dh_auto_build
+
+override_dh_clean:
+	dh_clean
+
+	rm -f doc/xfig_man.html
+
+#       restore files overwritten by dh_autoreconf:
+	[ ! -f debian/autoreconf.tar ] || tar xf debian/autoreconf.tar
+	rm -f debian/autoreconf.tar
+
+#	restore files from upstream tarball:
+	[ ! -f debian/preserve.tar ] || tar xf debian/preserve.tar
+	rm -f debian/preserve.tar
+
+override_dh_install-indep:
+	dh_install --indep
+
+#	remove the just installed ERD/GUI license files, because they are
+#	already in debian/copyright included:
+	rm -f $(LIBINSTDIR)/usr/share/xfig/Libraries/ERD/LICENSE
+	rm -f $(LIBINSTDIR)/usr/share/xfig/Libraries/GUI/LICENSE
+
+#	move Libraries/README to share/doc/xfig-libs:
+	mv $(LIBINSTDIR)/usr/share/xfig/Libraries/README \
+	   $(LIBINSTDIR)/usr/share/doc/xfig-libs/README
+
+#	remove assemble scripts, since they are only used on build:
+	rm -f $(LIBINSTDIR)/usr/share/xfig/Libraries/Maps/Canada/assemble
+	rm -f $(LIBINSTDIR)/usr/share/xfig/Libraries/Maps/USA/assemble
+
+override_dh_install-arch:
+	dh_install --arch
+
+# 	install wrapper as xfig:
+	install -m755 debian/xfig-wrapper $(INSTDIR)/usr/bin/xfig
+
+#	install japanese app-defaults:
+	install -m644 app-defaults/Fig \
+		$(INSTDIR)/etc/X11/ja_JP.eucJP/app-defaults/Fig
+	echo 'Fig.international: true' >> \
+		$(INSTDIR)/etc/X11/ja_JP.eucJP/app-defaults/Fig
+	echo 'Fig*international: false' >> \
+		$(INSTDIR)/etc/X11/ja_JP.eucJP/app-defaults/Fig
+	echo 'Fig.japanese: true' >> \
+		$(INSTDIR)/etc/X11/ja_JP.eucJP/app-defaults/Fig
+	echo 'Fig.inputStyle: OffTheSpot' >> \
+		$(INSTDIR)/etc/X11/ja_JP.eucJP/app-defaults/Fig
+
+	install -m644 app-defaults/Fig \
+		$(INSTDIR)/etc/X11/ko_KR.eucKR/app-defaults/Fig
+	echo 'Fig.international: true' >> \
+		$(INSTDIR)/etc/X11/ko_KR.eucKR/app-defaults/Fig
+	echo 'Fig*international: false' >> \
+		$(INSTDIR)/etc/X11/ko_KR.eucKR/app-defaults/Fig
+	echo 'Fig.korean: true' >> \
+		$(INSTDIR)/etc/X11/ko_KR.eucKR/app-defaults/Fig
+	echo 'Fig.inputStyle: OverTheSpot' >> \
+		$(INSTDIR)/etc/X11/ko_KR.eucKR/app-defaults/Fig
+
+# 	Scale and install PNG desktop icons:
+	convert doc/html/images/xfig-logo.png -geometry 16x16 \
+		$(INSTDIR)/usr/share/icons/hicolor/16x16/apps/xfig.png
+	convert doc/html/images/xfig-logo.png -geometry 22x22 \
+		$(INSTDIR)/usr/share/icons/hicolor/22x22/apps/xfig.png
+	convert doc/html/images/xfig-logo.png -geometry 48x48 \
+		$(INSTDIR)/usr/share/icons/hicolor/48x48/apps/xfig.png
+	install -m644 doc/html/images/xfig-logo.png \
+		$(INSTDIR)/usr/share/icons/hicolor/64x64/apps/xfig.png
+
+#	Install autotest binaries to /usr/libexec/xfig:
+	install -m755 tests/test1 $(INSTDIR)/usr/libexec/xfig/
+	install -m755 tests/test2 $(INSTDIR)/usr/libexec/xfig/
+	install -m755 tests/test3 $(INSTDIR)/usr/libexec/xfig/
+
+override_dh_installchangelogs:
+	dh_installchangelogs -k CHANGES
+
+override_dh_compress:
+	dh_compress -X.pdf

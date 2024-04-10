@@ -1,0 +1,8 @@
+- xscanimage/xcam crashes X server on Linux/Alpha
+        Older versions of the TGA X server (such as version 3.1.2) are known
+        to fail when creating shared images of certain sizes.  This can be
+        avoided by invoking xscanimage and xcam with option --no-shm.  
+
+- In three-pass mode, the progress indicator is not updated correctly. This
+  just menas that scanning is faster than the disk can handle. It happens
+  especially in three-pass mode because much seeking is going on in this mode.

@@ -1,0 +1,13 @@
+normalize-audio for Debian
+--------------------------
+
+The package name and binary have been changed due to namespace conflicts. The
+binary normalize was renamed to normalize-audio so that it keeps orthogonal
+with its frontend names (normalize-ogg and normalize-mp3) while not using a
+generic name anymore. For more information see
+http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=250390
+
+The frontend xmms-normalize is not build because it is buggy, unsupported and
+unmaintained upstream.
+
+ -- Joachim Reichel <reichel@debian.org>  Mon, 09 Jan 2012 21:03:18 +0100

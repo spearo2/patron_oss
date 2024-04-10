@@ -1,0 +1,35 @@
+Author: <jblache@debian.org>
+Description: Fix various typos in xcam.man.
+Index: trunk/doc/xcam.man
+===================================================================
+--- trunk.orig/doc/xcam.man
++++ trunk/doc/xcam.man
+@@ -1,4 +1,4 @@
+-.TH xcam 1 "11 April 2005"
++.TH xcam 1 "19 February 2008"
+ .IX xcam
+ .SH NAME
+ xcam - a graphical camera frontend for SANE
+@@ -12,7 +12,7 @@ xcam - a graphical camera frontend for S
+ .B xcam
+ provides a graphical user-interface to control an image
+ acquisition device such as a flatbed scanner or a camera.  It allows
+-scanning invidual images and can be invoked directly from the command-line.
++scanning individual images and can be invoked directly from the command-line.
+ 
+ .B xcam
+ acts as a stand-alone program that saves acquired images in a suitable
+@@ -43,12 +43,11 @@ will output its version number.
+ .PP
+ The
+ .B --help (-h)
+-.B xcam
+ flag prints a short summary of options.
+ .PP
+ .TP
+ .B SANE_DEBUG_XCAM
+-This environment variable controls the debug level xscanimage.  Higher
++This environment variable controls the debug level of xcam.  Higher
+ debug levels increase the verbosity of the output.
+ 
+               Value  Descsription

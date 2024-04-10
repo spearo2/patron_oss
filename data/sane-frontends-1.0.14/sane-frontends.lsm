@@ -1,0 +1,29 @@
+Begin4
+Title:          sane-frontends
+Version:        _VERSION_
+Entered-date:   _DATE_
+Description:    sane-frontends contains applications for SANE (Scanner Access
+                Now Easy). This package provides the graphical frontends
+                xscanimage and xcam. Both use the GTK+ toolkit. xscanimage is
+                used for scanners, xcam for cameras. xscanimage can also be
+                used as gimp plugin. The package also provides the command-line
+                frontend scanadf which is based on scanimage and is intended
+                for scanners that use automatic document feeders.
+Keywords:       camera, scanner, sane, frontend, application, ADF
+Author:         David.Mosberger@acm.org (David Mosberger-Tang)
+                becka@sunserver1.rz.uni-duesseldorf.de (Andreas Beck)
+                ttarrant@etnoteam.it (Tristan Tarrant)
+Maintained-by:  henning@meier-geinitz.de (Henning Meier-Geinitz)
+                Oliver.Rauch@rauch-domain.de (Oliver Rauch)
+Primary-site:   ftp.sane-project.org /pub/sane/sane-_VERSION_
+                _T_S_ kB sane-frontends-_VERSION_.tar.gz
+                _L_S_ kB sane-frontends-_VERSION_.lsm
+Alternate-site: sunsite.unc.edu /pub/Linux/apps/graphics/capture
+Platforms:      AIX, Digital Unix, HP Apollo Domain/OS, FreeBSD, HP-UX, IRIX,
+                Linux (Alpha, m68k, SPARC, x86), NetBSD, OpenBSD, 
+                OpenStep (x86), SCO OpenServer 5.x (x86), OS/2, 
+                Solaris (SPARC, x86), SunOS.
+                GNU make, sane-backends, and gtk+ is needed. The gimp libraries
+                are recommended (for usage as gimp-plugin).
+Copying-policy: GPL
+End

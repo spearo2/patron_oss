@@ -1,0 +1,10 @@
+./debian/xfig-pdf-viewer
+debian/tmp/usr/share/doc/xfig/html
+debian/tmp/usr/share/doc/xfig/xfig-howto.pdf
+debian/tmp/usr/share/doc/xfig/xfig_man.html
+debian/tmp/usr/share/doc/xfig/xfig_ref_en.pdf
+./debian/xfig-pdf-viewer
+debian/tmp/usr/share/doc/xfig/html
+debian/tmp/usr/share/doc/xfig/xfig-howto.pdf
+debian/tmp/usr/share/doc/xfig/xfig_man.html
+debian/tmp/usr/share/doc/xfig/xfig_ref_en.pdf

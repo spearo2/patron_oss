@@ -1,0 +1,21 @@
+From: Felipe Sateler <fsateler@debian.org>
+Date: Mon, 21 Sep 2015 09:21:23 -0300
+Subject: File endian.h is not on machine subdir
+
+---
+ src/include/soundcard.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/include/soundcard.h b/src/include/soundcard.h
+index 2cf3a2c..088be6a 100644
+--- a/src/include/soundcard.h
++++ b/src/include/soundcard.h
+@@ -103,7 +103,7 @@
+ #define SNDCARD_OPL            28
+ 
+ #include <sys/types.h>
+-#include <machine/endian.h>
++#include <endian.h>
+ #ifndef _IOWR
+ #include <sys/ioccom.h>
+ #endif  /* !_IOWR */

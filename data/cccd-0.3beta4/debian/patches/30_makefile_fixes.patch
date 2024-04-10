@@ -1,0 +1,81 @@
+# Various Makefile fixes.
+
+--- cccd-0.3beta4.orig/Makefile
++++ cccd-0.3beta4/Makefile
+@@ -7,39 +7,42 @@
+ CC = gcc
+ 
+ # you may need to change this
+-MAILPROG = "/bin/mail -i"
++MAILPROG = "/usr/bin/mail -i"
+ 
+ # If $(TARGET) spits out too many debug messages, remove -DDEBUG from 
+ # next line
+ 
+-CFLAGS = -g -Wall `gtk-config --cflags` -DDEBUG
+-#LDFLAGS = -lefence `gtk-config --libs` 
+-LDFLAGS = `gtk-config --libs` 
++
++
++MY_CFLAGS = `pkg-config --cflags gtk+-2.0`
++
++#MY_LDFLAGS = -lefence `pkg-config --libs gtk+-2.0` 
++MY_LDFLAGS = -L/usr/lib `pkg-config --libs gtk+-2.0` 
+ 
+ # production flags (no debugging)
+-#CFLAGS = -O2 -Wall `gtk-config --cflags`
+-#LDFLAGS = -s `gtk-config --libs` 
++#MY_CFLAGS = -O2 -Wall `pkg-config --cflags gtk+-2.0`
++#MY_LDFLAGS = -s `pkg-config --libs gtk+-2.0` 
+ 
+ prefix=/usr/local
+ bindir=$(prefix)/bin
+-mandir=$(prefix)/man/man1
++mandir=$(prefix)/share/man/man1
+ 
+-CFLAGS += -DMAILPROG="\"/bin/mail -i\""
++MY_CFLAGS += -DMAILPROG="\"/usr/bin/mail -i\""
+ 
+ .SUFFIXES: .c
+ 
+-.c.o: $(CC) -c $(CFLAGS) $<
++.c.o: $(CC) -c $(CFLAGS) $(MY_CFLAGS) $<
+ 
+ all: $(TARGET)
+ 
+ $(TARGET): $(OBJECTS)
+-	gcc -o $(TARGET) $(OBJECTS) $(CFLAGS) $(LDFLAGS)
++	gcc -o $(TARGET) $(OBJECTS) $(CFLAGS) $(MY_CFLAGS) $(LDFLAGS) $(MY_LDFLAGS)
+ 
+ install: $(TARGET)
+ 	mkdir -p $(bindir)
+-	install -c -s -m 0755 cccd $(bindir)
++	install -c -m 0755 cccd $(bindir)
+ 	mkdir -p $(mandir)
+-	install -c -m 0755 cccd.1 $(mandir)
++	install -c -m 0644 cccd.1 $(mandir)
+ 	@echo "Please read the README for additional installation hints"
+ 
+ static:	$(OBJECTS)
+@@ -49,12 +52,18 @@
+ clean:
+ 	rm -rf core *.o $(TARGET)
+ 
+-# dependancies, gcc `gtk-config --cflags` -MM *.c
+-cccd.o: cccd.c general.h misc.h cd.h options.h cddb.h info.h cccd.h \
+- icons.h
++# dependencies, gcc `gtk-config --cflags` -MM *.c
++cccd.o: cccd.c general.h misc.h cd.h options.h cddb.h info.h cccd.h icons.h
++	$(CC) -c $(CFLAGS) $(MY_CFLAGS) $<
+ cd.o: cd.c cd.h
++	$(CC) -c $(CFLAGS) $(MY_CFLAGS) $<
+ cddb.o: cddb.c general.h cd.h cddbp.h misc.h options.h cddb.h
++	$(CC) -c $(CFLAGS) $(MY_CFLAGS) $<
+ cddbp.o: cddbp.c misc.h cddbp.h
++	$(CC) -c $(CFLAGS) $(MY_CFLAGS) $<
+ info.o: info.c general.h misc.h cd.h cddb.h options.h cccd.h info.h
++	$(CC) -c $(CFLAGS) $(MY_CFLAGS) $<
+ misc.o: misc.c
++	$(CC) -c $(CFLAGS) $(MY_CFLAGS) $<
+ options.o: options.c general.h misc.h options.h
++	$(CC) -c $(CFLAGS) $(MY_CFLAGS) $<

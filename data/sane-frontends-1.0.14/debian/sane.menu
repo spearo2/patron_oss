@@ -1,0 +1,12 @@
+?package(sane):command="/usr/bin/xscanimage" needs="X11" \
+	       section="Applications/Graphics" title="xscanimage" \
+               icon="/usr/share/sane/xscanimage-icon-32x32-2.xpm" \
+		description="xscanimage provides a graphical \
+		user interface to control an image acquisition device \
+		such as a flatbed scanner or a camera."
+?package(sane):command="/usr/bin/xcam" needs="X11" \
+	       section="Applications/Graphics" title="xcam" \
+               icon="/usr/share/sane/xscanimage-icon-32x32-2.xpm" \
+		description="xcam provides a graphical \
+		user interface to control an image acquisition device \
+		such as a flatbed scanner or a camera."

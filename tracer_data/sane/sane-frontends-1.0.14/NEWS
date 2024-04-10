@@ -1,0 +1,11 @@
+-*-Mode: outline-*-
+
+New with 1.0.7, released 2002-02-04:
+
+* New frontend: scanadf (command line frontend focussing on scanners with
+  automatic document feeders).
+* Updated frontends: xscanimage
+* Documentation updates.
+* Build fixes.
+* Bugfixes.
+

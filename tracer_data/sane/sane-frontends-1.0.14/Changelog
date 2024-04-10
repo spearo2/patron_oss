@@ -1,0 +1,838 @@
+******    Release of sane-frontends-1.0.14   *****
+
+2005-09-18  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* configure configure.in: Changed version to 1.0.14.
+	* src/Makefile.in: Added missing DISTFILE.
+
+2005-05-31 Oliver Rauch <oliver.rauch@xsane.org>
+        * src/xcam.c update_param: added patch by
+          Douglas Schilling Landgraf:
+          if (dialog == NULL) return;
+
+2005-05-10 Gerard Klaver <gerard at gkall dot hobby dot nl>
+        * src/xcam.c - moved 2 DBG lines from above to below variable
+	  declarations (OS/2 compiler error bugreport Franz Bakan)
+	  - Changed declaration for "remaining" from SANE_Int to size_t
+	  
+	moved lines for generating frame count, fps and 
+2005-05-07 Gerard Klaver <gerard at gkall dot hobby dot nl>
+        * src/xcam.c -moved lines for generating frame count, fps and 
+          fps avarage value from nex_frame to input_available routine.
+	  -solved bug for fps values > 1
+
+2005-04-11 Gerard Klaver <gerard at gkall dot hobby dot nl>
+        * src/xcam.c added TXT button for option text line adding to i
+	  image with name, date and time info.
+          font_6x11.h  file and add_text routine taken from the (GPLed)
+          webcam.c file, part of xawtv, (c) 1998-2002 Gerd Knorr.
+          add_text was modified for this program (xcam_add_text).
+
+          added RGB/BGR button option to switch the colors if needed.
+
+          solved segment fault when no usb scanner/vidcam devices
+          is attached to system ( bug report from Henning Meier-Geinitz)
+
+          patch update for recording feature (SANE bugreport 300224)
+          added SAVE Frame button, output filename box.
+          With Save Frame button image can be saved as 
+          .pnm .pgm .pbm or .ppm file
+
+	  added info row with x, y, image-size, fps count, fps, fps_ava
+
+	  added -V and -h option (version and help
+	  added option -B -buffersize so instead of default input buffer of
+	  32*1024 a buffer of 1024*1024 can be chosen
+
+          src/font_6x11.h file added to src directory
+	  src/xscanimage.c updates for debug output
+	  src/preview.c updates for debug output
+	  src/gtkglue.c updates for debug output
+	  doc/xcam.man update for -B, help and debug info option
+		     
+2004-12-11  Julien Blache <jb@jblache.org>
+	* sanei resync with sane-backends, fixes a deadlock between xscanimage
+	  and saned when scanning over the network.
+
+2004-10-30  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* doc/scanadf.man src/scanadf.c: Wait for scan-scripts so all
+	  files are handled before leaving scanadf. Patch from Tristan
+	  Hill <stan@saticed.me.uk>, bug #300993.
+
+2004-10-17  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* configure configure.in: Changed version to 1.0.13-cvs. End of
+	  freeze.
+
+******    Release of sane-frontends-1.0.13   *****
+
+2004-10-17  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* configure configure.in: Changed version to 1.0.13.
+
+2004-10-16  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* configure configure.in: Don't ask user to remove
+	  /dev/null. Current autoconf doesn't use cache files.
+
+-- snapshot 1.0.13-pre1
+
+2004-10-10  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* Makefile.in: Added xscanimage-icon-48x48-2.png to DISTFILES.
+
+2004-10-05  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* xscanimage-icon-48x48-2.png: Added xscanimage icon (from Maciek
+	  Podkomorzy <gammaray@satfilm.net.pl>).
+
+2004-10-03  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* src/gtkglue.c: Don't try to print non-readable options. Don't
+	  try to write non-writable options (bug #300621). Don't print
+	  warnings for options without constraints.
+
+2004-07-09  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* doc/scanadf.man src/scanadf.c: Added -N option to stop scanadf
+	  from overwriting files (patch from Paul Walmsley
+	  <paul@booyaka.com>). 
+
+2004-05-12  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* acinclude.m4 aclocal.m4 configure sane-frontends.lsm: Removed
+	  old links to ftp.mostang.com.
+
+2004-04-29  Julien Blache <jb@jblache.org>
+	* src/gtkglue.h: looks like someone wanted GSGDialog.twocolumn to
+	an int rather than a GtkWidget *. Fixed.
+
+2004-04-24  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* Makefile.in: Remove autoconf temp files in distclean.
+
+2004-04-20  Julien Blache <jb@jblache.org>
+
+	* src/preview.c: make the preview work when it's resized.
+
+2004-04-19  Julien Blache <jb@jblache.org>
+
+	* src/xcam.c: fixed xcam layout.
+
+2004-04-17  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* configure configure.in: Set version to 1.0.12-cvs.
+	
+******    Release of sane-frontends-1.0.12   *****
+
+2004-04-17  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* configure configure.in: Set version to 1.0.12.
+
+2004-04-12  Henning Meier-Geinitz <henning@meier-geinitz.de>
+	
+	* src/gtkglue.c: Used "us" for microsecond as the UTF8
+	  text didn't work with GTK 1.2. See bug #300621. 
+
+-- snapshot 1.0.12-pre1
+
+2004-04-09  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* INSTALL: Updated supported Gimp versions.
+	* configure configure.in: Make sure that build also works without
+	  libgtk 2.0.
+	* config.guess config.sub: Updated.
+
+2004-04-05  Gerard Klaver <gerard at gkall dot hobby dot nl>
+	* src/gtkglue.c UTF8 patch from Mattias Ellert for
+	SANE_UNIT_MICROSECOND, See bug #300621. 
+	
+2004-04-05  Gerard Klaver <gerard at gkall dot hobby dot nl>
+	* src/gtkglue.c src.gtkglue.h src/preferences.c src/preferences.h
+	  src/xcam.c src/xscanimage.c: Add display option one or two column
+	  See bug #300450.
+
+2004-04-02  Henning Meier-Geinitz <henning@meier-geinitz.de>
+	* src/preview.c src/xscanimage.c: Set sensitivity to false when
+	  scanning or previewing. This change fixes some problems that
+	  accour when preview ist started again while preview is running.
+	  See bug #300220, #300219, and #300218.
+
+2004-04-02  Julien BLACHE <jb@jblache.org>
+	* src/xscanimage.c: fix select_device_callback() to return 0, fixing
+	a minor yet annoying bug in the device chooser (radio buttons didn't
+	toggle their status when clicked).
+
+2004-02-22  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* lib/usleep.c sanei/sanei_load_values.c
+	  sanei/sanei_save_values.c: Port to nsr-tandem-nsk (patch
+	  from "Bates, Tom" <tom.bates at hp.com>).
+
+2004-01-25  Julien BLACHE <jb@jblache.org>
+	* src/xscanimage.c: add a call to gimp_extension_ack(), conforming
+	to the GIMP 2.0 plug-in API. Also initialize the status to GIMP_PDB_CALLING_ERROR.
+
+2004-01-22  Julien BLACHE <jb@jblache.org>
+	* src/xscanimage.c: reverse the #ifdef ENABLE_GIMP_1_3 logic, we
+	now have ENABLE_GIMP_1_2 when GIMP 1.2 is explicitely wanted.
+	* configure.in: make GIMP 2.0 the default.
+	* include/sane/config.h: replace ENABLE_GIMP_1_3 by ENABLE_GIMP_1_2.
+	* aclocal.m4, acinclude.m4: include the AM_PATH_GIMP_2_0 macros,
+	which replaces the AM_PATH_GIMP_1_4 macro.
+
+2003-12-15  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* src/xscanimage: Added debug messages to most functions.
+	  Added checks for the return values of SANE API functions.
+	* src/gtkglue.c src/preview.c: Added checks for the return
+	  values of SANE API functions.
+
+2003-11-26  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* Makefile.in: Generate md5 hash when making a release. Remove
+	  generated .lsm file in "make distclean".
+	* doc/Makefile.in: Fixed link to images in HTML manpages.
+
+2003-10-05  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* src/xscanimage.c: Check if the gamma value is not negative and
+	  <255. based on a patch from  Patch from Gerard Klaver
+	  <gerard@gkall.hobby.nl>, bug #300251.
+
+2003-09-30  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* src/xscanimage.c: Make sure that we save only to files with
+	  extension pnm (and similar). Patch from Gerard Klaver
+	  <gerard@gkall.hobby.nl>, bug #300239.
+
+2003-09-24  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* README doc/scanadf.man: Changed links to
+	  sane-project.org. Minor updates.
+	* TODO Makefile.in: Removed TODO. Everything was added to the
+	  bug-tracking system.
+
+2003-07-28  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* INSTALL configure configure.in src/xscanimage.c: Support for gimp
+	  version 1.3.17 (patch from Julien BLACHE <jb@jblache.org>).
+
+2003-07-17  Henning Meier-Geinitz <henning@meier-geinitz.de>
+	
+	* src/xscanimage.c: Avoid integer overflow when calculating the
+	  size of very big images.
+	
+2003-06-25  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* configure configure.in src/xscanimage.c: Fix for API-change in
+	  gimp 1.3.15 (patch from Julien BLACHE <jb@jblache.org>).
+
+
+2003-05-15  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* INSTALL: Added information on dependency on devel packages for
+	  sane-backends. Mentioned supported versions of gtk and gimp
+	  explicitely.
+
+2003-04-26  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* configure configure.in: Changed version to 1.0.11-cvs.
+	* sane-frontends.lsm: Added scanadf.
+
+******    Release of sane-frontends-1.0.11   *****
+
+2003-04-20  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* Makefile.in: Add acinclude.m4 to DISTFILES.
+	* configure configure.in: New version: 1.0.11.
+
+2003-03-23  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* acinclude.m4 aclocal.m4 configure configure.in 
+	  include/sane/config.h.in src/xscanimage.c: Added GIMP 1.3 support.
+	  Added support for autoheader. Patch from Julien BLACHE
+	  <jb@jblache.org>.
+
+2003-03-22  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* src/xcam.c: Use a scrollbar if the options dialog gets too big.
+	  Patch from Julien BLACHE <jb@jblache.org>.
+	* acinclude.m4 aclocal.m4 configure configure.in src/Makefile.in
+	  src/gtkglue.c src/preview.c src/xscanimage.c: Added acinclude.m4
+	  to create aclocal.m4 automatically. Added GTK2 support. Check for
+	  GTK2 only if the gimp plugin is disabled. If GTK2 is not available,
+	  we'll fallback to a lower version if available. Patch from Julien
+	  BLACHE <jb@jblache.org>.
+	  Check that setting resolution option in preview succeeded.
+	  Otherwise we may use the main resolution setting accidently.
+	* TODO: Updated xcam and xscanimage entries.
+
+2003-02-01  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* src/xscanimage.c: Tell gimp which resolution we used for the scan.
+	  Based on patch from Aurelien Jarno <lists@aurel32.net>.
+	* src/xscanimage.c doc/xscanimage.man: Move gimp menu entries to
+	  File/Acquire/xscanimage/*. Patch from Julien BLACHE <jb@jblache.org>.
+
+******    Release of sane-frontends-1.0.10. End of code freeze *****
+
+2003-01-31  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* TODO: Removed PUT_PIXEL problem.
+	* configure configure.in: Increased version to 1.0.10.
+
+2003-01-29  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* INSTALL: Added comment about OS/2 pthread problem.
+
+---- CODE FREEZE FOR SANE 1.0.10 ---
+-- snapshot 1.0.10-pre3
+
+2003-01-24  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* src/xcam.c: Fixed the xcam code related to the GdkImage data buffer
+	  filling. I've resorted to the RGB shift values contained in the
+	  GdkVisual associated to the image. It seems to work pretty well now,
+	  and should be more portable among different platforms and X11
+	  visuals. Only 24/32 bit was fixed, 15/16 bit may need more work.
+	  Patch from Andrea Suatoni <a.suatoni@telefonica.net>.
+	* src/xcam.c: Used shift values also for 15/16 bit modes.
+
+2003-01-18  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* configure configure.in include/sane/config.h.in src/preferences.c
+	  src/preview.c src/progress.c: Some platforms/compilers don't
+	  define u_int8_t so we must do that ourselves.
+
+-- snapshot 1.0.10-pre2
+
+2003-01-14  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* src/Makefile.in: Create $(DESTDIR)$(sanedatadir) before installing
+	  sane-style.rc.
+
+---- FEATURE FREEZE FOR SANE 1.0.10 ---
+-- snapshot 1.0.10-pre1
+
+2003-01-12  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* src/xcam.c: Removed already defined Preferences variable.
+	* TODO: Minor cleanup + update.
+
+2003-01-05  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* src/Makefile.in: Install sane-style.rc to $(sanedatadir) where
+	  it can be found by the frontends (from Andrea Suatoni
+	  <a.suatoni@telefonica.net>).
+
+2002-12-30  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* src/gtkglue.c src/xscanimage.c: Use a scrollbar if the options
+	  dialog gets too big.  Make output filname dialog modal. Add check
+	  marks for unit menu.  All patches from Julien BLACHE
+	  <jblache@debian.org>.
+
+2002-11-14  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* src/xscanimage.c: Added 16 bit support for stand-alone mode 
+	  SANE_FRAME_GRAY and SANE_FRAME_RGB (from Sergey Vlasov 
+	  <vsu@altlinux.ru>.). Call scan_done if an error occurs during
+	  scan_start. Run sane_cancel even if sane_read wasn't called
+	  once.
+
+2002-10-24  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* configure configure.in: Addded extra version -cvs again.
+
+******    Release of sane-frontends-1.0.9. End of code freeze *****
+
+2002-10-23  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* configure configure.in: New version: 1.0.9.
+
+---- CODE FREEZE FOR SANE 1.0.9 ---
+-- snapshot 1.0.9-pre2
+
+2002-10-17  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* src/preview.c src/preview.h src/xscanimage.c: Disable "Scan"
+	  and "Acquire Preview" buttons while scanning, and "Acquire
+	  Preview" while acquiring a preview. Avoids error messages and/or
+	  lockups. Patch from Aurelien Jarno <ml@aurel32.net>.
+	* TODO: Added some more xscanimage bugs.
+	
+2002-10-15  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* src/preview.c: Added malloc that got lost in previous commit.
+
+2002-09-30  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* src/preview.c: Avoid unaligned 1 bit previews. Fixed 1 bit color mode
+	  (also three-pass). Changed 1 bit color modes to most significant bit
+	  is first pixel.
+
+---- FEATURE FREEZE FOR SANE 1.0.9 ---
+-- snapshot 1.0.9-pre1
+
+2002-09-02  Matto Marjanovic  <maddog@mir.com>
+
+	* src/progress.c, src/xscanimage.c: Added a couple of GTK mainloop
+          calls so that the UI is updated in a more timely fashion.  Helps
+          with backends which have potentially slow sane_start() and
+          sane_read() commands (e.g. microtek).
+
+2002-06-07  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* config.guess config.sub: Updated to latest versions (from
+	  ftp://ftp.gnu.org/pub/gnu/config/).
+
+2002-05-27  Oliver Rauch <Oliver.Rauch@Rauch-Domain.DE>
+
+	* configure.in/configure V_EXTRA=-cvs
+
+******    Release of sane-frontends-1.0.8. End of code freeze *****
+
+2002-05-25  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* configure configure.in: Set version to 1.0.8.
+
+---- CODE FREEZE FOR SANE 1.0.8 ---
+-- snapshot 1.0.8-pre1
+
+2002-05-03  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* configure configure.in: Check for libsyslog and libsocket for OS/2.
+
+---- FEATURE FREEZE FOR SANE 1.0.8 ---
+
+2002-04-13  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* src/preview.c: Really use only guint types instead of u_int??_t.
+	* configure configure.in lib/Makefile.in sanei/Makefile.in:
+	  Use ranlib if available. If we run AIX, don't use archives.
+
+2002-04-06  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* src/preview.c src/xscanimage.c: Don't remove imput tags that
+	  haven't been added. Don't hang when EOF and non-blocking.
+	* PROBLEMS TODO: Moved the entry about progress bar in three-pass 
+	  mode to PROBLEMS.
+
+2002-04-02  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* src/preview.c: Used guint types instead of u_int. Set order of pixels
+	  in 1 bit color mode to least significant -> most significant.
+	  That's the same as in three-pass mode.
+
+2002-04-01  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* src/preview.c: Fixed 1 bit color three-pass mode. Added 16 bit modes.
+	  Added 1 bit color mode.
+
+2002-03-28  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* Makefile.in: Remove *.tar.gz when making distclean.
+	* doc/Makefile.in src/Makefile.in: Add DESTDIR variable to allow
+	  installing to a temporary directory. Actually print the names
+	  of the installed files, not only their path.
+
+2002-03-15  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* src/Makefile.in: Actually print what we are installing where.
+	
+2002-02-05  Henning Meier-Geinitz <henning@meier-geinitz.de>
+	
+	* configure configure.in: New version: 1.0.7-cvs.
+
+******    Release of sane-frontends-1.0.7. End of code freeze *****
+
+2002-02-02  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* config.guess config.sub: Use the same versions as in sane-backends
+	  to avoid compilation problems on newer platforms.
+
+2002-01-29  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* configure configure.in: New version: 1.0.7. Disabled extra version.
+
+---- CODE FREEZE FOR SANE 1.0.7 ---
+--- sane-frontends-1.0.7-beta2 ----
+
+2002-01-27  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* TODO: Removed entry about scanadf. Removed entry concerning testing.
+	* INSTALL: Added link to man xscanimage. Added info about
+	  LD_LIBRARY_PATH.
+	* doc/xscanimage.man: Updated for gimp-1.2. Added link to scanadf.
+
+2002-01-26  Henning Meier-Geinitz <henning@meier-geinitz.de>
+	
+	* configure configure.in: Moved the message about problems from NEWS to
+	  configure itsself.
+	* NEWS: Now this file describes the user-visible changes between
+	  releases as in sane-backends. Updated for sane-frontends 1.0.7.
+
+--- sane-frontends-1.0.7-beta1 ---
+
+2002-01-16  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* src/scanadf.c: OS/2 compatibility fixes.
+
+2002-01-13  Tom Martone <tom@martoneconsulting.com>
+
+	* doc/scanadf.man
+	  added sane(7) to SEE ALSO section
+
+2002-01-12  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* configure: Regenerated from configure.in.
+	* doc/.cvsignore src/.cvsignore: Added scanadf.
+	* INSTALL: Added note about --help.
+	* README: Mentioned scanadf.
+
+2002-01-11  Tom Martone <tom@martoneconsulting.com>
+        * src/scanadf.c (new)
+	* doc/scanadf.man (new)
+	* ./configure.in
+	* src/Makefile.in
+	* doc/Makefile.in
+	* AUTHORS
+	  added scanadf program
+
+2002-01-08  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* include/Makefile.in: Created. Moved distclean target to this file
+	  from root dir.
+	* doc/Makefile.in lib/Makefile.in sanei/Makefile.in src/Makefile.in:
+	  Fixed .PHONY. Added target "dist".
+	* Makefile.in: Added target "dist" and "sane-frontends". make dist
+	  creates sane-frontends-x.y.z.tar.gz and make sane-frontends also
+	  creates the appropriate sane-x-y-z.lsm. Moved distclean to include/.
+	  Fixed .PHONY.
+	* configure configure.in: Added V_EXTRA version number to mark CVS
+	  releases (-cvs) and snapshosts/betas (e.g. -beta1). V_EXTRA will
+	  be empty for releases. Create include/Makefile.
+	* sane-frontends.lsm: Made it more compatible with lsm standard. Added
+	  OpenBSD. Fixed mostang.com cvs directory.
+
+2002-01-08  Oliver Rauch <Oliver.Rauch@Rauch-Domain.DE>
+
+	* configure.in: removed "rm -f $cache_file" when sane or gtk
+          was not found. This was bad when a user used a global cache_file
+
+2001-11-29  Oliver Schwartz <Oliver.Schwartz@gmx.de>
+
+	* preview.c: in function restore_preview_image() check for 
+	  width==0 to avoid floating point exception
+
+2001-11-04  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* sane-frontends-lsm: New file. Created Linux Software Map
+	  template to make uploading the sane-frontends package to mirrors
+	  easier.
+	* Makefile.in: Added target "lsm" from sane-backends.
+
+******    Release of sane-frontends-1.0.6. End of code freeze *****
+******    Code freeze for sane-1.0.6 is active       *****
+
+2001-10-29  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* configure configure.in: New version: 1.0.6.
+
+******    snapshot 2001-10-27                        *****
+
+2001-10-26  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* INSTALL: GTK_CONFIG needs the full path name.
+
+******    Feature freeze for sane-1.0.6 is active    *****
+******    snapshot 2001-10-15                        *****
+
+2001-10-13  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* src/xscanimage.c: Fixed pnm output of images with a depth >8.
+	  Don't send gimp images with more then 8 bits/color. Patches from
+	  mh <crapsite@gmx.net>. Changed name of find-scanner 
+	  to sane-find-scanner.
+	* TODO: Added xscanimage problem with gamma tables.
+
+2001-09-05  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* INSTALL: Added paragraph about gcc and GNU make and the C compiler.
+	  Added sentence about GTK_CONFIG. Removed information about 
+	  SANE 1.0.1.
+
+	* README: Removed list of frontends. Point to mostang.com instead.
+
+2001-08-03  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* src/Makefile.in src/preview.c src/xscanimage.c: Use "xscanimage"
+	  as program name consistantly (instead of "xscan").
+
+	* configure configure.in lib/Makefile.in lib/alloca.c lib/getenv.c
+	  lib/getipt.c lib/getopt1.c lib/isfdtype.c lib/snprintf.c
+	  lib/strdup.c lib/strndup.c lib/strsep.c lib/usleep.c lib/vsyslog.c
+	  include/sane/config.h.in: Added missing  getenv, isfdtype, and
+	  vsyslog functions from sane-backends. Used 
+	  #include "../include/sane/config.h".
+
+2001-07-11  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* sanei/sanei_init_debug.c: Use syslog.h instead of sys/syslog.h.
+	
+2001-07-11  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* INSTALL: Corrected some typos.
+	* configure configure.in: Made the error message that is printed if
+	  the SANE libraries can't be found more verbose.
+
+2001-07-07  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* doc/Makefile.in: Use 6 lines as top/bottom margin for man2html
+	  to avoid losing 2 lines at every page break.
+	* doc/.cvsignore: Added *.html.
+
+2001-07-02  Oliver Rauch <Oliver.Rauch@Rauch-Domain.DE>
+
+	* configure/configure.in: added check for os2.h
+
+	* src/xscanimage.c: added set_gimp_PLUG_IN_INFO(&PLUG_IN_INFO);
+	  before result = gimp_main (argc, argv); for os2
+
+
+2001-07-01 Oliver Rauch <Oliver.Rauch@rauch-domain.de>
+************************  end of code freeze ***********************************
+************************  Release of sane-frontends 1.0.5 **********************                                   
+
+
+2001-06-25  Oliver Rauch <Oliver.Rauch@Rauch-Domain.DE>
+
+	* configure/configure.in: changed version to 1.0.5
+
+2001-06-25 ********** CODE FREEZE FOR SANE-1.0.5
+	   snapshot sane-frontends-pre1-1.0.5
+           planned release on 2001-07-01                                                               
+
+--- cvs snapshot-2001-06-17 ---
+
+2001-06-12  Oliver Rauch <Oliver.Rauch@Rauch-Domain.DE>
+
+	* changed "#ifdef OS2" to "#ifdef HAVE_OS2_H" in gtkglue.c
+
+--- cvs snapshot-2001-06-10 ---
+
+2001-06-10  Petter Reinholdtsen <pere@td.org.uit.no>
+
+	* TODO: Added URL to scanadf.
+
+2001-06-09  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* TODO: Added entry about sanei problems and removed entry about
+	  filters.
+
+2001-06-09  Oliver Rauch <Oliver.Rauch@Rauch-Domain.DE>
+
+	* src/gtkglue.c: gsg_make_path(): colons ":" in dev_name
+	  are replaced by "+_" for OS2
+
+--- feature freeze for sane-1.0.5 is active ---
+--- cvs snapshot-2001-06-05 ---
+ 
+2001-05-28  Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* README doc/xcam.man doc/xscanimage.man: Added links to sane(7).
+	* src/xscanimage.c src/xcam.c src/preview.c src/gtkglue.c
+	  src/preview.h src/gtkglue.h: Used #include "../include/..." for
+	  internal headers.
+	* Makefile.in src/Makefile.in sanei/Makefile.in lib/Makefile.in
+	  doc/Makefile.in INSTALL: Added target "make uninstall".
+
+2001-05-27  Petter Reinholdtsen <pere@td.org.uit.no>
+
+	* sanei/sanei_codec_bin.c sanei/sanei_wire.c: Synchronize with
+	  sane-backends/sanei/ to avoid linker problems.  Correct fix is
+	  probably to make libsanei available from sane-backends.
+
+2001-05-06 Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* configure.in1: Removed.
+
+2001-05-05 Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* src/xscanimage.c: Fixed problems with old gimp versions.
+
+2001-04-29 Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* src/Makefile.in: Missing quotation marks seem to cause problems
+	  with some shells.
+	
+2001-04-28 Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* TODO: Removed entries about >8bit support for xscanimage, xcam doc
+	  strings, and hand-scanner mode in xscanimage.
+	* src/xscanimage.c: Print an error when hand-scanner mode is requested.
+	  Don't try to calculate image size in this case.
+
+2001-04-27 Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* doc/xscanimage.man src/xscanimage.c src/xscanimage-gimp-1_0-compat.h:
+	  Implemented (again) support for SANE_DEFAULT_DEVICE. If set, the 
+	  suitable backend is preselected in the device dialog. Use new Gimp
+	  API, added compatibility file for old Gimp API (from xsane).
+	* TODO: Removed entry about SANE_DEFAULT_DEVICE and new Gimp API.
+
+2001-04-22 Henning Meier-Geinitz <henning@meier-geinitz.de>
+
+	* INSTALL: Clarified that /usr/local/lib/sane in ld.so.conf is only
+	  needed for SANE 1.0.1 and /usr/local/lib for 1.0.2 and later.
+	* NEWS: Made the message shorter. Now the status output of configure
+	  should fit onto one screen. Updated Oliver's email address.
+	* src/Makefile.in: Added message if no programs can be installed
+	  (usually if gtk wasn't found).
+	
+2001-04-11 Henning Meier-Geinitz <hmg@gmx.de>
+
+	* doc/xscanimage.man: Added descriptions of the --version and
+	  --help options.
+
+2001-04-08 Henning Meier-Geinitz <hmg@gmx.de>
+
+	* INSTALL: Only gtk 0.99.13 is needed, not 1.2.0. Some spelling and
+	  formatting fixes.
+
+2000-12-23 Henning Meier-Geinitz <hmg@gmx.de>
+
+	* aclocal.m4 configure: Fixed some bugs concerning link checks for
+	  libsane.
+	* src/xscanimage.c: Use g_free for memory acquired by g_new.
+	* TODO: Removed entries about g_free and ac_local.m4.
+
+************************ Release of sane-frontends 1.0.4 **********************
+
+2000-12-17 Henning Meier-Geinitz <hmg@gmx.de>
+	
+	* TODO: Added points about using g_free instead of free and the
+	  sane compile/link test problem.
+
+**************************  Code freeze for SANE 1.0.4 ************************
+
+2000-12-10 Henning Meier-Geinitz <hmg@gmx.de>
+
+	* doc/xscanimage.man: Fixed some typos and made clear that
+	  SANE_DEFAULT_DEVICE doesn't work yet.
+	
+2000-12-08 Henning Meier-Geinitz <hmg@gmx.de>
+
+	* TODO: Updated. Removed entry about --without-x. 
+	* src/xscanimage.c: Fixed bux: When closing "select device" dialog
+	  with the window manager xscanimage wasn't exited.
+	
+*************************  snapshot-2000-12-04  *******************************
+
+2000-11-30 Oliver Rauch <Oliver.Rauch@Wolfsburg.DE>
+
+	* src/Makefile.in: removed unused variable XSCAN
+
+*************************  snapshot-2000-11-28  *******************************
+*************************  Feature freeze for SANE 1.0.4  *********************
+
+2000-11-26 Oliver Rauch <Oliver.Rauch@Wolfsburg.DE>
+
+	* changed configure.in/configure:
+	  - removed test for X (AC_PATH_X), the X-Test is done in GTK
+	  - added configure optin "--disable-guis", this  does not
+	    make sense in the moment because there are no non-GUI-progs,
+	    but it is planned to include other progs (e.g. scanadf).
+
+2000-11-22 Henning Meier-Geinitz <hmg@gmx.de>
+
+	* README: Added link to QuiteInsane.
+
+2000-11-19 Henning Meier-Geinitz <hmg@gmx.de>
+
+	* TODO: Removed entry about stiff.*
+	
+	* src/xscanimage.c: Removed support for SANE_DEFAULT_DEVICE. Using
+	  only this device without giving the user the ability to change to
+	  other devices isn't the intended behaviour.
+		
+2000-11-19 Oliver Rauch <Oliver.Rauch@Wolfsburg.DE>
+
+	* xscanimage.c: Suppressed Gimp warning at xscanimage startup
+
+2000-11-19 Oliver Rauch <Oliver.Rauch@Wolfsburg.DE>
+
+	* Removed src/stiff.[ch] and removed SCAN_OBJ=stiff.o from src/Makefile.in
+
+2000-11-18 Henning Meier-Geinitz <hmg@gmx.de>
+
+	* src/xscanimage.c: Moved Defines for DBG_* outside the 
+	  #ifdef HAVE_LIBGIMP_GIMP_H block.
+	
+2000-11-16 Henning Meier-Geinitz <hmg@gmx.de>
+
+	* TODO: Entries about SANE_DEFAULT_DEVICE and DBG output.
+	
+	* src/xscanimage.c: Added suport for DBG messages. Added only a
+	  few messages including a more verbose output when xscanimage
+	  can't find any devices. Added support for SANE_DEFAULT_DEVICE.
+
+	* doc/xscanimage.man: Documented support for SANE_DEFAULT_DEVICE and 
+	  SANE_DEBUG_XSCANIMAGE.
+
+2000-11-15 Oliver Rauch <Oliver.Rauch@Wolfsburg.DE>
+
+	* changed sanei/Makefile.in: SANE_CFLAGS is used now (for #include <sane.h>)
+	* changed acloacl.m4: SANE_LDFLAGS is used for sane test
+
+2000-11-14 Henning Meier-Geinitz <hmg@gmx.de>
+
+	* TODO: Added entries about stiff.c and libgimp warning in xscanimage.
+
+2000-11-14 Oliver Rauch <Oliver.Rauch@Wolfsburg.DE>
+
+	* changed src/Makefile.in: SANE_LDFLAGS is used now
+	* changed aclocal.m4: removed bug (SANE_LDLAGS=>SANE_LDFLAGS)
+	  and updated configure script 
+
+2000-11-13 Oliver Rauch <Oliver.Rauch@Wolfsburg.DE>
+
+	* changed configure + configure.in, script aborts now if sane or gtk
+	  is not found
+
+2000-11-12 Henning Meier-Geinitz <hmg@gmx.de>
+	
+	* README: Added information for developers and link to SANE website.
+	* TODO: Updated.
+	* INSTALL: Added link to GIMP website.
+	* src/xcam.c: Application is exited when window is closed (by 
+	  window manager)
+
+2000-11-12, 2000-11-11 Oliver Rauch <Oliver.Rauch@Wolfsburg.DE>
+
+	* several changes in configure scripts and Makefiles
+	* removed several unnecessary files
+
+2000-11-11 Henning Meier-Geinitz <hmg@gmx.de>
+
+	* .cvsignore doc/.cvsignore include/.cvsignore
+	  include/sane/.cvsignore lib/.cvsignore sanei/.cvsignore 
+	  src/.cvsignore: Added .cvsignore files.
+	* COPYING: Added GPL.
+	* TODO: Added from sane-backends.
+	* AUTHORS: Added from sane-backends.
+	* README: New file.
+	* NEWS: Renamed (old name: sane-frontend.NEWS).
+	* INSTALL: Renamed (old name: sane.INSTALL) and some reformating. 
+	  Added hint to PROBLEMS. Added some point about necessary packages.
+	* PROBLEMS: Renamed (old name: sane.PROBLEMS).
+	 
+2000-11-10 Oliver Rauch <Oliver.Rauch@Wolfsburg.DE>
+
+	* created own Package for frontends xscanimage and xcam
+
+Old entries can be found in file ChangeLog of the package containing the
+backends of SANE.
+	

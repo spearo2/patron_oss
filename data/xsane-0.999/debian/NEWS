@@ -1,0 +1,9 @@
+xsane (0.999-7) unstable; urgency=medium
+
+  Upstream stopped working on xsane some time ago. Now the homepage and
+  the archive are offline, too.
+
+  If the situation doesn't change, xsane will be removed before Bullseye
+  is released.
+
+ -- Jörg Frings-Fürst <debian@jff.email>  Fri, 26 Jul 2019 13:13:58 +0200

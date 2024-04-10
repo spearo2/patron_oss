@@ -1,0 +1,5 @@
+doc/*.html
+doc/*.jpg
+src/*.pnm
+src/*.xpm
+src/*.rc

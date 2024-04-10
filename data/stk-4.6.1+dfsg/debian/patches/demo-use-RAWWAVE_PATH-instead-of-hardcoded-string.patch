@@ -1,0 +1,21 @@
+From: Felipe Sateler <fsateler@debian.org>
+Date: Wed, 29 Mar 2017 10:28:40 -0300
+Subject: demo: use RAWWAVE_PATH instead of hardcoded string
+
+---
+ projects/demo/demo.cpp | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/projects/demo/demo.cpp b/projects/demo/demo.cpp
+index c877b4a..3e74769 100644
+--- a/projects/demo/demo.cpp
++++ b/projects/demo/demo.cpp
+@@ -213,7 +213,7 @@ int main( int argc, char *argv[] )
+ 
+   // Depending on how you compile STK, you may need to explicitly set
+   // the path to the rawwave directory.
+-  Stk::setRawwavePath( "../../rawwaves/" );
++  Stk::setRawwavePath( RAWWAVE_PATH );
+ 
+   // By default, warning messages are not printed.  If we want to see
+   // them, we need to specify that here.

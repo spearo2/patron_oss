@@ -1,0 +1,9 @@
+
+# dcraw has no browseable repository, or bug tracking system.
+# There is the RCS file including full development history:
+# https://www.dechifro.org/dcraw/RCS/dcraw.c,v
+dcraw source: upstream-metadata-missing-repository
+dcraw source: upstream-metadata-missing-bug-tracking
+
+# Mr. Coffin (upstream author) has been informed by FH about all changes.
+dcraw source: patch-not-forwarded-upstream

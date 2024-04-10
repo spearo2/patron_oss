@@ -1,0 +1,19 @@
+#!/bin/sh
+#
+# Run the xfig testsuite
+#
+# (c) 2018-2019 Roland Rosenfeld <roland@debian.org>
+
+echo "Running autoconf"
+autoconf >/dev/null 2>&1
+echo "Running dh_auto_configure"
+dh_auto_configure >/dev/null 2>&1
+
+cd tests
+echo "Building required test programs"
+make check >/dev/null 2>&1 || true
+echo "Running testsuite"
+make installcheck
+
+# Place testsuite output into artifacts:
+cp -a testsuite.log testsuite.dir $AUTOPKGTEST_ARTIFACTS/

@@ -1,0 +1,104 @@
+SHELL = /bin/sh
+
+VPATH = @srcdir@
+srcdir = @srcdir@
+top_srcdir = @top_srcdir@
+top_builddir = .
+
+PACKAGE = @PACKAGE@
+VERSION = @VERSION@
+distdir = $(top_srcdir)/$(PACKAGE)-$(VERSION)
+
+prefix = @prefix@
+exec_prefix = @exec_prefix@
+bindir = @bindir@
+sbindir = @sbindir@
+libexecdir = @libexecdir@
+datadir = @datadir@
+sysconfdir = @sysconfdir@
+sharedstatedir = @sharedstatedir@
+localstatedir = @localstatedir@
+libdir = @libdir@
+infodir = @infodir@
+mandir = @mandir@
+includedir = @includedir@
+oldincludedir = /usr/include
+
+sanedatadir = @datadir@/sane
+
+MKDIR = $(top_srcdir)/mkinstalldirs
+INSTALL = @INSTALL@
+INSTALL_PROGRAM = @INSTALL_PROGRAM@
+INSTALL_DATA = @INSTALL_DATA@
+
+@SET_MAKE@
+
+SUBDIRS	= include lib sanei src doc
+
+DISTFILES = AUTHORS COPYING Changelog INSTALL Makefile.in NEWS PROBLEMS \
+  README acinclude.m4 aclocal.m4 config.guess config.sub configure \
+  configure.in install-sh mkinstalldirs sane-frontends.lsm \
+  xscanimage-icon-48x48-2.png
+
+.PHONY: all all-recursive clean clean-recursive depend \
+  depend-recursive dist install install-recursive lsm sane-frontends \
+  uninstall uninstall-recursive
+
+all: all-recursive
+
+$(PACKAGE)-$(VERSION).lsm: $(PACKAGE)-$(VERSION).tar.gz $(PACKAGE).lsm
+	( cat $(PACKAGE).lsm | \
+	  sed -e "s|_DATE_|`date +%d%b%y`|g" \
+	    -e "s|_VERSION_|$(VERSION)|g" \
+	    -e "s|_T_S_|`find $(PACKAGE)-$(VERSION).tar.gz -printf \"%3k\"`|g"\
+	    -e "s|_L_S_|`find $(PACKAGE).lsm -printf "%3k"`|g" > \
+	    $(PACKAGE)-$(VERSION).lsm \
+	)
+
+lsm: $(PACKAGE)-$(VERSION).lsm dist
+
+install: install-recursive
+
+uninstall: uninstall-recursive
+
+clean: clean-recursive
+
+distclean: clean distclean-recursive
+	rm -f *~ *.log *.bak libtool *.tar.gz
+	rm -f Makefile config.cache config.status
+	rm -f intl/Makefile
+	rm -f $(distdir).tar.gz.md5
+	rm -f sane-frontends-*.lsm
+	rm -rf autom4te.cache
+
+depend: depend-recursive
+
+all-recursive install-recursive uninstall-recursive clean-recursive \
+distclean-recursive depend-recursive:
+	@for subdir in $(SUBDIRS); do		\
+	  target=`echo $@ | sed s/-recursive//`; \
+	  echo making $$target in $$subdir;	\
+	  (cd $$subdir && $(MAKE) $$target)	\
+	   || case "$(MFLAGS)" in *k*) fail=yes;; *) exit 1;; esac; \
+	done && test -z "$$fail"
+
+
+dist: $(DISTFILES)
+	rm -fr $(distdir)
+	$(MKDIR) $(distdir)
+	for file in $(DISTFILES); do \
+	  ln $$file $(distdir) 2>/dev/null || cp -p $$file $(distdir); \
+	done
+	for subdir in $(SUBDIRS) ; do \
+	  mkdir $(distdir)/$$subdir || exit 1; \
+	  (cd $$subdir && $(MAKE) $@) || exit 1; \
+	done
+	tar chzf $(distdir).tar.gz $(distdir)
+	rm -fr $(distdir)
+
+md5: dist
+	md5sum $(distdir).tar.gz > $(distdir).tar.gz.md5
+
+$(PACKAGE)-$(VERSION).tar.gz: dist
+
+sane-frontends: dist lsm md5

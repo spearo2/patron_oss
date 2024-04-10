@@ -1,0 +1,19 @@
+Description: Correct out-of-bounds
+Author: Jörg Frings-Fürst <debian@jff-webhosting.net>
+Forwarded: not-needed
+Last-Update: 2014-12-03
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+Index: trunk/src/xscanimage.c
+===================================================================
+--- trunk.orig/src/xscanimage.c
++++ trunk/src/xscanimage.c
+@@ -1284,7 +1284,7 @@ scan_dialog (GtkWidget * widget, gpointe
+     {				/* We are running in standalone mode */
+       /* test for pnm formats */
+       strncpy (testfilename, preferences.filename, sizeof (testfilename));
+-      testfilename[sizeof (testfilename)] = 0;
++      testfilename[sizeof (testfilename) - 1] = 0;
+       g_strreverse (testfilename);
+       if (!((!strncmp (testfilename, "mnp.", 4)) ||
+ 	    (!strncmp (testfilename, "mgp.", 4)) ||

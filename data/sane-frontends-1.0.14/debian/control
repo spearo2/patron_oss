@@ -1,0 +1,38 @@
+Source: sane-frontends
+Section: graphics
+Priority: optional
+Maintainer: Jörg Frings-Fürst <debian@jff.email>
+Standards-Version: 4.5.0
+Rules-Requires-Root: no
+Build-Depends:
+ debhelper-compat (= 13),
+ libgimp2.0-dev,
+ libgtk2.0-dev,
+ libsane-dev
+Homepage: http://www.sane-project.org
+Vcs-Git: git://jff.email/opt/git/sane-frontends.git
+Vcs-Browser: https://jff.email/cgit/sane-frontends.git
+
+Package: sane
+Architecture: any
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends}
+Suggests: gimp
+Description: scanner graphical frontends
+ This package includes :
+  o xscanimage, a scanner graphical frontend with GIMP 2.0 support
+  o scanadf, a command-line frontend for scanners with Automatic Document Feeder
+  o xcam, for acquiring images continuously from cameras.
+ .
+ An alternative to xscanimage called xsane is packaged separately.
+ .
+ The scanner frontends use SANE.  SANE stands for "Scanner Access Now
+ Easy" and is an application programming interface (API) that provides
+ standardized access to any raster image scanner hardware (flatbed
+ scanner, hand-held scanner, video- and still-cameras, frame-grabbers,
+ etc.). The SANE standard is free and its discussion and development are
+ open to everybody. The current source code is written to support several
+ operating systems, including GNU/Linux, OS/2, Win32 and various Unices
+ and is available under the GNU General Public License (commercial
+ applications and backends are welcome, too, however).

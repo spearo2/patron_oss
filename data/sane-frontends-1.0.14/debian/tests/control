@@ -1,0 +1,4 @@
+# smoke test
+Test-Command: scanadf -V && xcam -V
+Depends: sane
+Restrictions: superficial

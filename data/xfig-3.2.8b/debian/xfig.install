@@ -1,0 +1,5 @@
+usr/bin/xfig usr/libexec/xfig
+usr/share/X11/app-defaults/Fig etc/X11/app-defaults
+usr/share/applications/xfig.desktop
+usr/share/pixmaps/xfig.png usr/share/icons/hicolor/32x32/apps/
+usr/share/xfig/CompKeyDB

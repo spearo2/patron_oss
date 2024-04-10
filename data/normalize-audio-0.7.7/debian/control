@@ -1,0 +1,30 @@
+Source: normalize-audio
+Section: sound
+Priority: optional
+Maintainer: Joachim Reichel <reichel@debian.org>
+Build-Depends: debhelper-compat (= 13),
+  flac,
+  libaudiofile-dev,
+  libmad0-dev,
+  mpg321,
+  perl,
+  pkg-config,
+  vorbis-tools
+Standards-Version: 4.5.1
+Rules-Requires-Root: no
+Homepage: http://normalize.nongnu.org/
+Vcs-Git: https://salsa.debian.org/reichel/normalize-audio.git
+Vcs-Browser: https://salsa.debian.org/reichel/normalize-audio
+
+Package: normalize-audio
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ${perl:Depends}
+Replaces: normalize
+Conflicts: normalize
+Suggests: mpg321
+Recommends: vorbis-tools, flac
+Description: adjusts the volume of WAV, MP3 and OGG files to a standard volume level
+ normalize-audio is a tool for adjusting the volume of WAV, MP3 and OGG files
+ to a standard volume level. This is useful for things like creating mix CDs
+ and MP3 databases, where different recording levels on different albums
+ can cause the volume to vary greatly from song to song.

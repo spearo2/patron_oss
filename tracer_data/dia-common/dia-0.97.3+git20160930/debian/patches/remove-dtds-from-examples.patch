@@ -1,0 +1,68 @@
+Description: Remove DTDs from examples
+ By default, dia installs dtds duplicated in several language's example/
+ documentation directories. This is not necessary for Debian (installing
+ DTDs in standard catalog registration locations). Therefore removing.
+Author: Roland Stigge <stigge@antcom.de>
+
+Index: dia-0.97.3+git20160930/doc/eu/Makefile.am
+===================================================================
+--- dia-0.97.3+git20160930.orig/doc/eu/Makefile.am
++++ dia-0.97.3+git20160930/doc/eu/Makefile.am
+@@ -72,11 +72,6 @@ metadata = \
+ 	dia-eu.omf \
+ 	topic.dat
+ 
+-examples = \
+-	../shape.dtd \
+-	../diagram.dtd \
+-	../sheet.dtd
+-
+ ##	$(progname).$(progfiles_extension)
+ 
+ DISTCLEANFILES = 
+Index: dia-0.97.3+git20160930/doc/en/Makefile.am
+===================================================================
+--- dia-0.97.3+git20160930.orig/doc/en/Makefile.am
++++ dia-0.97.3+git20160930/doc/en/Makefile.am
+@@ -154,11 +154,6 @@ metadata = \
+ 	dia-C.omf \
+ 	topic.dat
+ 
+-examples = \
+-	../shape.dtd \
+-	../diagram.dtd \
+-	../sheet.dtd
+-
+ 
+ DISTCLEANFILES = 
+ 
+Index: dia-0.97.3+git20160930/doc/pl/Makefile.am
+===================================================================
+--- dia-0.97.3+git20160930.orig/doc/pl/Makefile.am
++++ dia-0.97.3+git20160930/doc/pl/Makefile.am
+@@ -73,10 +73,6 @@ metadata = \
+ 	dia-pl.omf \
+ 	topic.dat
+ 
+-examples = \
+-	../shape.dtd \
+-	../diagram.dtd \
+-	../sheet.dtd
+ 
+ ##	$(progname).$(progfiles_extension) \
+ 
+Index: dia-0.97.3+git20160930/doc/fr/Makefile.am
+===================================================================
+--- dia-0.97.3+git20160930.orig/doc/fr/Makefile.am
++++ dia-0.97.3+git20160930/doc/fr/Makefile.am
+@@ -76,10 +76,6 @@ metadata = \
+ 	dia-fr.omf \
+ 	topic.dat
+ 
+-examples = \
+-	../shape.dtd \
+-	../diagram.dtd \
+-	../sheet.dtd
+ 
+ DISTCLEANFILES = 
+ 

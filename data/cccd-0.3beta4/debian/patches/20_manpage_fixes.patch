@@ -1,0 +1,89 @@
+# Various manpage fixes.
+
+--- cccd-0.3beta4.orig/cccd.1
++++ cccd-0.3beta4/cccd.1
+@@ -5,17 +5,18 @@
+ .SH SYNOPSIS
+ .B cccd
+ .SH DESCRIPTION
+-cccd is a small GTK CD player program with many features:
++cccd is a small GTK+ CD player program with many features:
++
+   * Works with SCSI devices
+   * CDDB lookups (local and remote) and local storing
+   * Uses very little screen space
+   * Handles CD Extras (mixed mode CDs)
+-
+ .SH OPTIONS
+-none
++None.
+ .SH USAGE
+-Upon starting cccd two windows will pop up: a smaller control panel and a 
+-status window.
++Upon starting
++.B cccd
++two windows will pop up: a smaller control panel and a status window.
+ .SS The Control Panel
+ .PP
+ Here are the buttons for controlling the CD drive. The main action will take 
+@@ -23,8 +24,8 @@
+ .B cccd
+ to quit. The right most button will cause the Info window (q.v.) to pop up.
+ Buttons in the top row (left to right): Previous Track, Play, Next Track, and
+-in the bottom row: Pause, Stop and Eject. Their functions should be self-
+-explanitory.
++in the bottom row: Pause, Stop and Eject. Their functions should be
++self-explanatory.
+ .SS The Status Window
+ .PP
+ You will see four rows of text here, and a progress bar below that. The top 
+@@ -51,19 +52,43 @@
+ Save the current CD data, submit it to a remote CDDB database, and Undo any
+ changes you have made since the last saving.
+ You can realize a playlist of the tracks you want to hear, by clicking on the
+-track row. Darker tracks will not be played. (Note: Data tracks will by 
+-\'unselected' automatically).
++track row. Darker tracks will not be played. (Note: Data tracks will
++be 'unselected' automatically).
+ .SS CDDB
+ .PP
+ You can enter the relevant data for remote and local cddb databases here,
+ and the lookup order.
+ If the remote databases lookup protocol is http, you will need to enter the 
+-URL in addidion to the hostname, without the leading "http://"
++URL in addition to the hostname, without the leading "http://"
+ (e.g. "example.url.com/cddb/database/lookup.cgi".
+ The category section is not used, and will be omitted in future versions.
+ "Save" will save the info to "~/.cccdrc". I'll leave to your imagination what
+ Undo does.
+-
+-.SH AUTHOR
++.SH FILES
++.TP
++.IP "~/.cccdrc"
++The
+ .B cccd
+-was originally written by Sven Riedel, modified by Jochen Stein.
++configfile.
++.SH BUGS
++Please report any bugs you find to Jochen A. Stein <jst@nitsfans.org>.
++You can use the form in
++.B "/usr/share/doc/cccd/BUGREPORT"
++for this...
++.SH LICENSE
++.B cccd
++is covered by the GNU General Public License (GPL) version 2 or
++(at your option) any later version.
++.SH AUTHORS
++.B cccd
++was originally written by Sven Riedel <Sven.Riedel@heim8.tu-clausthal.de>,
++modified by Jochen A. Stein <jst@nitsfans.org>.
++.PP
++This manpage was written by Jochen A. Stein <jst@nitsfans.org>.
++.SH "SEE ALSO"
++.BR cdcd (1),
++.BR cdtool (1),
++.BR dcd (1),
++.BR workbone (1),
++.BR workman (1),
++.BR xmcd (1).

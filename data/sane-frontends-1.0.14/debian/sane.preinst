@@ -1,0 +1,20 @@
+#!/bin/sh
+set -e
+
+case "$1" in
+    install|upgrade|abort-upgrade)
+#
+# remove obsolete link
+#
+	if [ -L /usr/lib/gimp/2.0/plug-ins/xscanimage ] ; then
+	    rm -f /usr/lib/gimp/2.0/plug-ins/xscanimage
+	fi
+	;;
+    *)
+        echo "preinst called with unknown argument \`$1'" >&2
+        exit 1
+	;;
+esac
+
+
+#DEBHELPER#

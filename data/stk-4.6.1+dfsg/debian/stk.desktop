@@ -1,0 +1,9 @@
+Name=STKDemo
+GenericName=Sound Synthesis Toolkit (example applications)
+Comment=Play with software sound synthesizers
+Exec=STKDemo %U
+Terminal=false
+Type=Application
+Categories=AudioVideo;Audio;
+Keywords=Audio;
+StartupNotify=true

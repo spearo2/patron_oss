@@ -1,0 +1,38 @@
+Author: <jblache@debian.org>
+Description: Fix word list handling when current value is not part of the list.
+Index: trunk/src/gtkglue.c
+===================================================================
+--- trunk.orig/src/gtkglue.c
++++ trunk/src/gtkglue.c
+@@ -913,6 +913,7 @@ panel_build (GSGDialog * dialog)
+   char **str_list;
+   int i, j;
+   int num_vector_opts = 0, *vector_opts;
++  SANE_Bool val_in_list;
+ 
+   main_hbox = gtk_hbox_new (FALSE, 2);
+ 
+@@ -1073,13 +1074,23 @@ panel_build (GSGDialog * dialog)
+ 	    case SANE_CONSTRAINT_WORD_LIST:
+ 	      /* use a "list-selection" widget */
+ 	      num_words = opt->constraint.word_list[0];
++	      if (num_words == 0)
++		{
++		  fprintf (stderr, "panel_build: empty word list!\n");
++		  break;
++		}
++	      val_in_list = SANE_FALSE;
+ 	      str_list = malloc ((num_words + 1) * sizeof (str_list[0]));
+ 	      for (j = 0; j < num_words; ++j)
+ 		{
++		  if (opt->constraint.word_list[j + 1] == val)
++		    val_in_list = SANE_TRUE;
+ 		  sprintf (str, "%d", opt->constraint.word_list[j + 1]);
+ 		  str_list[j] = strdup (str);
+ 		}
+ 	      str_list[j] = 0;
++	      if (!val_in_list)
++		val = opt->constraint.word_list[1];
+ 	      sprintf (str, "%d", val);
+ 	      option_menu_new (parent, title, str_list, str, elem,
+ 			       dialog->tooltips, opt->desc,

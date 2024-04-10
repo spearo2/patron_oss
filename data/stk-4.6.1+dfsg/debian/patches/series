@@ -1,0 +1,7 @@
+Rename-demo-to-stk-demo.patch
+Link-against-system-s-shared-copies-of-rtaudio-and-r.patch
+File-endian.h-is-not-on-machine-subdir.patch
+demo-needs-rt.patch
+Sort-o-files
+Do-not-override-user-supplied-CXXFLAGS.patch
+demo-use-RAWWAVE_PATH-instead-of-hardcoded-string.patch

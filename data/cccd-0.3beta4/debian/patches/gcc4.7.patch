@@ -1,0 +1,13 @@
+Index: cccd-0.3beta4/cddbp.c
+===================================================================
+--- cccd-0.3beta4.orig/cddbp.c	2012-06-16 21:48:58.000000000 +0200
++++ cccd-0.3beta4/cddbp.c	2012-06-16 21:50:57.877976888 +0200
+@@ -97,7 +97,7 @@
+   printf("=> %s\n", buffer);
+ #endif
+ 
+-  fprintf(socket, buffer);
++  fprintf(socket, "%s", buffer);
+   free(buffer);
+ 
+   tmp = buffer = get_string_piece(socket, '\n');

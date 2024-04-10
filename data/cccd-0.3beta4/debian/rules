@@ -1,0 +1,17 @@
+#!/usr/bin/make -f
+
+include /usr/share/cdbs/1/rules/debhelper.mk
+include /usr/share/cdbs/1/class/makefile.mk
+include /usr/share/cdbs/1/rules/utils.mk
+
+# Install target.
+DEB_MAKE_INSTALL_TARGET := install prefix=$(CURDIR)/debian/cccd/usr
+
+# Manpage.
+DEB_INSTALL_MANPAGES_cccd := cccd.1
+
+# Reduce the number of unneeded dependencies with --as-needed.
+LDFLAGS += "-Wl,--as-needed"
+
+common-binary-post-install-arch:: list-missing
+

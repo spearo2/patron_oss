@@ -1,0 +1,43 @@
+From: Felipe Sateler <fsateler@debian.org>
+Date: Sat, 23 Jul 2016 10:39:51 -0400
+Subject: Only build demo program when realtime is enabled
+
+Closes: #815509
+---
+ Makefile.in | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/Makefile.in b/Makefile.in
+index 5afd13e..94eedd9 100644
+--- a/Makefile.in
++++ b/Makefile.in
+@@ -6,8 +6,8 @@ REALTIME = @realtime@
+ 
+ all :
+ 	cd src && $(MAKE)
+-	cd projects/demo && $(MAKE) stk-demo
+ ifeq ($(REALTIME),yes)
++	cd projects/demo && $(MAKE) stk-demo
+ 	cd projects/effects && $(MAKE) libeffects
+ 	cd projects/ragamatic && $(MAKE) libragamat
+ 	cd projects/eguitar && $(MAKE) libeguitar
+@@ -17,8 +17,8 @@ endif
+ clean : 
+ 	$(RM) -f *~
+ 	cd src && $(MAKE) clean
+-	cd projects/demo && $(MAKE) clean
+ ifeq ($(REALTIME),yes)
++	cd projects/demo && $(MAKE) clean
+ 	cd projects/effects && $(MAKE) clean
+ 	cd projects/ragamatic && $(MAKE) clean
+ 	cd projects/eguitar && $(MAKE) clean
+@@ -28,8 +28,8 @@ endif
+ distclean: clean
+ 	$(RM) -rf config.log config.status autom4te.cache Makefile
+ 	cd src && $(MAKE) distclean
+-	cd projects/demo && $(MAKE) distclean
+ ifeq ($(REALTIME),yes)
++	cd projects/demo && $(MAKE) distclean
+ 	cd projects/effects && $(MAKE) distclean
+ 	cd projects/ragamatic && $(MAKE) distclean
+ 	cd projects/eguitar && $(MAKE) distclean

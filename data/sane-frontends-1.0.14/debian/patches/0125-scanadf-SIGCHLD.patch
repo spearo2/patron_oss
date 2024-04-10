@@ -1,0 +1,20 @@
+Description: Sets SIGCHLD to SIG_DFL before execle().
+Author: Jakub Wilk <jwilk@debian.org>
+Origin: http://www.opengroup.org/onlinepubs/009695399/functions/exec.html
+Bug-Debian: https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=596232
+Forwarded: not-needed
+Last-Update: 2014-12-03
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+Index: trunk/src/scanadf.c
+===================================================================
+--- trunk.orig/src/scanadf.c
++++ trunk/src/scanadf.c
+@@ -1213,6 +1213,7 @@ scan_it_raw (const char *fname, SANE_Boo
+ 
+ 	case 0:
+ 	  /*  in child process  */
++	  signal(SIGCHLD, SIG_DFL);
+ 	  sprintf(cmd, "%s '%s'", script, fname);
+ 	  /*	  system(cmd); */
+ 	  execle(script, script, fname, NULL, environ);

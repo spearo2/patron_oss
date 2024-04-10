@@ -1,0 +1,40 @@
+#!/usr/bin/make -f
+
+# export DH_VERBOSE=1
+
+export DEB_BUILD_MAINT_OPTIONS = hardening=+bindnow
+
+CFLAGS := $(CFLAGS) -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64
+
+%:
+	dh $@
+
+override_dh_autoreconf:
+	touch AUTHORS ChangeLog
+	dh_autoreconf
+
+override_dh_auto_configure:
+	dh_auto_configure -- --host=$(DEB_HOST_GNU_TYPE) --build=$(DEB_BUILD_GNU_TYPE) \
+	  --prefix=/usr --mandir=\$${prefix}/share/man \
+	  --with-mad --with-audiofile --disable-xmms --enable-longer-name
+
+override_dh_clean:
+	rm -f xmms-rva/Makefile
+	dh_clean
+
+override_dh_autoreconf_clean:
+	rm -rf AUTHORS ChangeLog
+	dh_autoreconf_clean
+
+override_dh_install:
+	dh_install
+	(cd $(CURDIR)/debian/normalize-audio/usr/share; \
+	  mv locale/en_GB/LC_MESSAGES/normalize.mo locale/en_GB/LC_MESSAGES/normalize-audio.mo; \
+	  mv locale/fr/LC_MESSAGES/normalize.mo locale/fr/LC_MESSAGES/normalize-audio.mo; \
+ 	  mv man/man1/normalize.1 man/man1/normalize-audio.1)
+
+override_dh_installchangelogs:
+	dh_installchangelogs NEWS
+
+override_dh_link:
+	dh_link usr/share/man/man1/normalize-mp3.1.gz usr/share/man/man1/normalize-ogg.1.gz

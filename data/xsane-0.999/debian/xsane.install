@@ -1,0 +1,7 @@
+src/xsane.desktop usr/share/applications
+debian/xsane.png usr/share/icons/hicolor/256x256/apps
+usr/bin
+usr/share/man
+debian/ocr-scripts usr/share/xsane
+usr/bin/xsane usr/lib/gimp/2.0/plug-ins/xsane
+src/xsane-startimage.pnm usr/share/sane/xsane

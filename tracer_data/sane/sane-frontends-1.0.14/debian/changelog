@@ -1,0 +1,643 @@
+sane-frontends (1.0.14-15) unstable; urgency=medium
+
+  * Fix DEP 9 smoketest:
+    - Remove xscanimage -V: Needs display to run.
+
+ -- Jörg Frings-Fürst <debian@jff.email>  Sun, 18 Aug 2019 14:50:58 +0200
+
+sane-frontends (1.0.14-14) unstable; urgency=medium
+
+  * Migrate to debhelper 12:
+    - Change debian/compat to 12.
+    - Bump minimum debhelper version in debian/control to >= 12.
+  * Declare compliance with Debian Policy 4.4.0 (No changes needed).
+  * debian/watch: Rewrite for the new Gitlab directory layout.
+  * debian/copyright: Add year 2019 to debian/*
+  * Add DEP 8 smoketest.
+
+ -- Jörg Frings-Fürst <debian@jff.email>  Sat, 27 Jul 2019 09:37:36 +0200
+
+sane-frontends (1.0.14-13) unstable; urgency=medium
+
+  * Change to my new email address.
+  * New README.source to explain the branching model used.
+  * Migrate to debhelper 11:
+    - Change debian/compat to 11.
+    - Bump minimum debhelper version in debian/control to >= 11.
+    - Remove Build-Depend autotools.dev in debian/control.
+    - Remove --with autotools-dev from debian/rules.
+  * Declare compliance with Debian Policy 4.2.1 (No changes needed).
+  * Remove obsolete package sane-dbg.
+  * Rename patches and remove not used debian/patches/scanadf-sigchld.diff.
+  * debian/watch:
+    - Switch to gitlab.
+  * debian/changelog:
+    - Remove trailing whitespaces.
+  * debian/control:
+    - Change Vcs-* to point to the new repository.
+    - Remove trailing whitespaces.
+    - Remove outdated minimum version for libgimp2.0-dev and libsane-dev.
+  * debian/copyright:
+    - Use secure copyright format URI.
+    - Update source.
+  * debian/sane.dirs:
+    - Remove usr/share/sane.
+  * debian/sane.install:
+    - Remove usr/share/sane/* and usr/bin/*.
+
+ -- Jörg Frings-Fürst <debian@jff.email>  Sat, 08 Sep 2018 19:34:09 +0200
+
+sane-frontends (1.0.14-12) unstable; urgency=medium
+
+  * New debian/patches/0001-fix_missing_sane-config.patch:
+    - Add autoconf statements which were previously part of
+      sane-config to detect the presence of sane-backends.
+  * debian/compat:
+    - Change compat level to 10.
+  * debian/control:
+    - Bump required version of debhelper to >= 10.
+    - Bump Standards-Version to 3.9.8 (no changes required).
+    - Change Vcs-Browser to secure URI.
+  * debian/copyright:
+    - Add year 2017 for debian/*.
+  * Refresh debian/patches/25_manpages-typo.patch.
+
+ -- Jörg Frings-Fürst <debian@jff-webhosting.net>  Sat, 28 Jan 2017 08:24:35 +0100
+
+sane-frontends (1.0.14-11) unstable; urgency=medium
+
+  * New debian/patch/30_gimp_init.patch:
+    - Enable GIMP plugin (Closes: #682540).
+  * debian/copyright: Add year 2015.
+
+ -- Jörg Frings-Fürst <debian@jff-webhosting.net>  Sat, 09 May 2015 21:58:27 +0200
+
+sane-frontends (1.0.14-10) unstable; urgency=medium
+
+  * New maintainer (Close: #688556).
+  * debian/control:
+    - Add myself as maintainer.
+    - Bump Standards-Version to 3.9.6.
+    - Package sane:
+      - Add ${misc:Depends} to Depends.
+      - Remove useless "Section: graphics".
+    - Add homepage.
+    - Add Vcs-* to new git repository.
+  * debian/compat:
+    - Change from 5 to 9.
+  * New debian/source/format
+    - Set to "3.0 (quilt)".
+  * Convert patches from dpatch to quilt.
+  * Rewrite debian/copyright.
+  * Rewrite builtsystem to dh and DebSrc3.0 (Closes: #670380):
+    - Rewrite debian/rules.
+    - New sane.links
+    - New sane.install
+  * Add debian/watch.
+  * debian/patches:
+    - New 20_scanadf-SIGCHLD.patch (Closes: #596232):
+      - Sets SIGCHLD to SIG_DFL before execle().
+    - New 25_manpages-typo.patch (Closes: #612686):
+      - Correct some typos.
+  * New package sane-dbg.
+
+ -- Jörg Frings-Fürst <debian@jff-webhosting.net>  Wed, 11 Feb 2015 08:00:08 +0100
+
+sane-frontends (1.0.14-9) unstable; urgency=low
+
+  * debian/control:
+    + Bump Standards-Version to 3.8.3 (no changes).
+
+  * debian/patches/06_word_list_fix.dpatch:
+    + Added; fix word list handling when the current value is not part of the
+      list (closes: #556166).
+
+ -- Julien BLACHE <jblache@debian.org>  Sat, 14 Nov 2009 10:46:58 +0100
+
+sane-frontends (1.0.14-8) unstable; urgency=low
+
+  * debian/control:
+    + Bump Standards-Version to 3.8.2 (no changes).
+
+  * debian/patches/04_cap_always_settable.dpatch:
+    + Added; remove check for SANE_CAP_ALWAYS_SETTABLE which has been removed
+      upstream in SANE 1.0.20 (and was never used, not part of the standard).
+  * debian/patches/05_xcam_off_by_one.dpatch:
+    + Added; fix an off-by-one in xcam.
+
+ -- Julien BLACHE <jblache@debian.org>  Fri, 26 Jun 2009 13:51:25 +0200
+
+sane-frontends (1.0.14-7) unstable; urgency=low
+
+  * debian/control:
+    + Bump Standards-Version to 3.8.0 (no changes).
+  * debian/patches/03_scanadf_options_fix.dpatch:
+    + Added; get option descriptor 0 before getting the value for option 0.
+      This is a standard-compliance fix needed for proper operation with the
+      net backend.
+
+ -- Julien BLACHE <jblache@debian.org>  Tue, 05 Aug 2008 12:01:06 +0200
+
+sane-frontends (1.0.14-6) unstable; urgency=low
+
+  * debian/patches/02_xcam_man_typo.dpatch:
+    + Updated; more typo fixes (closes: #466593).
+  * debian/control:
+    + Bump Standards-Version to 3.7.3 (no changes).
+
+ -- Julien BLACHE <jblache@debian.org>  Sat, 01 Mar 2008 15:35:24 +0100
+
+sane-frontends (1.0.14-5) unstable; urgency=low
+
+  * debian/patches/02_xcam_man_typo.dpatch:
+    + Added; Fix typo in xcam(1) (closes: #445715).
+
+ -- Julien BLACHE <jblache@debian.org>  Sun, 14 Oct 2007 11:49:00 +0200
+
+sane-frontends (1.0.14-4) unstable; urgency=low
+
+  * debian/sane.menu:
+    + Update for the new menu structure.
+
+ -- Julien BLACHE <jblache@debian.org>  Sun, 05 Aug 2007 18:13:01 +0200
+
+sane-frontends (1.0.14-3) unstable; urgency=low
+
+  * debian/control:
+    + Remove Conflicts/Replaces on the old sane-gimp1.{2,3} packages.
+  * debian/rules:
+    + Do not ignore make distclean errors.
+
+ -- Julien BLACHE <jblache@debian.org>  Thu, 02 Aug 2007 18:01:02 +0200
+
+sane-frontends (1.0.14-2) unstable; urgency=low
+
+  * debian/control:
+    + Bumped Standards-Version to 3.7.2 (no changes).
+    + Remove Uploaders.
+
+      Thank you Aurélien JARNO for your help during these years.
+
+ -- Julien BLACHE <jblache@debian.org>  Sun, 15 Oct 2006 17:22:54 +0200
+
+sane-frontends (1.0.14-1) unstable; urgency=low
+
+  * New upstream release.
+    + Bugfixes and improvements for xcam and scanadf.
+  * debian/control:
+    + Bumped Standards-Version to 3.6.2 (no changes).
+  * debian/copyright:
+    + Update ftp URL.
+    + Update FSF address.
+  * debian/patches/01_sanei_update.dpatch:
+    + Removed.
+  * debian/patches/01_xcam.c_dead_code.dpatch:
+    + Added; kills dead code in xcam.c::load_defaults().
+
+ -- Julien BLACHE <jblache@debian.org>  Tue, 20 Sep 2005 19:32:05 +0200
+
+sane-frontends (1.0.13-2) unstable; urgency=medium
+
+  * debian/patches/01_sanei_update.dpatch:
+    + Added; update sanei from sane-backends 1.0.15 to fix a deadlock when
+      scanning over the network (both saned and xscanimage attempt to read at
+      the same time) (closes: #284320).
+
+ -- Julien BLACHE <jblache@debian.org>  Thu,  9 Dec 2004 15:38:41 +0100
+
+sane-frontends (1.0.13-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/patches:
+    + All patches removed, merged upstream.
+  * debian/control:
+    + Removed unneeded build-dependency on xlibs-dev.
+  * debian/menu, debian/rules:
+    + Added icon for xscanimage/xcam (closes: #244489).
+
+ -- Julien BLACHE <jblache@debian.org>  Sun, 17 Oct 2004 19:15:09 +0200
+
+sane-frontends (1.0.12-2) unstable; urgency=low
+
+  * debian/control:
+    + added build-depends on dpatch.
+  * debian/rules:
+    + support dpatch.
+  * debian/patches/10_preview_resize.dpatch:
+    + added, fixes the selection when the preview window has been
+      resized (closes: #242003).
+  * debian/patches/11_xcam_layout.dpatch:
+    + added, fixes the xcam window layout when resized.
+  * debian/patches/12_gsgdialog_type_fix.dpatch:
+    + added, type mismatch in the GSGDialog type definition.
+
+ -- Julien BLACHE <jblache@debian.org>  Thu, 29 Apr 2004 21:23:36 +0200
+
+sane-frontends (1.0.12-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/copyright: s/Copyright/License/ (closes: #242000).
+
+ -- Julien BLACHE <jblache@debian.org>  Sat, 17 Apr 2004 15:10:55 +0200
+
+sane-frontends (1.0.11+cvs20040402-1) unstable; urgency=low
+
+  * Pulled from CVS, for proper GIMP 2.0 support.
+  * Built with GIMP 2.0 support (closes: #183698).
+  * Build-Depends on GIMP 2.0 and GTK+ 2.0.
+
+ -- Julien BLACHE <jblache@debian.org>  Fri,  2 Apr 2004 10:44:38 +0200
+
+sane-frontends (1.0.11-3) unstable; urgency=low
+
+  * gimp1.2 has been renamed to gimp, reflect this change in the control file.
+  * Bumped Standards-Version to 3.6.1 (no changes).
+  * debian/compat: use DH_COMPAT=4.
+
+ -- Julien BLACHE <jblache@debian.org>  Sun, 14 Sep 2003 15:43:59 +0200
+
+sane-frontends (1.0.11-2) unstable; urgency=medium
+
+  * Rebuild against libsane (>= 1.0.11-3) to get rid of the libgphoto2-2
+    dependency.
+
+ -- Julien BLACHE <jblache@debian.org>  Sun,  4 May 2003 14:28:53 +0200
+
+sane-frontends (1.0.11-1) unstable; urgency=low
+
+  * New upstream release.
+    * All patches from 1.0.10-1 were applied upstream.
+  * Killed sane-gimp1.2 for good, now Conflicts: sane-gimp1.2.
+  * Bumped Standards-Version to 3.5.9 (no changes).
+
+ -- Julien BLACHE <jblache@debian.org>  Sat, 26 Apr 2003 18:12:03 +0200
+
+sane-frontends (1.0.10-1) unstable; urgency=low
+
+  * New upstream release.
+  * Pulled xscanimage.c from CVS
+    * In GIMP, scanners are now available from File/Acquire/xscanimage/*
+      (closes: #176430).
+    * In GIMP, the resolution of the resulting image is set according to the
+      scanner's settings (closes: #176428).
+  * Build sane with GIMP 1.2 support, which means sane-gimp1.2 is now a dummy
+    package for a smooth upgrade (closes: #176754).
+  * Bumped Standards-Version to 3.5.8.
+
+ -- Julien BLACHE <jblache@debian.org>  Sun,  2 Feb 2003 18:31:11 +0100
+
+sane-frontends (1.0.9-4) unstable; urgency=low
+
+  * Various patches to xscanimage
+    * Pack the options in a scrolled window (closes: #174132).
+    * Use radio menu items for the length unit (#174132 too).
+    * It is now impossible to hit the "Browse" button twice (closes: #174137).
+
+ -- Julien BLACHE <jblache@debian.org>  Tue, 24 Dec 2002 15:29:07 +0100
+
+sane-frontends (1.0.9-3) unstable; urgency=low
+
+  * Rebuilt against new libgphoto2.
+  * Changed Uploaders: field so that Aurélien's uploads won't be tagged as
+    NMU again.
+  * Build-Depends updated.
+
+ -- Julien BLACHE <jblache@debian.org>  Sun,  1 Dec 2002 11:38:49 +0100
+
+sane-frontends (1.0.9-2) unstable; urgency=low
+
+  * Added a build rule to debian/rules to be Policy-compliant (closes: #167415).
+    * distclean may fail in clean-nogimp.
+    * Explain how the build takes place.
+  * Updated libusb build-depends.
+  * Improved description wrt scanadf.
+
+ -- Julien BLACHE <jblache@debian.org>  Sat,  2 Nov 2002 10:57:38 +0100
+
+sane-frontends (1.0.9-1) unstable; urgency=low
+
+  * New upstream release.
+  * Fixed packages descriptions (wrt #165138).
+
+ -- Julien BLACHE <jblache@debian.org>  Thu, 24 Oct 2002 19:34:51 +0200
+
+sane-frontends (1.0.8-2) unstable; urgency=low
+
+  * New maintainers.
+  * New upstream release (closes: #103109, #135264).
+    * xcam and find-scanner manpages added (closes: #39470).
+    * xscanimage now refers to sane-find-scanner (closes: 109428).
+  * Repackaged from scratch, using debhelper.
+  * Standards-Version bumped to 3.5.6.
+  * Build-Depends updated (closes: #115272, #95381).
+  * Copyright updated (closes: #146055).
+  * Build sane and sane-gimp1.2 flavours.
+  * Removed README.Debian, libsane's one is far more complete.
+
+ -- Julien BLACHE <jblache@debian.org>  Sat, 12 Oct 2002 11:31:23 +0200
+
+sane-frontends (1.0.8-1) unstable; urgency=low
+
+  * New upstream release.  New frontend scanadf, focusing on scanners with
+    automatic document feeders.
+
+ -- Kevin Dalley <kevind@rahul.net>  Sun,  6 Oct 2002 18:14:23 -0700
+
+sane-frontends (1.0.7-2.1) unstable; urgency=medium
+
+  * Non-Maintainer Upload.
+  * Remove libc6-dev Build-Depends, as it's build-essential (closes: Bug#115272).
+  * Build-Depends on libusb-dev >= 0.1.5-2.
+  * Update config.{sub,guess} on build, avoiding problems on newer architectures.
+    Thus added Build-Depends on autotools-dev.
+  * Strip .note and .comment sections.
+
+ -- Julien BLACHE <jblache@debian.org>  Mon,  1 Apr 2002 13:12:51 +0200
+
+sane-frontends (1.0.7-2) unstable; urgency=low
+
+  * relink with libusb-0.1-4.
+
+ -- Kevin Dalley <kevind@rahul.net>  Fri, 15 Mar 2002 18:33:29 +0000
+
+sane-frontends (1.0.7-1) unstable; urgency=low
+
+  * new upstream release.
+
+ -- Kevin Dalley <kevind@rahul.net>  Thu, 14 Mar 2002 00:18:10 +0000
+
+sane-frontends (1.0.6-1) unstable; urgency=low
+
+  * new upstream release.
+
+ -- Kevin Dalley <kevind@rahul.net>  Mon, 28 Jan 2002 00:21:42 -0800
+
+sane-frontends (1.0.5-3) unstable; urgency=low
+
+  * rebuilt with new version of libgimp-1.2.2-2. (closes: #110065).
+
+ -- Kevin Dalley <kevind@rahul.net>  Tue,  2 Oct 2001 22:31:06 -0700
+
+sane-frontends (1.0.5-1) unstable; urgency=low
+
+  * new upstream release of sane.
+
+ -- Kevin Dalley <kevind@rahul.net>  Mon, 13 Aug 2001 01:13:12 -0700
+
+sane-frontends (1.0.4-1) unstable; urgency=low
+
+  * new upstream release of sane
+  * frontends are now separate from backends.
+  * improved description of package (closes: #81481)
+
+ -- Kevin Dalley <kevind@rahul.net>  Sun, 28 Jan 2001 11:25:28 -0800
+
+sane (1.0.1-1999-10-21-12) frozen unstable; urgency=low
+
+  * add libjpeg62-dev, tetex-bin, tetex-extra to Build-Depends (closes:
+    #61834, 61835).
+
+ -- Kevin Dalley <kevind@rahul.net>  Wed,  5 Apr 2000 10:37:38 -0700
+
+sane (1.0.1-1999-10-21-11) frozen unstable; urgency=low
+
+  * Add Build-Depends to control files for sane and sane-gimp1.1 (closes:
+    #60923).
+
+ -- Kevin Dalley <kevind@rahul.net>  Mon, 27 Mar 2000 03:16:55 -0800
+
+sane (1.0.1-1999-10-21-10) frozen unstable; urgency=low
+
+  * Improve description in control file (closes: #57032).
+  * link sane-gimp1.1 with libgimp1.1.17, which is the most recent
+    libgimp1.1 in frozen.
+
+ -- Kevin Dalley <kevind@rahul.net>  Mon, 28 Feb 2000 02:37:20 +0000
+
+sane (1.0.1-1999-10-21-9) frozen unstable; urgency=low
+
+  * link sane-gimp1.1 with libgimp1.1.15, which is the most recent
+    libgimp1.1 in frozen.
+
+ -- Kevin Dalley <kevind@rahul.net>  Sat, 22 Jan 2000 01:57:55 -0800
+
+sane (1.0.1-1999-10-21-8) unstable; urgency=low
+
+  * sane now conflicts with gimp1.1, which increases the chances of
+    getting the correct versions of gimp with each version of sane
+    (closes: #55070).  Unfortunately, sane-gimp1.1 cannot conflict with
+    gimp, since gimp1.1 provides gimp.
+
+ -- Kevin Dalley <kevind@rahul.net>  Sun, 16 Jan 2000 11:41:52 -0800
+
+sane (1.0.1-1999-10-21-7) unstable; urgency=low
+
+  * link with libgimp1.1.14 (closes: #53982)
+  * remove conflict of libsane-gimp1.1 with itself (closes: #49709).
+  * Each version of sane and sane-gimp1.1 now depend upon the same release
+    of libsane (closes: #50927).
+  * shlibs dependencies is updated to ">= 1.0.1-1999-10-21-7" to reduce
+    chances of problem #50927.
+
+ -- Kevin Dalley <kevind@rahul.net>  Sun,  9 Jan 2000 13:22:57 -0800
+
+sane (1.0.1-1999-10-21-6) unstable; urgency=low
+
+  * add conflict between libsane and older version of sane, sane-gimp1.1
+    due to moving documentation from sane to libsane (closes: #50735).
+
+ -- Kevin Dalley <kevind@rahul.net>  Sat, 20 Nov 1999 15:15:30 -0400
+
+sane (1.0.1-1999-10-21-5) unstable; urgency=low
+
+  * added link for /usr/lib/libsane-dll.so, again.
+
+ -- Kevin Dalley <kevind@rahul.net>  Fri, 19 Nov 1999 00:03:40 -0400
+
+sane (1.0.1-1999-10-21-4) unstable; urgency=low
+
+  * corrected problematic stripping of "libsane.la" (closes: #50099).
+  * move much of documentation from sane package to libsane and
+    libsane-dev package.
+  * move find-scanner to libsane
+
+ -- Kevin Dalley <kevind@rahul.net>  Wed, 17 Nov 1999 23:08:44 -0400
+
+sane (1.0.1-1999-10-21-3) unstable; urgency=low
+
+  * added link for /usr/lib/libsane-dll.so
+
+ -- Kevin Dalley <kevind@rahul.net>  Mon, 25 Oct 1999 01:24:30 -0700
+
+sane (1.0.1-1999-10-21-2) unstable; urgency=low
+
+  * corrected link of libsane.so.1
+
+ -- Kevin Dalley <kevind@rahul.net>  Sun, 24 Oct 1999 14:43:14 -0700
+
+sane (1.0.1-1999-10-21-1) unstable; urgency=low
+
+  * cvs server version from 1999-10-21
+  * many bugs fixed in various backends
+
+ -- Kevin Dalley <kevind@rahul.net>  Fri, 22 Oct 1999 22:06:52 -0700
+
+sane (1.0.1-6) unstable; urgency=low
+
+  * relink sane-gimp1.1 with libgimp1.1.10
+
+ -- Kevin Dalley <kevind@rahul.net>  Thu, 14 Oct 1999 23:33:18 -0700
+
+sane (1.0.1-5) unstable; urgency=low
+
+  * relink sane-gimp1.1 with libgimp1.1.9
+  * separate sane-gimp1.1 from sane
+
+ -- Kevin Dalley <kevind@rahul.net>  Sun, 10 Oct 1999 03:42:37 -0700
+
+sane (1.0.1-4) unstable; urgency=low
+
+  * added sane-gimp1.1 (used with gimp1.1) at the same time as sane for
+    gimp-1.0.x.
+
+ -- Kevin Dalley <kevind@rahul.net>  Wed, 30 Jun 1999 00:54:57 -0700
+
+sane (1.0.1-3) unstable; urgency=low
+
+  * try to fix problems with shared libraries.  Install libsane-dll.so in
+    /usr/lib so that programs linked with libsane will run.  (Needed to
+    fix xsane bug #37756).
+
+ -- Kevin Dalley <kevind@rahul.net>  Mon, 31 May 1999 22:15:16 -0700
+
+sane (1.0.1-2) unstable; urgency=low
+
+  * remove dependencies for libsane
+
+ -- Kevin Dalley <kevind@rahul.net>  Fri, 30 Apr 1999 23:08:50 -0700
+
+sane (1.0.1-1) unstable; urgency=low
+
+  * version 1.0.1
+  * new backend for Sharp scanner
+  * update backends for Kodak DC25, HP, Microtek, Micro, Mustek, Nikon
+    Coolscan, snapscan, UMAX.
+  * fixes problem with HP scanner (closes #32516)
+  * includes backend for dc210 (closes #31377)
+
+ -- Kevin Dalley <kevind@rahul.net>  Tue, 27 Apr 1999 01:24:33 -0700
+
+sane (1.00-2) unstable; urgency=low
+
+  * removed examples directory.  Moved examples/tools to tools directory.
+
+ -- Kevin Dalley <kevind@rahul.net>  Mon,  5 Apr 1999 02:04:53 -0700
+
+sane (1.00-1) unstable; urgency=low
+
+  * 1.00 is released
+  * artec is back in dll.conf
+  * many more scanner supported and more changes
+
+ -- Kevin Dalley <kevind@rahul.net>  Sat,  5 Dec 1998 01:00:30 -0800
+
+sane (0.74-2) unstable; urgency=low
+
+  * temporarily comment out artec in dll.conf, due to bad interaction with
+    Umax scanner.  If artec is used as a scanner, uncomment artec from
+    dll.conf
+  * automatically generates conffiles, thanks for
+    Roman.Hodek@informatik.uni-erlangen.de (fixes bug #26545)
+  * fixes problem with creation of /usr/share/sane during build process
+    (bug #26314)
+
+ -- Kevin Dalley <kevind@rahul.net>  Sun, 20 Sep 1998 18:00:28 -0700
+
+sane (0.74-1) unstable; urgency=low
+
+  * first release of 0.74
+
+ -- Kevin Dalley <kevind@rahul.net>  Sat, 22 Aug 1998 23:06:26 -0700
+
+sane (0.72-1) frozen unstable; urgency=low
+
+  * first official release which supports libgtk1-0.99.9
+
+ -- Kevin Dalley <kevind@rahul.net>  Fri, 10 Apr 1998 02:29:52 -0700
+
+sane (0.71-2) frozen unstable; urgency=low
+
+  * fixed spelling in control files (fixes bug# 19003)
+  * modified to match latest change in libgtk-0.99.5
+  * change datadir to /usr/share/sane
+  * compatible with libgtk1-0.99.8 (fixes bug #19595)
+
+ -- Kevin Dalley <kevind@rahul.net>  Sun, 22 Mar 1998 19:44:10 -0800
+
+sane (0.71-1) unstable; urgency=low
+
+  * new release, which adds support for the following scanners:
+        Polaroid Digital Microscope Camera (DMC) backend
+        Apple scanner backend
+        Nikon CoolScan backend
+  * removed execute permission in doc directory (fixes: bug #17949)
+  * modified manual page referring to symbolic link of xscanimage (fixes:
+    bug #18071)
+
+ -- Kevin Dalley <kevind@rahul.net>  Fri, 27 Feb 1998 23:03:08 -0800
+
+sane (0.70-1) unstable; urgency=low
+
+  * update to version 0.70 of sane, adds AGFA SnapScan backend, updates
+    UMAX backend
+
+  * add patches 2-5 to SnapScan backend which allows other scanners
+    to work
+
+ -- Kevin Dalley <kevind@rahul.net>  Sat, 31 Jan 1998 17:32:53 -0800
+
+sane (0.69-2) unstable; urgency=low
+
+  * correct umax-scanner.h so that Astra 1200S is legal
+
+ -- Kevin Dalley <kevind@rahul.net>  Sun, 25 Jan 1998 09:44:45 -0800
+
+sane (0.69-1) unstable; urgency=low
+
+  * update to version 0.69 of sane
+
+ -- Kevin Dalley <kevind@rahul.net>  Fri, 23 Jan 1998 20:24:01 -0800
+
+sane (0.68-4) unstable; urgency=low
+
+  * modified gtkglue.c to correspond with changes to libgtk1
+
+ -- Kevin Dalley <kevind@rahul.net>  Tue,  6 Jan 1998 22:24:14 -0800
+
+sane (0.68-3) unstable; urgency=low
+
+  * change plug-in directory to 0.99 to match gimp changes, add explicit
+    gimp dependency.
+  * added README.debian
+  * install find-scanner
+  * install many documentation files
+
+ -- Kevin Dalley <kevind@rahul.net>  Fri,  2 Jan 1998 21:51:52 -0800
+
+sane (0.68-2) unstable; urgency=low
+
+  * corrected control file
+
+ -- Kevin Dalley <kevind@rahul.net>  Sun, 21 Dec 1997 18:26:23 -0800
+
+sane (0.68-1) unstable; urgency=low
+
+  * update to version 0.68 of sane
+
+ -- Kevin Dalley <kevind@rahul.net>  Fri,  5 Dec 1997 00:42:27 -0800
+
+sane (0.67-1) unstable; urgency=low
+
+  * first Debian release of sane
+
+ -- Kevin Dalley <kevind@rahul.net>  Tue, 18 Nov 1997 21:38:41 -0800

@@ -1,0 +1,23 @@
+Source: dcraw
+Section: graphics
+Priority: optional
+Maintainer: Debian Astronomy Team <debian-astro-maintainers@lists.alioth.debian.org>
+Uploaders: Filip Hroch <hroch@physics.muni.cz>
+Build-Depends: debhelper-compat (= 13), libjpeg-dev, liblcms2-dev
+Standards-Version: 4.6.0.1
+Rules-Requires-Root: no
+Homepage: https://www.dechifro.org/dcraw/
+Vcs-Git: https://salsa.debian.org/debian-astro-team/dcraw.git
+Vcs-Browser: https://salsa.debian.org/debian-astro-team/dcraw
+
+Package: dcraw
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Suggests: gphoto2, netpbm
+Description: decode raw digital camera images
+ This utility converts the native (RAW), format of various digital
+ cameras into netpbm portable pixmap (.ppm) or TIFF images. Supports
+ the following models: Canon, Kodak, Olympus, Nikon, Fuji, Minolta
+ and Sigma (see https://www.dechifro.org/dcraw/ for full list)
+ Note: This utility does not read directly from the cameras, only
+ the files after they have been downloaded, use gphoto2 for that.

@@ -1,0 +1,42 @@
+Format: 1.8
+Date: Fri, 15 Nov 2019 10:39:22 +0100
+Source: xfig
+Binary: xfig xfig-doc xfig-libs
+Architecture: source amd64 all
+Version: 1:3.2.7b-2
+Distribution: unstable
+Urgency: medium
+Maintainer: Roland Rosenfeld <roland@debian.org>
+Changed-By: Roland Rosenfeld <roland@debian.org>
+Description:
+ xfig       - Facility for Interactive Generation of figures under X11
+ xfig-doc   - XFig on-line documentation and examples
+ xfig-libs  - XFig image libraries and examples
+Changes:
+ xfig (1:3.2.7b-2) unstable; urgency=medium
+ .
+   * 07_reproducible_splash: build splash.xbm in a reproducible way.
+Checksums-Sha1:
+ ca609cd2c599cf1de8359ecc016ff12a043c6f3e 1347 xfig_3.2.7b-2.dsc
+ aab257b7c35b2ca3dc5c917eb2137f0f5ba68fa7 39440 xfig_3.2.7b-2.debian.tar.xz
+ 52122e7b9ada504089cf808aa218a1a4286507ba 954436 xfig-dbgsym_3.2.7b-2_amd64.ddeb
+ e640133f314ee27b5a72c6bd975c993d28a6b84b 3426524 xfig-doc_3.2.7b-2_all.deb
+ a9737a39b76e7e78e04accd5f8e36db4dcd0876f 1120860 xfig-libs_3.2.7b-2_all.deb
+ 9f5d9baebb327f1a5de7116a8c6c5ced0dfe70f1 9733 xfig_3.2.7b-2_amd64.buildinfo
+ 8337adcb982a6f873acf94ef6bf538ad36cd2968 679816 xfig_3.2.7b-2_amd64.deb
+Checksums-Sha256:
+ 448eb447859df22e2cd5254dc15686fb61acb86c4e93f418a5e2bc134e73d2d1 1347 xfig_3.2.7b-2.dsc
+ cc31603621c33c6d6f6bed87590235206fd6a11091a0fbd7a1b6b50a13cea2b5 39440 xfig_3.2.7b-2.debian.tar.xz
+ 4401207617423d3dd9e7c371cf388fefac0a7444d03d1f716af7d38798a464d9 954436 xfig-dbgsym_3.2.7b-2_amd64.ddeb
+ a735828a265474026ef03b70d01655d7a178e5f4b5968adbc525f6870a30911f 3426524 xfig-doc_3.2.7b-2_all.deb
+ 2c4e1bf735e9dae043b0ace0a4aed9a9570bd86e60c019306cad00afc1377e77 1120860 xfig-libs_3.2.7b-2_all.deb
+ c1b3957f686f31f055ede8290a156b90a6bb5cbcf7d94cfd678251f56d6a9681 9733 xfig_3.2.7b-2_amd64.buildinfo
+ dea868e5a68c80f94f2ad129227fd83e95dd9a70bcd17b984195dc52f5860d91 679816 xfig_3.2.7b-2_amd64.deb
+Files:
+ 439f163b75a63255be3d5c87b1988bbc 1347 graphics optional xfig_3.2.7b-2.dsc
+ e86b49b5e32b9f4e03a476cb8945d914 39440 graphics optional xfig_3.2.7b-2.debian.tar.xz
+ a9167631fe3b98b4ddd50cd97a1a6672 954436 debug optional xfig-dbgsym_3.2.7b-2_amd64.ddeb
+ d04ce3c8415e6403d24cdf34647c1609 3426524 doc optional xfig-doc_3.2.7b-2_all.deb
+ b8659c488bc14c632abd2342b3eaa5a7 1120860 graphics optional xfig-libs_3.2.7b-2_all.deb
+ b3c26d6e548271318d6a61305a5bfe70 9733 graphics optional xfig_3.2.7b-2_amd64.buildinfo
+ fed448192874899904aa58c1b7eb51c3 679816 graphics optional xfig_3.2.7b-2_amd64.deb

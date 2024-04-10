@@ -1,0 +1,13 @@
+apt-get source xfig
+apt-get source hugin-data
+apt-get source xsane-common
+apt-get source darktable
+apt-get source sane
+apt-get source rawtherapee
+apt-get source dia-common
+apt-get source exiv2
+apt-get source dcraw
+apt-get source alsa-utils
+apt-get source stk
+apt-get source normalize-audio
+apt-get source cccd

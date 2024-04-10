@@ -1,0 +1,273 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: sane-backends
+Upstream-Contact: 
+Source: https://gitlab.com/sane-project
+
+Files: *
+Copyright: 1995      Spencer Kimball
+           1995      Peter Mattis
+           1997-1998 David Mosberger
+           1997      Tristan Tarrant
+           1997-1998 Andreas Beck
+           1999      Tom Martone
+License: GPL-2+ with sane exception
+
+Files: debian/*
+Copyright: 1997-2002 Kevin Dalley <kevind@rahul.net>
+           2002-2009 Julien BLACHE <jblache@debian.org>
+           2014-2019 Jörg Frings-Fürst <debian@jff.email>
+License: GPL-2+ with sane exception
+
+Files: include/*.h
+       lib/getopt.c
+       lib/getopt1.c
+       lib/vsyslog.c
+Copyright: 1989-1996 Free Software Foundation, Inc.
+License: GPL-2+
+
+Files: include/sane/sanei.h
+Copyright: 1996      David Mosberger-Tang
+           1996      Andreas Beck
+           2002-2003 Henning Meier-Geinitz
+License: GPL-2+ with sane exception
+
+Files: include/sane/sanei_codec_*.h
+Copyright: 1996      David Mosberger-Tang
+           1996      Andreas Beck
+License: GPL-2+ with sane exception
+
+Files: include/sane/sanei_wire.h
+Copyright: 1996      David Mosberger-Tang
+License: GPL-2+ with sane exception
+
+Files: lib/snprintf.c
+Copyright: 1988-1997 Patrick Powell <papowell@sdsu.edu>
+License: Artistic-1.0
+
+Files: sanei/*
+Copyright: 1996      David Mosberger-Tang
+License: GPL-2+ with sane exception
+
+Files: sanei/sanei_init_debug.c
+Copyright: 1996-1997 David Mosberger-Tang
+           1996-1997 Andreas Beck
+License: GPL-2+ with sane exception
+
+Files: sanei/sanei_thread.c
+Copyright: 1998-2001 Yuri Dario
+           2003-2004 Gerhard Jaeger
+License: GPL-2+ with sane exception
+
+Files: src/gtkglue.c
+       src/preview.c
+       src/xcam.c
+Copyright: 1997      David Mosberger-Tang
+           1997      Tristan Tarrant
+License: GPL-2+
+
+Files: src/preferences.c
+       src/preview.h
+Copyright: 1997      David Mosberger-Tang
+License: GPL-2+
+
+Files: src/progress.c
+Copyright: 1995      Spencer Kimball
+           1995      Peter Mattis
+           1996      Tristan Tarrant
+License: GPL-2+
+
+Files: src/progress.h
+Copyright: 1995      Spencer Kimball
+           1995      Peter Mattis
+License: GPL-2+
+
+Files: src/scanadf.c
+Copyright: 1999      Tom Martone
+License: GPL-2+
+
+Files: src/xscanimage.c
+Copyright: 1997-1998 Andreas Beck
+           1997-1998 Tristan Tarrant
+           1997-1998 David Mosberger
+License: GPL-2+
+
+Files: src/xscanimage-gimp-1_0-compat.h
+Copyright:           Oliver Rauch
+License: GPL-2+
+
+Files: lib/alloca.c
+Copyright: D A Gwyn
+License: public-domain
+ (Mostly) portable public-domain implementation
+
+Files: lib/strdup.c
+       lib/strndup.c
+       lib/strsep.c
+       lib/usleep.c
+Copyright: 1992-1997 Free Software Foundation, Inc.
+License: LGPL-2+
+
+License: Artistic-1.0
+ Preamble
+ .
+ The intent of this document is to state the conditions under which a Package
+ may be copied, such that the Copyright Holder maintains some semblance of
+ artistic control over the development of the package, while giving the users
+ of the package the right to use and distribute the Package in a more-or-less
+ customary fashion, plus the right to make reasonable modifications.
+ .
+ Definitions:
+ .
+ "Package" refers to the collection of files distributed by the Copyright
+ Holder, and derivatives of that collection of files created through textual
+ modification.
+ .
+ "Standard Version" refers to such a Package if it has not been modified, or
+ has been modified in accordance with the wishes of the Copyright Holder.
+ .
+ "Copyright Holder" is whoever is named in the copyright or copyrights for the
+ package.
+ .
+ "You" is you, if you're thinking about copying or distributing this Package.
+ .
+ "Reasonable copying fee" is whatever you can justify on the basis of media
+ cost, duplication charges, time of people involved, and so on. (You will not
+ be required to justify it to the Copyright Holder, but only to the computing
+ community at large as a market that must bear the fee.)
+ .
+ "Freely Available" means that no fee is charged for the item itself, though
+ there may be fees involved in handling the item. It also means that recipients
+ of the item may redistribute it under the same conditions they received it.
+ .
+ 1. You may make and give away verbatim copies of the source form of the
+ Standard Version of this Package without restriction, provided that you
+ duplicate all of the original copyright notices and associated disclaimers.
+ .
+ 2. You may apply bug fixes, portability fixes and other modifications derived
+ from the Public Domain or from the Copyright Holder. A Package modified in
+ such a way shall still be considered the Standard Version.
+ .
+ 3. You may otherwise modify your copy of this Package in any way, provided that
+ you insert a prominent notice in each changed file stating how and when you
+ changed that file, and provided that you do at least ONE of the following:
+ .
+ a) place your modifications in the Public Domain or otherwise make them Freely
+  Available, such as by posting said modifications to Usenet or an equivalent
+  medium, or placing the modifications on a major archive site such as
+  ftp.uu.net, or by allowing the Copyright Holder to include your modifications
+  in the Standard Version of the Package.
+ b) use the modified Package only within your corporation or organization.
+ c) rename any non-standard executables so the names do not conflict with
+  standard executables, which must also be provided, and provide a separate
+  manual page for each non-standard executable that clearly documents how it
+  differs from the Standard Version.
+ d) make other distribution arrangements with the Copyright Holder.
+ .
+ 4. You may distribute the programs of this Package in object code or
+ executable form, provided that you do at least ONE of the following:
+ .
+ a) distribute a Standard Version of the executables and library files,
+  together with instructions (in the manual page or equivalent) on where to
+  get the Standard Version.
+ b) accompany the distribution with the machine-readable source of the Package
+  with your modifications.
+ c) accompany any non-standard executables with their corresponding Standard
+  Version executables, giving the non-standard executables non-standard names,
+  and clearly documenting the differences in manual pages (or equivalent),
+  together with instructions on where to get the Standard Version.
+ d) make other distribution arrangements with the Copyright Holder.
+ .
+ 5. You may charge a reasonable copying fee for any distribution of this
+ Package. You may charge any fee you choose for support of this Package. You
+ may not charge a fee for this Package itself. However, you may distribute this
+ Package in aggregate with other (possibly commercial) programs as part of a
+ larger (possibly commercial) software distribution provided that you do not
+ advertise this Package as a product of your own.
+ .
+ 6. The scripts and library files supplied as input to or produced as output
+ from the programs of this Package do not automatically fall under the
+ copyright of this Package, but belong to whomever generated them, and may be
+ sold commercially, and may be aggregated with this Package.
+ .
+ 7. C or perl subroutines supplied by you and linked into this Package shall
+ not be considered part of this Package.
+ .
+ 8. The name of the Copyright Holder may not be used to endorse or promote
+ products derived from this software without specific prior written permission.
+ .
+ 9. THIS PACKAGE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR IMPLIED
+ WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
+ MERCHANTIBILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+License: GPL-2+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 2 of the License, or
+ (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program. If not, see <http://www.gnu.org/licenses/>.
+ .
+ The complete text of the GNU General Public License
+ can be found in /usr/share/common-licenses/GPL-2 file.
+
+License: GPL-2+ with sane exception
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 2 of the License, or
+ (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program. If not, see <http://www.gnu.org/licenses/>.
+ .
+ The complete text of the GNU General Public License
+ can be found in /usr/share/common-licenses/GPL-2 file.
+ .
+ As a special exception, the authors of SANE give permission for
+ additional uses of the libraries contained in this release of SANE.
+ .
+ The exception is that, if you link a SANE library with other files
+ to produce an executable, this does not by itself cause the
+ resulting executable to be covered by the GNU General Public
+ License.  Your use of that executable is in no way restricted on
+ account of linking the SANE library code into it.
+ .
+ This exception does not, however, invalidate any other reasons why
+ the executable file might be covered by the GNU General Public
+ License.
+ .
+ If you submit changes to SANE to the maintainers to be included in
+ a subsequent release, you agree by submitting the changes that
+ those changes may be distributed with this exception intact.
+ .
+ If you write modifications of your own for SANE, it is your choice
+ whether to permit this exception to apply to your modifications.
+ If you do not wish that, delete this exception notice. 
+
+License: LGPL-2+
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Library General Public
+ License as published by the Free Software Foundation; either
+ version 2 of the License, or (at your option) any later version.
+ .
+ This library is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ You should have received a copy of the GNU Library General Public
+ License along with this library; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA
+ .
+ On Debian systems, the complete text of the GNU Library General Public License
+ version 2 can be found in "/usr/share/common-licenses/LGPL-2".

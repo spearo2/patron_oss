@@ -1,0 +1,19 @@
+Source: cccd
+Section: sound
+Priority: extra
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+XSBC-Original-Maintainer: Uwe Hermann <uwe@debian.org>
+Build-Depends: cdbs, debhelper (>= 8.0.0), libgtk2.0-dev
+Standards-Version: 3.9.2
+# Homepage: 
+
+Package: cccd
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Small GTK+ CD player program
+ cccd is a small GTK+ CD player program with many features:
+  * Works with SCSI devices
+  * CDDB lookups (local and remote) and local storing
+  * Uses very little screen space
+  * Handles CD Extras (mixed mode CDs)
+

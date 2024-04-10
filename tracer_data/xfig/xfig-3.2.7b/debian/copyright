@@ -1,0 +1,240 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: Xfig
+Source: https://sourceforge.net/projects/mcj/files/xfig-3.2.7b.tar.xz
+
+Files: *
+Copyright:
+ Copyright (c) 1985-1988 by Supoj Sutanthavibul
+ Parts Copyright (c) 1989-2016 by Brian V. Smith
+ Parts Copyright (c) 2016-2019 Thomas Loimer
+ Parts Copyright (C) 1989 by Jef Poskanzer
+ Parts Copyright (c) 1991 by Paul King
+ Parts Copyright (c) 1990 David Koblas
+ Parts Copyright (c) 1991 by Henning Spruth
+ Parts Copyright (c) 1991-1996, Thomas G. Lane
+ Parts Copyright (c) 1992 by Brian Boyter
+ Parts Copyright (c) 1992 by James Tough
+ Parts Copyright (c) 1993 Alan Richardson (mppa3@uk.ac.sussex.syma)
+ Parts Copyright (c) 1994 by Bill Taylor
+ Parts Copyright (c) 1995 by C. Blanc and C. Schlick
+ Parts Copyright (c) 1995 Jim Daley (jdaley@cix.compulink.co.uk)
+ Parts Copyright (c) 1997 by T. Sato
+ Parts Copyright (c) 1998 by Georg Stemmer
+ Parts Copyright (c) 1998-2002 by Stephane Mancini
+ Parts Copyright (c) 1999-2002 Alexander Durner
+ Parts Copyright (c) 2004 by Chris Moller
+ Parts Copyright, 1987, Massachusetts Institute of Technology
+License: xfig
+
+License: xfig
+ Any party obtaining a copy of these files is granted, free of charge, a
+ full and unrestricted irrevocable, world-wide, paid up, royalty-free,
+ nonexclusive right and license to deal in this software and documentation
+ files (the "Software"), including without limitation the rights to use,
+ copy, modify, merge, publish distribute, sublicense and/or sell copies of
+ the Software, and to permit persons who receive copies from any such
+ party to do so, with the only requirement being that the above copyright
+ and this permission notice remain intact.
+
+Files: src/f_readpcx.c
+Copyright:
+ Based on (public domain) code from Russell Marks
+ Parts Copyright (c) 2000-2007 by Brian V. Smith
+License: xfig
+
+Files: src/w_color.c
+Copyright:
+ Parts Copyright (c) 1994-2007 by Brian V. Smith
+ Parts Copyright 1990,1992 Richard Hesketh
+ Pixel Grab color lookup Copyright 1993, David Koblas (koblas@netcom.com)
+ and Copyright 1995, 1996 Torsten Martinsen (bullestock@dk-online.dk)
+License: xfig-xcoloredit
+ Any party obtaining a copy of these files is granted, free of charge, a
+ full and unrestricted irrevocable, world-wide, paid up, royalty-free,
+ nonexclusive right and license to deal in this software and documentation
+ files (the "Software"), including without limitation the rights to use,
+ copy, modify, merge, publish distribute, sublicense and/or sell copies of
+ the Software, and to permit persons who receive copies from any such
+ party to do so, with the only requirement being that the above copyright
+ and this permission notice remain intact.
+ .
+ Parts of this work were extracted from Richard Hesketh's xcoloredit
+ client. Here is the copyright notice which must remain intact:
+ .
+ Copyright 1990,1992 Richard Hesketh / rlh2@ukc.ac.uk
+                 Computing Lab. University of Kent at Canterbury, UK
+ .
+ Permission to use, copy, modify and distribute this software and its
+ documentation for any purpose is hereby granted without fee, provided that
+ the above copyright notice appear in all copies and that both that
+ copyright notice and this permission notice appear in supporting
+ documentation, and that the names of Richard Hesketh and The University of
+ Kent at Canterbury not be used in advertising or publicity pertaining to
+ distribution of the software without specific, written prior permission.
+ Richard Hesketh and The University of Kent at Canterbury make no
+ representations about the suitability of this software for any purpose.
+ It is provided "as is" without express or implied warranty.
+ .
+ Richard Hesketh AND THE UNIVERSITY OF KENT AT CANTERBURY DISCLAIMS ALL
+ WARRANTIES WITH REGARD TO THIS SOFTWARE, INCLUDING ALL IMPLIED WARRANTIES
+ OF MERCHANTABILITY AND FITNESS, IN NO EVENT SHALL Richard Hesketh OR THE
+ UNIVERSITY OF KENT AT CANTERBURY BE LIABLE FOR ANY SPECIAL, INDIRECT OR
+ CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE,
+ DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER
+ TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE
+ OF THIS SOFTWARE.
+
+Files: src/w_dir.*
+Copyright:
+ Copyright (c) 1989-2007 by Brian V. Smith
+ Parts Copyright (c) 1990 by Digital Equipment Corporation. All Rights Reserved.
+ Parts Copyright (c) 1991 by Paul King
+ Parts Copyright (c) 1990 by Digital Equipment Corporation
+License: xfig-xdir
+ Any party obtaining a copy of these files is granted, free of charge, a
+ full and unrestricted irrevocable, world-wide, paid up, royalty-free,
+ nonexclusive right and license to deal in this software and documentation
+ files (the "Software"), including without limitation the rights to use,
+ copy, modify, merge, publish distribute, sublicense and/or sell copies of
+ the Software, and to permit persons who receive copies from any such
+ party to do so, with the only requirement being that the above copyright
+ and this permission notice remain intact.
+ .
+ Original xdir code:
+ .
+ Created: 13 Aug 88
+ .
+ Win Treese
+ Cambridge Research Lab
+ Digital Equipment Corporation
+ treese@crl.dec.com
+ .
+ COPYRIGHT 1990
+ DIGITAL EQUIPMENT CORPORATION
+ MAYNARD, MASSACHUSETTS
+ ALL RIGHTS RESERVED.
+ .
+ THE INFORMATION IN THIS SOFTWARE IS SUBJECT TO CHANGE WITHOUT NOTICE AND
+ SHOULD NOT BE CONSTRUED AS A COMMITMENT BY DIGITAL EQUIPMENT CORPORATION.
+ DIGITAL MAKES NO REPRESENTATIONS ABOUT THE SUITABILITY OF THIS SOFTWARE
+ FOR ANY PURPOSE.  IT IS SUPPLIED "AS IS" WITHOUT EXPRESS OR IMPLIED
+ WARRANTY.
+ .
+ IF THE SOFTWARE IS MODIFIED IN A MANNER CREATING DERIVATIVE COPYRIGHT
+ RIGHTS, APPROPRIATE LEGENDS MAY BE PLACED ON THE DERIVATIVE WORK IN
+ ADDITION TO THAT SET FORTH ABOVE.
+ .
+ Permission to use, copy, modify, and distribute this software and its
+ documentation for any purpose and without fee is hereby granted, provided
+ that the above copyright notice appear in all copies and that both that
+ copyright notice and this permission notice appear in supporting
+ documentation, and that the name of Digital Equipment Corporation not be
+ used in advertising or publicity pertaining to distribution of the
+ software without specific, written prior permission.
+
+Files: src/SimpleMenu.c
+Copyright: Copyright (c) 1989, 1994  X Consortium
+License: X11
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+ .
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE
+ X CONSORTIUM BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN
+ AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ .
+ Except as contained in this notice, the name of the X Consortium shall not be
+ used in advertising or otherwise to promote the sale, use or other dealings
+ in this Software without prior written authorization from the X Consortium.
+
+Files: src/SmeBSB*
+Copyright: Copyright (c) 1989, 1994  X Consortium
+License: X11-xfig
+ Any party obtaining a copy of these files is granted, free of charge, a
+ full and unrestricted irrevocable, world-wide, paid up, royalty-free,
+ nonexclusive right and license to deal in this software and
+ documentation files (the "Software"), including without limitation the
+ rights to use, copy, modify, merge, publish and/or distribute copies of
+ the Software, and to permit persons who receive copies from any such
+ party to do so, with the only requirement being that this copyright
+ notice remain intact.
+ .
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE
+ X CONSORTIUM BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN
+ AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ .
+ Except as contained in this notice, the name of the X Consortium shall not be
+ used in advertising or otherwise to promote the sale, use or other dealings
+ in this Software without prior written authorization from the X Consortium.
+
+Files: Libraries/DSP/*
+Copyright: DSP library copyright Jakub Stastny (stastnj1@volny.cz)
+License: public-domain
+ You are free to distribute this library as long as this
+ copyright notice is included.
+
+Files: Libraries/GUI/* Libraries/ERD/*
+Copyright: Copyright 2000 Antonio Luis Delgado Gonzalez
+License: xfig
+
+Files: doc/html/*
+Copyright: Copyright (c) 1998-2012 by Tom Sato and Brian V. Smith
+License: xfig-doc
+ This documentation was first written in Japanese by Tom Sato, based
+ on the manual pages distributed with xfig. It was then translated
+ into English with the help of some kind people. Later, it was updated
+ to conform to the latest version by Brian Smith.
+ .
+ Permission to use, copy and distribute this documentation for any
+ purpose and without fee is hereby granted. Modification of this
+ documentation is also granted as long as this copyright/permission
+ notice remain intact and name of the person who made the modification
+ is explicitly written in the documentation. However, contact with Tom
+ Sato and/or Brian V. Smith is strongly recommended if you want to
+ distribute modified version of this documentation.
+ .
+ You may also put these documentation files on your `public' WWW
+ server. In such case, please send its URL to Brian V. Smith or Tom
+ Sato so that we can maintain a list of such WWW servers.
+
+Files: debian/*
+Copyright:
+ 1999-2018 Roland Rosenfeld <roland@debian.org>
+ 2013-2014 Vladislav Zavjalov <slazav@altlinux.org>
+ 1998-1999 Edward Betts <edward@debian.org>
+ 1997-1998 Enrique Zanardi <ezanardi@molec1.dfis.ull.es>
+ 1996-1997 joost witteveen <joostje@debian.org>
+ 1996 Michael Meskes <meskes@debian.org>
+ 1995 D.J. Gregor <dgregor@coil.com>
+License: GPL-2+
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License version 2 or 3 as
+ published by the Free Software Foundation.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program; if not, write to the Free Software Foundation,
+ Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
+ .
+ On Debian systems, the full text of the GNU General Public
+ License version 2 can be found in the file
+ `/usr/share/common-licenses/GPL-2'.

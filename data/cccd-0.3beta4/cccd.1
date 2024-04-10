@@ -1,0 +1,94 @@
+.\"                                      Hey, EMACS: -*- nroff -*-
+.TH CCCD 1 "January 6, 2002"
+.SH NAME
+cccd \- yet another CD player with CDDB support
+.SH SYNOPSIS
+.B cccd
+.SH DESCRIPTION
+cccd is a small GTK+ CD player program with many features:
+
+  * Works with SCSI devices
+  * CDDB lookups (local and remote) and local storing
+  * Uses very little screen space
+  * Handles CD Extras (mixed mode CDs)
+.SH OPTIONS
+None.
+.SH USAGE
+Upon starting
+.B cccd
+two windows will pop up: a smaller control panel and a status window.
+.SS The Control Panel
+.PP
+Here are the buttons for controlling the CD drive. The main action will take 
+place here. The left most button is the exit button, which will cause 
+.B cccd
+to quit. The right most button will cause the Info window (q.v.) to pop up.
+Buttons in the top row (left to right): Previous Track, Play, Next Track, and
+in the bottom row: Pause, Stop and Eject. Their functions should be
+self-explanatory.
+.SS The Status Window
+.PP
+You will see four rows of text here, and a progress bar below that. The top 
+most row shows the Artist and Title of the CD, if known. Below that is the 
+track title. Then comes the time display and then a status row.
+You can toggle the time display between 
+
+  - CD time passed
+  - CD time remaining,
+  - Track time passed,
+  - Track time remaining
+
+by clicking on the window above the progress bar.
+The status information will show the current status and the play mode.
+You can toggle the playmodes (Normal, Loop Track, Loop CD, Random) by clicking
+on the progress bar. The progress bar will always show the elapsed CD time.
+.SS The Info Window
+.PP
+This window is divided into two sections:
+.SS CD
+.PP
+Here you can see (and later enter) the CD title and Artist, followed by a list
+of the Track titles. Below this there are button that (will) allow you to
+Save the current CD data, submit it to a remote CDDB database, and Undo any
+changes you have made since the last saving.
+You can realize a playlist of the tracks you want to hear, by clicking on the
+track row. Darker tracks will not be played. (Note: Data tracks will
+be 'unselected' automatically).
+.SS CDDB
+.PP
+You can enter the relevant data for remote and local cddb databases here,
+and the lookup order.
+If the remote databases lookup protocol is http, you will need to enter the 
+URL in addition to the hostname, without the leading "http://"
+(e.g. "example.url.com/cddb/database/lookup.cgi".
+The category section is not used, and will be omitted in future versions.
+"Save" will save the info to "~/.cccdrc". I'll leave to your imagination what
+Undo does.
+.SH FILES
+.TP
+.IP "~/.cccdrc"
+The
+.B cccd
+configfile.
+.SH BUGS
+Please report any bugs you find to Jochen A. Stein <jst@nitsfans.org>.
+You can use the form in
+.B "/usr/share/doc/cccd/BUGREPORT"
+for this...
+.SH LICENSE
+.B cccd
+is covered by the GNU General Public License (GPL) version 2 or
+(at your option) any later version.
+.SH AUTHORS
+.B cccd
+was originally written by Sven Riedel <Sven.Riedel@heim8.tu-clausthal.de>,
+modified by Jochen A. Stein <jst@nitsfans.org>.
+.PP
+This manpage was written by Jochen A. Stein <jst@nitsfans.org>.
+.SH "SEE ALSO"
+.BR cdcd (1),
+.BR cdtool (1),
+.BR dcd (1),
+.BR workbone (1),
+.BR workman (1),
+.BR xmcd (1).

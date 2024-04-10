@@ -1,0 +1,49 @@
+Description: Disable use of xml_config. Use pkg_config macro to detect libxml2
+Author: Rodrigo Carvalho <rodrigorsdc@gmail.com>
+
+Index: dia-0.97.3+git20160930/configure.ac
+===================================================================
+--- dia-0.97.3+git20160930.orig/configure.ac
++++ dia-0.97.3+git20160930/configure.ac
+@@ -401,30 +401,18 @@ dnl AM_PATH_GTK_2_0's fourth argument (m
+ 
+ found_libxml=false
+ if test $found_libxml = false; then
+-  AC_CHECK_PROG(XML2_CONFIG, xml2-config, xml2-config)
+-  if test "x$XML2_CONFIG" != x ; then
+-    AC_MSG_CHECKING(for libxml >= 2.3.9)
+-    vers=`$XML2_CONFIG --version | sed -e "s/libxml //" | awk 'BEGIN {FS=".";} { printf "%d", ($1 * 1000 + $2) * 1000 + $3;}'`
+-
+-    if test "$vers" -ge 2003009; then
+-      AC_MSG_RESULT(found)
+-      found_libxml=true
+-      XML_LIBS="`$XML2_CONFIG --libs`"
+-      XML_CFLAGS="`$XML2_CONFIG --cflags`"
+-
+-      if test "$enable_gnome_print" = "yes"; then
+-          gnome-config --cflags print | \
+-          grep gnome-xml 2>&1 >/dev/null && \
+-          AC_MSG_ERROR(libxml2 found but gnome-print uses libxml1 ; this is a conflict.\nPlease do either provide libxml1 or disable gnome-print.)
+-      fi
+-      echo $GNOME_CFLAGS | \
+-      grep gnome-xml 2>&1 >/dev/null && \
+-      AC_MSG_ERROR(libxml2 found but one GNOME component uses libxml1 ; this is a conflict.\nPlease do either provide libxml1 or disable the offending GNOME component.)
+-        
+-    else
+-      AC_MSG_RESULT(not found)
+-    fi
++  PKG_CHECK_MODULES(LIBXML2, libxml-2.0 >= 2.3.9)
++  XML_LIBS=$LIBXML2_LIBS
++  XML_CFLAGS=$XML2_CFLAGS
++  found_libxml=true
++  if test "$enable_gnome_print" = "yes"; then
++    gnome-config --cflags print | \
++    grep gnome-xml 2>&1 >/dev/null && \
++      AC_MSG_ERROR(libxml2 found but gnome-print uses libxml1 ; this is a conflict.\nPlease do either provide libxml1 or disable gnome-print.)
+   fi
++  echo $GNOME_CFLAGS | \
++  grep gnome-xml 2>&1 >/dev/null && \
++    AC_MSG_ERROR(libxml2 found but one GNOME component uses libxml1 ; this is a conflict.\nPlease do either provide libxml1 or disable the offending GNOME component.)
+ fi
+ 
+ if test $found_libxml = false; then

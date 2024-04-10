@@ -1,0 +1,1093 @@
+darktable (3.8.1-2) unstable; urgency=medium
+
+  * Bug fix: "Please rebuild darktable 3.8.1. against newer exiv2 for CR3
+    support", thanks to Mike Brodbelt (Closes: #1009082).
+
+ -- David Bremner <bremner@debian.org>  Sat, 09 Apr 2022 13:04:04 -0300
+
+darktable (3.8.1-1) unstable; urgency=medium
+
+  * Update to new upstream version 3.8.1.
+  * Drop aarch64 related patch (now upstream commit 51856af).
+
+ -- David Bremner <bremner@debian.org>  Mon, 28 Feb 2022 09:00:30 -0400
+
+darktable (3.8.0-3) unstable; urgency=medium
+
+  * Bump Lua depends to 5.4. Bug fix: "luarc scripts no longer load on startup", thanks to Ritchie
+    Wilson (Closes: #1004051).
+
+ -- David Bremner <bremner@debian.org>  Thu, 20 Jan 2022 10:29:09 -0400
+
+darktable (3.8.0-2) unstable; urgency=medium
+
+  * Bug fix: "FTBFS on arm64", cherry-pick upstream commit 51856af
+    (Closes: #1002900).
+  * Upload to unstable
+
+ -- David Bremner <bremner@debian.org>  Tue, 11 Jan 2022 22:30:56 -0400
+
+darktable (3.8.0-1) experimental; urgency=medium
+
+  * New upstream feature release (see
+    /usr/share/doc/darktable/RELEASE_NOTES.md.gz for details).
+  * Embeds libraw (again).
+
+ -- David Bremner <bremner@debian.org>  Thu, 30 Dec 2021 07:33:39 -0400
+
+darktable (3.6.1-1) unstable; urgency=medium
+
+  * New upstream feature release (see
+    /usr/share/doc/darktable/RELEASE_NOTES.md.gz for details).
+
+ -- David Bremner <bremner@debian.org>  Sat, 18 Sep 2021 08:46:06 -0300
+
+darktable (3.6.0-2) unstable; urgency=medium
+
+  * Rebuild for unstable
+  * Drop unused build dependency on flickcurl.
+
+ -- David Bremner <bremner@debian.org>  Fri, 27 Aug 2021 08:50:13 -0700
+
+darktable (3.6.0-1) experimental; urgency=medium
+
+  * Update to new upstream version 3.6.0.
+  * Drop patches, all are now upstream.
+  * Bug fix: "Please add iso-codes to the build-dependencies", thanks to
+    Laurent Bigonville (Closes: #990545).
+
+ -- David Bremner <bremner@debian.org>  Sat, 03 Jul 2021 11:12:05 -0300
+
+darktable (3.4.1-5) unstable; urgency=medium
+
+  * Bug fix: "configuring shortcuts breaks filemanager gui at next start
+    filemanager issueVersion: 3.4.1-4", thanks to stef.binde (Closes:
+    #990405). Closed by cherry-picking upstream commit 154e945f.
+
+ -- David Bremner <bremner@debian.org>  Wed, 30 Jun 2021 09:37:35 -0300
+
+darktable (3.4.1-4) unstable; urgency=medium
+
+  * Bug fix: "crashes with 'Floating point exception (core dumped)' after
+    loading some DNG files", thanks to Jonas Smedegaard (Closes: #989222).
+    Cherry pick upstream commit 2ff4fc58e44.
+
+ -- David Bremner <bremner@debian.org>  Sat, 05 Jun 2021 12:41:39 -0300
+
+darktable (3.4.1-3) unstable; urgency=medium
+
+  * Bug fix: "broken symlinks: /usr/share/darktable/js/*.js -&gt;
+    ../../javascript/*/*.js", thanks to Andreas Beckmann (Closes:
+    #988874).
+
+ -- David Bremner <bremner@debian.org>  Thu, 20 May 2021 14:07:16 -0300
+
+darktable (3.4.1-2) unstable; urgency=medium
+
+  * Bug fix: "darktable FTBFS with DEB_BUILD_OPTIONS=parallel=1", thanks
+    to Helmut Grohne (Closes: #986574). As Helmut guessed, the fix is to
+    add a dependency to the CMake configuration.
+
+ -- David Bremner <bremner@debian.org>  Thu, 08 Apr 2021 07:58:21 -0300
+
+darktable (3.4.1-1) unstable; urgency=medium
+
+  * Update to new upstream version 3.4.1.
+  * Bug fix: "use default values for empty config settings", thanks to
+    Fabian Inostroza (Closes: #969137).
+
+ -- David Bremner <bremner@debian.org>  Sat, 06 Feb 2021 12:42:43 -0400
+
+darktable (3.4.0-2) unstable; urgency=medium
+
+  * Bug fix: "FTBFS on arm64", thanks to Pascal Obry (Closes: #978936).
+    Cherry picked upstream commit 3e0604a
+
+ -- David Bremner <bremner@debian.org>  Fri, 08 Jan 2021 07:52:30 -0400
+
+darktable (3.4.0-1) unstable; urgency=medium
+
+  * New upstream release
+    - New module grouping feature
+    - Module masking enhanced for use with scene-referred workflows.
+    - New color calibration module.
+    - Updated map view
+
+ -- David Bremner <bremner@debian.org>  Fri, 25 Dec 2020 15:59:42 -0400
+
+darktable (3.2.1-3) unstable; urgency=medium
+
+  * Bug fix: "export as web gallery broken", thanks to Jonas Smedegaard
+    (Closes: #713974).
+  * Bug fix: "Superfluous dependencies", thanks to astian (Closes:
+    #960047).
+
+ -- David Bremner <bremner@debian.org>  Fri, 28 Aug 2020 07:50:50 -0300
+
+darktable (3.2.1-2) unstable; urgency=medium
+
+  * update debian/changelog for src/external/libxcf
+
+ -- David Bremner <bremner@debian.org>  Mon, 10 Aug 2020 21:42:19 -0300
+
+darktable (3.2.1-1) unstable; urgency=medium
+
+  * New upstream feature release
+  * See /usr/share/doc/darktable/RELEASE_NOTES.md for changes and new
+    features.
+
+ -- David Bremner <bremner@debian.org>  Mon, 10 Aug 2020 20:21:15 -0300
+
+darktable (3.0.2-1) unstable; urgency=medium
+
+  * Bug fixes since 3.0.1
+  - Fix color peaking mode in culling mode.
+  - Fix single expanded module in some cases.
+  - Fix a watermark issue that could crash darktable.
+  - Fix issue with gradient mask rotation in some cases.
+  - Fix upward compatibility support in base adjustment module.
+  - Fix issues on some Lut 3D files.
+  * Bug fixes since 3.0.0
+  - All valid Lut files are displayed in file selector.
+  - Fix straightening in crop and rotate module when flip is applied.
+  - The ellipse and gradient masks can now be manipulated when the crop
+    and rotate flip is activated.
+  - Fix style editing from lighttable. The modules list was empty due to
+    an error in SQL statement.
+  - Make clicking on group icon easier. The active zone around the group
+    icon was too small.
+  - Make sure no more than 64 spots are added in spot removal module and
+    display a message when the limit is reached.
+  - Delay histogram display until the image is fully loaded and so the
+    corresponding histogram is ready.
+  - Properly update the XMP when doing undo/redo actions.
+  - Fix discrepancies between the SSE/OpenCL local Laplacian code paths.
+  - Exports should now better respect the final dimensions requested.
+  - Fix issues with brush opacity handling.
+  - Better performance for computing the aspect ratio.
+  - Better visibility of tone curve grid on Grey theme.
+  - Better accuracy for the keystone OSD lines.
+  - Better performance and accuracy improvements for the waveform histogram.
+  - Fix brush OSD when in zoom mode. The brushes are now keeping thin
+    lines.
+  - Fix watermark blurring when using rotation.
+  - Fix using apostrophe in meta-data.
+  - Fix time-line display reporting 61 minutes per hour.
+  - Remove wrong presets in RGB-curve module.
+  * Convert to debhelper-compat=12
+
+ -- David Bremner <bremner@debian.org>  Sat, 18 Apr 2020 19:19:20 -0300
+
+darktable (3.0.0-1) experimental; urgency=medium
+
+  * Major upstream feature release.
+
+ -- David Bremner <bremner@debian.org>  Mon, 30 Dec 2019 08:47:11 -0400
+
+darktable (2.6.3-1) unstable; urgency=medium
+
+  * New upstream bugfix release
+  * New Features
+    - April 1st game is now disabled by default
+    - Print module default margin set 17mm
+    - Add support for disabling base-curve by default
+    - Add support for disabling sharpen by default
+  * Bugfixes
+    - Source with OpenMP can be compiled with GCC-9 and clang (Closes: #944164).
+    - Update skin tone preset on color-zones module
+    - Fix compiling with exiv 0.27.2.1
+    - Fix picasa, piwigo and facebook SSL support
+  * Camera Support
+    - Epson R-D1s, R-D1x
+    - Fujifilm FinePix F770EXR, X-T30 (compressed), XF10
+    - Kodak EasyShare Z981, Z990
+    - Leica C (Typ 112) (4:3), CL (dng) Q (Typ 116) (dng), Q2 (dng), SL
+      (Typ 601) (dng), V-LUX (Typ 114) (3:2, 4:3, 16:9, 1:1)
+    - Olympus E-M1X, TG-6
+    - Panasonic DC-G90 (4:3), DC-G91 (4:3), DC-G95 (4:3), DC-G99 (4:3), DC-ZS200 (3:2),
+      DMC-TX1 (3:2)
+    - Sony DSC-RX0M2, ILCE-6400, ILCE-7RM4
+  * Balance Presets/Profiles: Panasonic DC-LX100M2
+
+ -- David Bremner <bremner@debian.org>  Sat, 23 Nov 2019 15:08:08 -0400
+
+darktable (2.6.2-3) unstable; urgency=medium
+
+  * Add missing build-depends on g++-8
+
+ -- David Bremner <bremner@debian.org>  Sun, 08 Sep 2019 20:00:54 -0300
+
+darktable (2.6.2-2) unstable; urgency=medium
+
+  * upload to unstable
+  * Force build to use gcc-8 (Closes: #939755).
+
+ -- David Bremner <bremner@debian.org>  Sun, 08 Sep 2019 11:43:47 -0300
+
+darktable (2.6.2-1) experimental; urgency=medium
+
+  * New upstream bugfix release
+  * Fixes from 2.6.2
+  - Fix SSE bug introduced in #2025
+  - Fix issue when looking for input color profile (backward compatibility)
+  - Add missing Czech translation file
+  - Fix possible halo issue in local contrast module.
+  - Fix contextual help link to point to new HTML manual for 2.6 series.
+  * Fixes from 2.6.1
+  - fix collect module filters
+  - fix retouch module, mask areas are properly taking into account
+    the source and destination
+  - fix navigation from darkroom when groups are present and collapsed
+  - fix a rare issue where masks could "jump" to some random location
+  - keep reference point (mouse position) when zooming above 200%
+  - title and description filters are now properly working
+  - minor UI fixes to gain some spaces in darktable modules
+  - fix masks detection over the mouse in some complex ca
+
+ -- David Bremner <bremner@debian.org>  Sun, 14 Apr 2019 13:55:53 -0300
+
+darktable (2.6.0-1) unstable; urgency=medium
+
+  * New upstream release
+    - new module retouch allowing changes based on image frequency layers
+    - new module filmic which can replace  base curve and shadows & highlights
+    - new module to handle duplicates in the darkroom
+    - new logarithm controls for the tone-curve
+    - new mode for the unbreak profile module
+    - add mask preview to adjust size, hardness before placing them
+    - make it possible to change the cropped area in perspective correction
+    - the mask blur has been complemented with a guided-filter to fine tune it
+    - color balance module has two new modes based on ProPhotoRGB and HSL
+
+ -- David Bremner <bremner@debian.org>  Wed, 26 Dec 2018 08:36:25 +0900
+
+darktable (2.4.4-2) unstable; urgency=medium
+
+  * Enable link time optimization for rawspeed, thanks to Roman Lebedev
+
+ -- David Bremner <bremner@debian.org>  Sat, 01 Dec 2018 08:41:39 -0400
+
+darktable (2.4.4-1) unstable; urgency=medium
+
+  * New upstream bugfix release
+
+ -- David Bremner <bremner@debian.org>  Sun, 10 Jun 2018 14:57:00 -0300
+
+darktable (2.4.3-1) unstable; urgency=medium
+
+  * New upstream bugfix release
+
+ -- David Bremner <bremner@debian.org>  Mon, 07 May 2018 19:30:50 -0300
+
+darktable (2.4.2-1) unstable; urgency=medium
+
+  * New upstream bugfix release
+
+ -- David Bremner <bremner@debian.org>  Thu, 29 Mar 2018 11:54:26 -0300
+
+darktable (2.4.1-1) unstable; urgency=medium
+
+  * New upstream bugfix release
+
+ -- David Bremner <bremner@debian.org>  Sun, 11 Mar 2018 09:00:36 -0500
+
+darktable (2.4.0-1) unstable; urgency=medium
+
+  * New upstream release
+    * A new module for haze removal
+    * The local contrast module can now be pushed much further, it also got
+      a new local laplacian mode
+    * Add undo support for masks and more intelligent grouping of undo steps
+    * Blending now allows to display individual channels using false colors
+    * darktable now supports loading Fujifilm compressed RAFs
+    * darktable now supports loading floating point HDR DNGs as written by
+      HDRMERGE
+    * Added channel specific blend modes for Lab and RGB color spaces
+    * The base curve module allows for more control of the exposure fusion
+      feature using the newly added bias slider
+    * The tonecurve module now supports auto colour adjustment in RGB
+    * Add absolute color input as an option to the color look up table
+      module
+    * A new X-Trans demosaicing algorithm, Frequency Domain Chroma, was
+      implemented.
+    * XMP sidecar files are no longer written to disk when the content
+      didn't actually change. That mostly helps with network storage and
+      backup systems that use files' time stamps
+  * Assert compliance with Debian policy 4.1.2
+
+ -- David Bremner <bremner@debian.org>  Sun, 24 Dec 2017 20:31:45 -0400
+
+darktable (2.4.0~rc2-1) experimental; urgency=medium
+
+  * Upstream release candidate
+  * Remove src/external/lua in clean
+  * Move lua build-dependency to liblua5.3-dev
+  * Build-depend only on libtiff-dev, drop libtiff5-dev
+
+ -- David Bremner <bremner@debian.org>  Thu, 21 Dec 2017 21:21:16 -0400
+
+darktable (2.4.0~rc1-1) experimental; urgency=medium
+
+  * Upstream release candidate
+  * Update Vcs-* to use https
+
+ -- David Bremner <bremner@debian.org>  Fri, 15 Dec 2017 09:04:46 -0400
+
+darktable (2.2.5-2) unstable; urgency=medium
+
+  * rebuild for unstable
+
+ -- David Bremner <bremner@debian.org>  Mon, 03 Jul 2017 09:54:20 -0300
+
+darktable (2.2.5-1) experimental; urgency=medium
+
+  * New upstream bugfix release
+  * New Features
+  - When appending EXIF data to an exported image, do not fail if reading of EXIF from the original file fails
+  - Support XYZ as proofing profile
+  - Clear DerivedFrom from XMP before writing it
+  - bauhaus: when using soft bounds, keep slider step constant
+  * Bugfixes
+  - Some GCC7 build fixes
+  - cmstest: fix crash when missing XRandR extension.
+  - Fix crash in Lua libs when collapsing libs
+  - RawSpeed: TiffIFD: avoid double-free
+  - Fix a few alloc-dealloc mismatches
+  * Base Support:
+  - Canon EOS 77D
+  - Canon EOS 9000D
+  - Nikon D500 (14bit-uncompressed, 12bit-uncompressed)
+  - Nikon D5600 (12bit-compressed, 12bit-uncompressed, 14bit-compressed, 14bit-uncompressed)
+  - Panasonic DC-FZ82 (4:3)
+  - Panasonic DMC-FZ80 (4:3)
+  - Panasonic DMC-FZ85 (4:3)
+  - Panasonic DC-GH5 (4:3)
+  * White Balance Presets:
+  - Pentax K-3 II
+  * Noise Profiles:
+  - Nikon D500
+  - Panasonic DMC-FZ300
+  - Panasonic DMC-LX100
+  - Pentax K-70
+  - Sony ILCE-5000
+
+ -- David Bremner <bremner@debian.org>  Sun, 04 Jun 2017 12:36:17 -0300
+
+darktable (2.2.4-1) experimental; urgency=medium
+
+  * Assert compliance with policy 3.9.8
+  * New upstream bugfix release
+   - DNG: fix camera name demangling.
+   - When using wayland, prefer XWayland
+   - EXIF: properly handle image orientation '2' and '4' (swap them)
+   - masks: avoid assertion failure in early phase of path generation,
+   - masks: reduce risk of unwanted self-finalization of small path shapes
+   - Camera import: fix ignore_jpg setting not having an effect
+   - Picasa web exporter: unbreak after upstream API change
+   - collection: fix query string for folders
+  * Camera Support
+   - Fujifilm X-T20 (only uncompressed raw, at the moment)
+   - Fujifilm X100F (only uncompressed raw, at the moment)
+   - Nikon COOLPIX B700 (12bit-uncompressed)
+   - Olympus E-M1MarkII
+   - Panasonic DMC-TZ61 (4:3, 3:2, 1:1, 16:9)
+   - Panasonic DMC-ZS40 (4:3, 3:2, 1:1, 16:9)
+   - Sony ILCE-6500
+
+ -- David Bremner <bremner@debian.org>  Sun, 16 Apr 2017 11:58:35 -0300
+
+darktable (2.2.3-4) experimental; urgency=medium
+
+  * Drop i386 in experimental as well.
+
+ -- David Bremner <bremner@debian.org>  Fri, 10 Mar 2017 15:33:43 -0400
+
+darktable (2.2.3-3) experimental; urgency=medium
+
+  * Use CMAKE_BUILD_TYPE=Release
+
+ -- David Bremner <bremner@debian.org>  Tue, 07 Mar 2017 12:07:50 -0400
+
+darktable (2.2.3-2) experimental; urgency=medium
+
+  * Build with -O3 by default
+
+ -- David Bremner <bremner@debian.org>  Sun, 05 Mar 2017 10:04:43 -0400
+
+darktable (2.2.3-1) experimental; urgency=medium
+
+  * New upstream bugfix release
+
+ -- David Bremner <bremner@debian.org>  Sun, 19 Feb 2017 09:54:02 -0400
+
+darktable (2.2.1-3) unstable; urgency=medium
+
+  * Drop support for 32bit intel (i386) architectures (Closes: #857147)
+    - Upstream no longer supports 32bit address spaces.
+    - The i386 build is reported to be unstable.
+
+ -- David Bremner <bremner@debian.org>  Fri, 10 Mar 2017 13:41:38 -0400
+
+darktable (2.2.1-2) unstable; urgency=medium
+
+  * re-re-enable arm64 (sigh)
+  * re-remove some extra build-deps
+
+ -- David Bremner <bremner@debian.org>  Mon, 02 Jan 2017 13:54:11 -0400
+
+darktable (2.2.1-1) unstable; urgency=medium
+
+  * Upstream bugfix release
+  - Fix crash when using undo after re-entering darkroom
+  - Fix rare crashes after deleting second instance of module.
+  - Levels and tonecurve modules now also use 256 bins.
+  - Rawoverexposed module: fix visualization when a camera custom white
+    balance preset is used
+
+ -- David Bremner <bremner@debian.org>  Mon, 02 Jan 2017 09:00:32 -0400
+
+darktable (2.2.0-2) unstable; urgency=medium
+
+  * Re-enable arm64
+
+ -- David Bremner <bremner@debian.org>  Mon, 26 Dec 2016 07:40:21 +0900
+
+darktable (2.2.0-1) unstable; urgency=medium
+
+  * Upstream feature release
+  * Automatic perspective correction module
+  * Liquify tool for all your fancy pixel moving
+  * Image module to use a Color Look Up Table to change colors in the image
+  * Highlight reconstruction module, the mode LCh reconstruction rewritten
+  * New tool darktable-chart, that goes along with the CLUT module
+  * Exposure fusion in the basecurve module to lower the dynamic range of images
+  * Raw overexposure indication
+  * Darkroom: the preview (in top-left corner) is now no longer pre-demosaiced
+  * Split the database into a library containing images and a general one with styles,
+    presets and tags.
+
+ -- David Bremner <bremner@debian.org>  Sun, 25 Dec 2016 08:07:55 +0900
+
+darktable (2.2.0~rc1+dfsg1-2) experimental; urgency=medium
+
+  * Enable arm64
+
+ -- David Bremner <bremner@debian.org>  Fri, 25 Nov 2016 07:23:53 -0400
+
+darktable (2.2.0~rc1+dfsg1-1) experimental; urgency=medium
+
+  * Upstream release candidate for new feature release.
+
+ -- David Bremner <bremner@debian.org>  Wed, 23 Nov 2016 20:24:25 -0400
+
+darktable (2.0.7-1) unstable; urgency=medium
+
+  * New upstream camera-support / bugfix release
+  * Support for Canon EOS 100D, 300D, 6D, 700D, 80D (sRaw1, sRaw2) Powershort A720 IS (dng)
+  * Support for Fujifilm FinePix S100FS
+  * Support for Nikon D3400 (12bit-compressed)
+  * Support for Panasonic DMC FZ300, G8, G80, G85 (all 4:3)
+  * Support for Pentax K-70
+  * Fixed Base support for many Nikon cameras.
+  * Dropped support for Nikon E8400, E8800, DX3 (12-bit), Df (12-bit)
+
+ -- David Bremner <bremner@debian.org>  Wed, 26 Oct 2016 22:16:14 -0300
+
+darktable (2.0.6-1) unstable; urgency=low
+
+  * New upstream bug fix release
+  * Bug fix: "Issues with the latest gtk3 update", thanks to Yuri D'Elia
+    (Closes: #836739).
+  * Fix internal build issue: do not assume that Perl's @INC contains '.'
+  * OpenCL: properly discard CPU-based OpenCL devices. Fixes crashes on
+    startup with some partial OpenCL implementations like pocl.
+  * Bug fix: "darktable 2.0.5 crashes on OpenCL", thanks to Marc
+    J. Driftmeyer (Closes: #831819).
+  * Cherry-pick  abfa552,  5624412, 011d98d, eb7c475, 18d2b9d from
+    next bugfix release. Whitelevel fixes for Nikon.
+  * Other bugfixes and camera support improvements (see upstream release notes).
+
+ -- David Bremner <bremner@debian.org>  Mon, 05 Sep 2016 14:56:10 -0300
+
+darktable (2.0.5-2) unstable; urgency=medium
+
+  * Cherry pick PR 1217 from upstream, fix for openjpeg2 (Closes: #826810)
+  * Build depend on libopenjp2-7-dev instead of libopenjpeg-dev
+
+ -- David Bremner <bremner@debian.org>  Thu, 14 Jul 2016 09:46:55 -0300
+
+darktable (2.0.5-1) unstable; urgency=medium
+
+  * new upstream bug fix release
+  * New Features
+    - Add geolocation to watermark variables
+  * Bugfixes
+    - Lua: fixed dt.collection not working
+    - Fix softproofing with some internal profiles
+    - Fix non-working libsecret pwstorage backend
+    - Fixed a few issues within (rudimentary) lightroom import
+    - Some fixes related to handling of duplicates and/or tags
+   * Camera Support
+    - Canon EOS 80D (no mRAW/sRAW support!)
+
+ -- David Bremner <bremner@debian.org>  Mon, 11 Jul 2016 19:48:33 -0300
+
+darktable (2.0.4-1) unstable; urgency=medium
+
+  * New upstream bug fix release
+  * Improve compatibility with libgtk-3-0 3.20
+
+ -- David Bremner <bremner@debian.org>  Tue, 03 May 2016 18:32:43 -0300
+
+darktable (2.0.3-2) unstable; urgency=medium
+
+  * remove build dep libdbus-glib-1-dev, thanks to Roman Lebedev.
+
+ -- David Bremner <bremner@debian.org>  Sat, 09 Apr 2016 11:19:26 -0300
+
+darktable (2.0.3-1) unstable; urgency=medium
+
+  * New upstream bugfix release
+  * Remove debug package, replaced by -dbgsym package
+
+ -- David Bremner <bremner@debian.org>  Thu, 31 Mar 2016 19:28:25 -0300
+
+darktable (2.0.2-2) experimental; urgency=medium
+
+  * Build against lensfun 0.3.2-2
+
+ -- David Bremner <bremner@debian.org>  Mon, 07 Mar 2016 17:44:53 -0400
+
+darktable (2.0.2-1) unstable; urgency=medium
+
+  * New upstream bugfix release
+
+ -- David Bremner <bremner@debian.org>  Sun, 06 Mar 2016 13:24:21 -0400
+
+darktable (2.0.1-1) unstable; urgency=medium
+
+  * New upstream bugfix release
+
+ -- David Bremner <bremner@debian.org>  Fri, 05 Feb 2016 22:32:56 -0400
+
+darktable (2.0.0-1) unstable; urgency=medium
+
+  * Add build-dep on libcolord-gtk-dev
+  * Major new upstream version.
+  * new print mode, reworked screen color management (softproof, gamut
+    check etc.), delete/trash feature, pdf export
+  * new image operations: color reconstruction module; magic lantern-style
+    deflicker was added to exposure module; text watermarks; updated
+    shadows-and-highlights; monochrome raw demosaicing; raw black/white
+    point module
+  * 32-bit support is soft-deprecated due to limited virtual address space
+  * lua scripting can now control more of the UI.
+  * New camera support, compared to 1.6.9: Canon PowerShot G5 X; Olympus
+    SP320; Panasonic DMC-FZ150 (3:2), DMC-FZ70 (1:1, 3:2, 16:9), DMC-FZ72
+    (1:1, 3:2, 16:9), DMC-GF7 (1:1, 3:2, 16:9), DMC-GX8 (4:3), DMC-LF1
+    (3:2, 16:9, 1:1); Sony DSC-RX10M2
+  * New white balance presets: Canon EOS M3, EOS-1D Mark III, EOS-1Ds Mark
+    III, PowerShot G1 X, PowerShot G1 X Mark II, PowerShot G15, PowerShot
+    G16, PowerShot G3 X, PowerShot G5 X, PowerShot S110; Panasonic
+    DMC-GX8, DMC-LF1; Pentax *ist DL2; Sony DSC-RX1, DSC-RX10M2, DSC-RX1R,
+    DSLR-A500, DSLR-A580, ILCE-3000, ILCE-5000, ILCE-5100, ILCE-6000,
+    ILCE-7S, ILCE-7SM2, NEX-3N, NEX-5T, NEX-F3, SLT-A33, SLT-A35
+  * New Noise Profiles: Canon EOS M3; Fujifilm X-E1, X30; Nikon Coolpix
+    P7700; Olympus E-M10 Mark II, E-M5 Mark II, E-PL3; Panasonic DMC-GX8,
+    DMC-LF1; Pentax K-50; Sony DSC-RX1, DSC-RX10M2, ILCA-77M2, ILCE-7M2,
+    ILCE-7RM2, SLT-A58
+
+ -- David Bremner <bremner@debian.org>  Tue, 22 Dec 2015 19:56:15 -0400
+
+darktable (2.0~rc4-2) experimental; urgency=medium
+
+  * Bug fix: "Change of name for osm-gps-map dev package", thanks to Ross
+    Gammon (Closes: #808089).
+  * Bug fix: "debian packaging: debian/copyright needs updating", thanks
+    to Roman Lebedev (Closes: #808037).
+  * Remove lintian overrides (warning is gone).
+  * Remove dependency on libgtk2-engines
+
+ -- David Bremner <bremner@debian.org>  Sun, 20 Dec 2015 07:56:19 -0400
+
+darktable (2.0~rc4-1) experimental; urgency=medium
+
+  * New upstream release candidate
+
+ -- David Bremner <bremner@debian.org>  Mon, 14 Dec 2015 19:45:05 -0400
+
+darktable (2.0~rc3-1) experimental; urgency=medium
+
+  * New upstream release candidate
+
+ -- David Bremner <bremner@debian.org>  Sat, 05 Dec 2015 10:05:10 -0400
+
+darktable (1.6.9-1) unstable; urgency=medium
+
+  * New upstream bugfix release
+
+ -- David Bremner <bremner@debian.org>  Tue, 20 Oct 2015 21:14:00 -0300
+
+darktable (1.6.8-1) unstable; urgency=medium
+
+  * New upstream bugfix release.
+
+ -- David Bremner <bremner@debian.org>  Fri, 31 Jul 2015 16:35:10 +0200
+
+darktable (1.6.7-2) unstable; urgency=medium
+
+  * Bug fix: "Export is broken err [imageio_storage_disk] could not export
+    to file", thanks to Roman Lebedev (Closes: #792209).
+
+ -- David Bremner <bremner@debian.org>  Tue, 14 Jul 2015 07:17:34 +0200
+
+darktable (1.6.7-1) unstable; urgency=medium
+
+  * Bug fix: "no longer ships gphoto2-{, port-}config which breaks
+    FindGphoto2.cmake", thanks to Emilio Pozuelo Monfort (Closes:
+    #783821).
+  * Bug fix: "CVE-2015-3885: input sanitization flaw leading to buffer
+    overflow", thanks to Salvatore Bonaccorso (Closes: #786792).
+
+ -- David Bremner <bremner@debian.org>  Sun, 07 Jun 2015 23:23:34 +0200
+
+darktable (1.6.6-2) unstable; urgency=medium
+
+  * Bug fix: "Install appstream appdata", thanks to Marcus Lundblad
+    (Closes: #785663).
+
+ -- David Bremner <bremner@debian.org>  Tue, 19 May 2015 17:12:18 +0200
+
+darktable (1.6.6-1) unstable; urgency=medium
+
+  * New upstream bug fix release
+
+ -- David Bremner <bremner@debian.org>  Fri, 08 May 2015 22:55:46 +0200
+
+darktable (1.6.4-1) experimental; urgency=medium
+
+  * New upstream bugfix release.
+
+ -- David Bremner <bremner@debian.org>  Fri, 10 Apr 2015 06:02:35 +0900
+
+darktable (1.6.3-1) experimental; urgency=medium
+
+  * New upstream bugfix release
+
+ -- David Bremner <bremner@debian.org>  Mon, 02 Mar 2015 05:22:44 +0100
+
+darktable (1.6.2-1) experimental; urgency=medium
+
+  * New upstream bugfix release.
+
+ -- David Bremner <bremner@debian.org>  Tue, 03 Feb 2015 20:36:36 +0100
+
+darktable (1.6.1-2) experimental; urgency=medium
+
+  * cherry pick patch from 1.6.x to support OnePlus One phone
+
+ -- David Bremner <bremner@debian.org>  Fri, 02 Jan 2015 00:30:59 +0100
+
+darktable (1.6.1-1) experimental; urgency=medium
+
+  * New upstream bugfix release
+
+ -- David Bremner <bremner@debian.org>  Mon, 22 Dec 2014 19:44:01 +0100
+
+darktable (1.6.0-2) experimental; urgency=medium
+
+  * cherry pick patch from 1.6.x branch to fix 'flip' related crash
+
+ -- David Bremner <bremner@debian.org>  Tue, 09 Dec 2014 18:20:33 +0100
+
+darktable (1.6.0-1) experimental; urgency=medium
+
+  * New upstream release; see /usr/share/doc/darktable/RELEASE_NOTES for
+    new features and camera support.
+
+ -- David Bremner <bremner@debian.org>  Sun, 07 Dec 2014 20:38:20 +0100
+
+darktable (1.4.2-1) unstable; urgency=medium
+
+  * New upstream release.
+    - Cleanup of large image handling, memory leaks, masks,
+      TIFF reader/writer
+    - Tonecurve no longer clamps the gamut
+    - Map view: only connect to the map server when active
+    - Use filesystem timestamp for images lacking EXIF
+    - Sync AMAZE code from RawTherapee
+    - Olympus: improved lens detection, focus distance detection.
+    - SONY ILCE-7(R) garbage pixels are now cut off
+    - Experimental support for Nikon D5300, Nikon D3300, Samsung NX1100,
+      Samsung NX30
+    - Very experimental support for Olympus E-M10 (color rendering is still
+      subject to future change, and may retroactively affect your image library
+      for this camera)
+    - New white balance presets for: Nikon D610, Olympus E-PL5, Olympus
+      E-PM2
+
+ -- David Bremner <bremner@debian.org>  Sun, 04 May 2014 12:35:36 +0900
+
+darktable (1.4.1-1) unstable; urgency=medium
+
+  [ Jackson Doak ]
+  * New upstream release.
+  * debian/control:
+    - Update libgphoto build-depends. Closes: #736221, 739350
+    - Bump standards-version to 3.9.5 (no changes)
+    - Use canonical git URLs
+    - Mention debug in the short description of darktable-dbg
+
+ -- David Bremner <bremner@debian.org>  Sun, 23 Mar 2014 09:37:22 -0300
+
+darktable (1.4-2) unstable; urgency=low
+
+  * Bug fix: "add LUA support", thanks to Steve Pomeroy (Closes: #735126).
+
+ -- David Bremner <bremner@debian.org>  Sun, 12 Jan 2014 19:43:13 -0400
+
+darktable (1.4-1) unstable; urgency=medium
+
+  * New upstrean version; see /usr/share/doc/darktable/RELEASE_NOTES for
+    upstream changes (Closes: #733246).
+
+ -- David Bremner <bremner@debian.org>  Tue, 31 Dec 2013 08:48:23 -0400
+
+darktable (1.4~rc1-1) experimental; urgency=low
+
+  * Upstream release candidate; see /usr/share/doc/darktable/RELEASE_NOTES for
+    upstream changes.
+  * Bug fix: "segmentation fault when exporting website-gallery", thanks
+    to IOhannes m zmoelnig (Closes: #709174).
+
+ -- David Bremner <bremner@debian.org>  Tue, 03 Dec 2013 10:26:58 -0400
+
+darktable (1.2.3-1) unstable; urgency=low
+
+  * New upstream release
+    - libraw fix from 1.2.2-2 is now upstream (in darktable)
+    - Updates and new hardware: update to RawSpeed r570, Canon 70D
+      (preliminary), Olympus E-P5 (incl. preliminary Adobe Coeff.),
+      Samsung NX2000, Sony RX100m2, Sony SLT-A58 (updated)
+    - White Balance Presets: Sony NEX-5R, Sony SLT-A58, Nikon D3200
+      (updated), Pentax K20D
+    - Enhanced Color Matrix: Pentax K20D
+    - Noise Profiles: Canon EOS 1100D == Canon EOS Rebel T3, Canon
+      PowerShot S95, Canon PowerShot G11, Nikon Coolpix P330, Sony A580,
+      Fuji X10, Pentax K20D
+    - Fixes and improvements:
+       - Increased maximum cache size to 8GB
+       - Adjustments to default lowpass blur settings
+       - Adjustments to dithering slider ranges
+       - Metadata viewer: fix display of focal length
+       - Chromatic Aberrations: fix segfault for small buffers
+       - Color pickers: fix various issues
+       - More guides for Crop & Rotate
+       - Improve light table usability
+       - Soften: speed improvements by using SSE and OpenMP
+       - Deleting images from camera is not supported anymore for safety.
+       - Exposure module now supports multiple instances
+       - Support for custom meta data burn in
+       - PFM: load timestamp as date & time taken.
+       - Fix bug prohibiting image rating by mouse
+       - Update Picasa uploader: references Google+ now
+       - Some fixes for memory leaks, deadlocks, background jobs
+       - Fixes of on-screen handles for Crop&Rotate and GND modules
+       - 0 bytes files will no longer be imported but ignored
+
+ -- David Bremner <bremner@debian.org>  Thu, 12 Sep 2013 06:44:59 -0300
+
+darktable (1.2.2-2) unstable; urgency=medium
+
+  * Port libraw commit c4e374ea. This one commit is a fix for two bugs.
+    - Bug fix: "darktable: multiple vulnerabilities", thanks to Raphael
+      Geissert (Closes: #721233).
+    - Bug fix: "darktable: multiple vulnerabilities", thanks to Raphael
+      Geissert (Closes: #721339).
+
+ -- David Bremner <bremner@debian.org>  Thu, 12 Sep 2013 06:43:59 -0300
+
+darktable (1.2.2-1) unstable; urgency=low
+
+  * New upstream "hardware support release"
+    - updated rawspeed r553. Support for Canon EOS 700D, Nikon Coolpix
+      P330, New Olymbus base curve Updated Adobe Coeffs
+    - Enhanced color matrices: Canon 700D (from Canon 650D), Canon 100D
+      (from Canon 650D), Sony NEX-7
+    - White balance presets: Some updates from UFRaw, Canon 100D, Canon
+      700D, Sony SLT-A37 Nikon, Coolpix P330
+    - Noise profiles: Canon EOS-M, Olympus E-600 (from: Olympus E-30),
+      Olympus E-620 (from: Olympus E-30), Samsung WB2000, Sony A99v,
+      Panasonic DMC-G10 iso 100, Nikon D60
+    - Bug fixes: 0 star rating working again, LT: ctrl+d duplicates per
+      default now, Some fixes concerning locale handling, double click on
+      film strip jumps to image, remember position in collections, ctrl+k
+      jumps to previous collection, Blending parameters are preserved when
+      module is deactivated, In full-preview (alt-1) ratings and labels are
+      only applied to image shown, libsquish compilation now optional, dr:
+      deactivate interpolation at 200% zoom
+
+ -- David Bremner <bremner@debian.org>  Sun, 28 Jul 2013 18:18:54 -0300
+
+darktable (1.2.1-2) unstable; urgency=medium
+
+  * Bug fix: "CVE-2013-2126: double free", thanks to Raphael Geissert
+    (Closes: #711316).
+
+ -- David Bremner <bremner@debian.org>  Sat, 15 Jun 2013 06:50:53 +0900
+
+darktable (1.2.1-1) unstable; urgency=low
+
+  * New upstream bugfix release (Closes: #710207).
+    - Blend mode "vividlight" should work for NaNs
+    - Whitebalance is now relative to daylight, not to camera white balance
+    - Now importing folder via key accelerator is supported.
+    - Only one temperature slider in white balance
+    - Some fixes to the zoom behaviour in darkroom mode
+    - Fix some possible deadlocks, memory leaks and null pointer dereferences
+
+ -- David Bremner <bremner@debian.org>  Wed, 29 May 2013 07:12:24 -0300
+
+darktable (1.2-1) experimental; urgency=low
+
+  * New upstream feature release (Closes: #705486).
+    - profiled denoise
+    - lightroom import
+    - multi instance support
+    - improved usability for distorting modules
+    - selective copy/paste of image processing
+    - new keystone correction tool
+    - jpeg2000 support
+    - graphics magick import
+    - dithering against banding.
+    - sharper thumbnails in lighttable mode.
+    - new oauth2 based picasa uploader.
+
+ -- David Bremner <bremner@debian.org>  Tue, 30 Apr 2013 19:09:45 -0300
+
+darktable (1.1.4-1) unstable; urgency=low
+
+  * New upstream bugfix release.
+    -  Keep the styles plugin usable after applying a style
+    - darktable should now be better able to import some of the data from
+      .xmp's from other applications
+    - Better redraw logic in darkroom mode
+    - It should be less likely to get blurry thumbnails in lighttable mode now
+    - On low end system use lower quality thumbnails
+    - Work around some malformed icc profiles
+    - Add a mandatory cprt tag to embedded icc profiles
+    - Prevent Adobe rgb related trademark issue
+    - Some fixes with regard to the colorpicker
+    - Tooltips should now be more easily distinguisable
+    - Fix build with new glib versions
+
+ -- David Bremner <bremner@debian.org>  Sat, 20 Apr 2013 10:36:53 -0300
+
+darktable (1.1.3-1) unstable; urgency=low
+
+  * New upstream camera support update and bugfix release:
+    - Check for glib 2.28 at config time.
+    - Don't sanitize exif when creating HDR DNGs
+    - Colorpicker now disappears immediately when disabling it
+    - Lens correction now uses loose lens matching (Ivan Tarozzi)
+    - Konica Minolta Dynax 5D rotation fix
+    - Removed an outdated assertion which could cause a crash in rare cases
+    - Fix crash when loading half-corrupted XMPs
+    - Fix crash when an imported file contains incomplete GPS information
+    - libjpeg-turbo workaround (Klaus Post)
+    - Preliminary support for nikon d5200
+    - White balance preset updates:
+      - Sony Alpha 700 (update to firmware v4)
+      - Sony Alpha 230 (new)
+      - Canon EOS 650d (new)
+      - Canon EOS Rebel T2i (fixed)
+      - Canon EOS M (fixed)
+    - Enhanced color rendition:
+      - Konica Minolta Dynax 5D (Wolfgang Kuehnel)
+      - Sony NEX 3 (Wolfgang Kuehnel)
+      - Sony Alpha 230 (Wolfgang Kuehnel)
+      - Sony RX100 (Josef Wells)
+
+ -- David Bremner <bremner@debian.org>  Sat, 09 Feb 2013 11:25:40 -0400
+
+darktable (1.1.2-1) unstable; urgency=low
+
+  * New upstream camera support update and bugfix release:
+    - fix export resolution rounding issue
+    - correctly set output dimension in exif instead of passing the raw
+      resolution verbatim
+    - local average green eq was fixed
+    - use ordered arrays in xmp files
+    - disable export parallelism for flickr/picasa export
+    - don't enter tethering mode when there is no camera attached
+    - bring back the pin for map thumbnails
+    - improved tiff support
+    - vignetting now has a dithering option
+    - read nikon subject distance properly
+    - assorted freebsd fixes
+    - various opencl fixes
+    - usermanual updates
+  * Support for the following camera's added or updated:
+    - canon eos 6d, powershot s110, powershot g15, powershot sx50 hs
+    - nikon 1 v2, d600, coolpix p7700
+    - olympus e pl5, e pm2, xz 2
+    - panasonic dmc gh3, dmc lx7
+    - pentax k5ii,  ex2f
+    - sony rx1, nex 6, slt a99
+    - sony nex c3 blackpoint/greenshift fix
+  * white balance preset updates:
+    - canon eos 550d, 5d mark iii
+    - olympus xz 1
+    - sony nex c3, slt a57, nex 5n
+    - panasonic dmc-gh3
+
+ -- David Bremner <bremner@debian.org>  Sat, 12 Jan 2013 09:15:30 -0400
+
+darktable (1.1.1-1) unstable; urgency=low
+
+  * New upstream release (1.1); Many new features and bug fixes.
+    - geotagging
+    - image similarity search
+    - improved sharpness and noise reduction
+    - improved color management
+    For more details see:
+    http://www.darktable.org/2012/11/released-darktable-1-1/
+  * Bug fix release (1.1.1)
+    - a curve related crash was fixed (Upstream: #9906)
+    - a deadlock in the lens correction module was fixed (Upstream: #9106)
+    For more details see: http://www.darktable.org/2012/12/released-1-1-1/
+  * Add versioned Build-Depends on debhelper
+  * Enable hardening flags.
+
+ -- David Bremner <bremner@debian.org>  Tue, 11 Dec 2012 17:39:11 -0400
+
+
+darktable (1.0.5-1) experimental; urgency=low
+
+  * New upstream release
+    - Update to RawSpeed r438
+    - Update to LibRaw 0.14.7
+    - White balance presets for Nikon Coolpix P7100 and Panasonic GF3
+    - White balance preset updates for Canon EOS 7D, Canon EOS 350D
+    - Standard Color Matrices for Canon EOS 650D, Canon EOS 5D Mark III,
+      Canon EOS 1D X, Canon PowerShot G1 X, Canon PowerShot SX220, Nikon
+      D3200, Nikon D4, Nikon D800, Olympus E-M5, Panasonic GF5, Sony
+      SLT-A37/A57, Leica X1/X2, Sony DSC-RX100
+  * Build with libtiff5 (Closes: #682588).
+  * Switch to debhelper compat 9, for hardening support
+  
+ -- David Bremner <bremner@debian.org>  Fri, 27 Jul 2012 06:59:38 -0300
+
+darktable (1.0.4-1) unstable; urgency=low
+
+  * New upstream release
+    - New warming/cooling filter presets for color correction plugin
+    - Correctly restore panels when using Tab.
+    - Checking if an export target directly is read-only
+    - Writing of hierarchical tags in .xmp has been improved
+    - disabled scrollwheel scrolling in darkroom mode
+    - Lighttable thumbnails are now color managed
+    - Improved color rendition:  Nikon D800, Canon EOS 5D Mark III
+    - Updated White balance presets.
+
+ -- David Bremner <bremner@debian.org>  Sun, 03 Jun 2012 20:13:24 -0300
+
+darktable (1.0.3-1) unstable; urgency=low
+
+  * Upstream bugfix release. Fixes include:
+    - upstream #275 "plugin with auto applied preset not disabled"
+    - upstream #364 "keywords plugin causes hang"
+    - upstream #365 "Watermark variable not correct"
+    - upstream #366/#399 "two bugs in preset functionality"
+  * New presets/matrices
+    - Sony NEX-7
+    - Canon 400D, 50F
+    - Nikon D800/D5100
+
+ -- David Bremner <bremner@debian.org>  Sun, 29 Apr 2012 08:30:00 -0300
+
+darktable (1.0-2) unstable; urgency=low
+
+  * Rebuild for unstable.
+
+ -- David Bremner <bremner@debian.org>  Sat, 24 Mar 2012 07:58:08 -0300
+
+darktable (1.0-1) experimental; urgency=low
+
+  * New upstream release
+  * Bug fix: "darktable gconf schemas cause warnings on each gconf2
+    trigger call", thanks to Julien Valroff (Closes: #624763).
+  * Bump standards version (no changes).
+
+ -- David Bremner <bremner@debian.org>  Thu, 15 Mar 2012 19:14:57 -0300
+
+darktable (0.9.3-2) unstable; urgency=low
+
+  * Bug fix: "Darktable is missing Flickr export option", thanks to Mike
+    Alborn (Closes: #644517).
+
+ -- David Bremner <bremner@debian.org>  Tue, 24 Jan 2012 17:27:06 -0400
+
+darktable (0.9.3-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- David Bremner <bremner@debian.org>  Sun, 13 Nov 2011 10:46:00 -0400
+
+darktable (0.9.2-1) unstable; urgency=low
+
+  * New upstream version
+  * (equivalents of) all patches now upstream
+
+ -- David Bremner <bremner@debian.org>  Sat, 27 Aug 2011 08:41:10 -0300
+
+darktable (0.9.1-2) unstable; urgency=low
+
+  * patch upstream copy of FindGTK2.cmake to work with multi-arch
+    (fixes KFreeBSD FTBFS).
+
+ -- David Bremner <bremner@debian.org>  Tue, 16 Aug 2011 23:07:57 -0300
+
+darktable (0.9.1-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- David Bremner <bremner@debian.org>  Tue, 02 Aug 2011 21:32:31 +0200
+
+darktable (0.9-1) unstable; urgency=low
+
+  * New upstream release.
+  * Remove all patches now upstream; only patch for
+    -Wno-error=unused-but-set-variable remains.
+  * Bump Standards-Version to 3.9.2 (no changes)
+
+ -- David Bremner <bremner@debian.org>  Tue, 12 Jul 2011 09:36:46 -0300
+
+darktable (0.8-4) unstable; urgency=low
+
+  * Really restrict architecture to any-i386, any-amd64
+  * Add -Wno-error=unused-but-set-variable (Closes: #625315)
+
+ -- David Bremner <bremner@debian.org>  Tue, 03 May 2011 22:19:33 -0300
+
+darktable (0.8-3) unstable; urgency=low
+
+  * Restrict architecture to any-i386, any-amd64
+  * Backport upstream commits to more gracefully deal with missing sse2
+    support (Closes: #623393).
+
+ -- David Bremner <bremner@debian.org>  Thu, 21 Apr 2011 22:35:03 -0300
+
+darktable (0.8-2) unstable; urgency=low
+
+  * Enable cmake option BINARY_PACKAGE_BUILD, which disables build host
+    specific optimizations.
+
+ -- David Bremner <bremner@debian.org>  Thu, 14 Apr 2011 23:42:12 -0300
+
+darktable (0.8-1) unstable; urgency=low
+
+  [ Bernd Zeimetz ]
+  * Initial release (Closes: #553359)
+
+ -- David Bremner <bremner@debian.org>  Tue, 22 Feb 2011 07:58:31 -0400

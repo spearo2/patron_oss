@@ -1,0 +1,10 @@
+Tests: xfig-testsuite
+Restrictions: rw-build-tree
+Depends: autoconf,
+         debhelper,
+         desktop-file-utils,
+         libpng-dev,
+         libx11-dev,
+         libxt-dev,
+         xaw3dg-dev,
+         xfig

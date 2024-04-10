@@ -1,0 +1,2 @@
+debian/xscanimage-icon-32x32-2.xpm usr/share/sane
+debian/sane/usr/bin/xscanimage usr/lib/gimp/2.0/plug-ins/xscanimage

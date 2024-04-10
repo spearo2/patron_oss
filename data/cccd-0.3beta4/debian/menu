@@ -1,0 +1,2 @@
+?package(cccd):needs="X11" section="Applications/Sound" \
+  title="cccd" command="/usr/bin/cccd"

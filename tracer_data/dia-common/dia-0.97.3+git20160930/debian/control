@@ -1,0 +1,55 @@
+Source: dia
+Section: graphics
+Priority: optional
+Maintainer: Rodrigo Carvalho <rodrigorsdc@gmail.com>
+Standards-Version: 4.5.0
+Build-Depends: autoconf,
+	automake,
+	dblatex,
+	debhelper (>= 10),
+	docbook-xml,
+	docbook-xsl,
+	intltool,
+	libart-2.0-dev,
+	libfreetype6-dev,
+	libglib2.0-dev,
+	libgtk2.0-dev,
+	libpango1.0-dev,
+	libpng-dev,
+	libpopt-dev,
+	libtool,
+	libxml-parser-perl,
+	libxml2-dev,
+	libxslt1-dev,
+	texlive-lang-cyrillic,
+	texlive-lang-french,
+	texlive-lang-german,
+	xml-core,
+	xsltproc
+Build-Conflicts: autoconf2.13,
+	dia-shapes
+Homepage: https://wiki.gnome.org/Apps/Dia/
+
+Package: dia-common
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Recommends: dia
+Description: Diagram editor (common files)
+ Dia is an editor for diagrams, graphs, charts etc. There is support for UML
+ static structure diagrams (class diagrams), Entity-Relationship diagrams,
+ network diagrams and much more. Diagrams can be exported to postscript and
+ many other formats.
+ .
+ This package contains the architecture independent files.
+
+Package: dia
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, dia-common (=${source:Version})
+Recommends: gsfonts-x11, dia-shapes
+Breaks: dia-libs (<< 0.97.3+git20160904-1~)
+Replaces: dia-libs (<< 0.97.3+git20160904-1~)
+Description: Diagram editor
+ Dia is an editor for diagrams, graphs, charts etc. There is support for UML
+ static structure diagrams (class diagrams), Entity-Relationship diagrams,
+ network diagrams and much more. Diagrams can be exported to postscript and
+ many other formats.

@@ -1,0 +1,43 @@
+#!/usr/bin/make -f
+#export DH_VERBOSE=1
+
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+
+%:
+	dh $@
+
+override_dh_auto_configure:
+	dh_auto_configure -- --enable-gimp
+
+override_dh_auto_clean:
+	dh_auto_clean
+
+	rm -f config.sub config.guess
+	rm -f xsane.spec include/config.h
+	rm -f po/*.gmo
+
+override_dh_install-arch:
+	dh_install
+
+	install -m 0644 src/xsane-32x32.xpm \
+		debian/xsane/usr/share/pixmaps/xsane.xpm
+	install -m 0644 src/xsane-48x48.png \
+		debian/xsane/usr/share/pixmaps/xsane.png
+
+override_dh_install-indep:
+	dh_install
+
+override_dh_installchangelogs:
+	dh_installchangelogs xsane.CHANGES
+
+override_dh_installdocs-indep:
+	dh_installdocs
+	mkdir debian/xsane-common/usr/share/doc/xsane-common/html
+	mv debian/xsane-common/usr/share/doc/xsane-common/*.html debian/xsane-common/usr/share/doc/xsane-common/html/
+	mv debian/xsane-common/usr/share/doc/xsane-common/*.jpg debian/xsane-common/usr/share/doc/xsane-common/html/
+	# remove outdated/useless documentation
+	rm -f debian/xsane-common/usr/share/doc/xsane-common/html/sane-backends-doc.html
+	rm -f debian/xsane-common/usr/share/doc/xsane-common/html/sane-pnm-doc.html
+
+override_dh_compress:
+	dh_compress -X.pnm -X.rc -X.xpm

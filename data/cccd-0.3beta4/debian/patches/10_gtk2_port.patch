@@ -1,0 +1,144 @@
+# Port to GTK2.
+
+--- cccd-0.3beta4.orig/cccd.c
++++ cccd-0.3beta4/cccd.c
+@@ -102,7 +102,6 @@
+   tooltipcolor.green = 59113;
+   tooltipcolor.blue = 35979;
+   gdk_color_alloc(colormap, &tooltipcolor);
+-  gtk_tooltips_set_colors(tooltip, &tooltipcolor, &window->style->fg[GTK_STATE_NORMAL]);
+ 
+   gtk_window_set_title(GTK_WINDOW(window), "cccd Panel");
+   gtk_signal_connect(GTK_OBJECT(window), "destroy",
+@@ -273,9 +272,8 @@
+   /* area where all text appears */
+   disp.drawing_area = gtk_drawing_area_new();
+   gtk_drawing_area_size(GTK_DRAWING_AREA(disp.drawing_area), 120, 60);
+-  gtk_widget_set_events(disp.drawing_area,
+-			gtk_widget_get_events(disp.drawing_area) |
+-			GDK_EXPOSURE_MASK | GDK_BUTTON_PRESS_MASK);
++  gtk_widget_add_events(disp.drawing_area,
++			GDK_EXPOSURE_MASK | GDK_BUTTON_PRESS_MASK | GDK_STRUCTURE_MASK);
+   gtk_signal_connect(GTK_OBJECT(disp.drawing_area), "expose_event",
+ 		     (GtkSignalFunc) expose_event, NULL);
+   gtk_signal_connect(GTK_OBJECT(disp.drawing_area), "configure_event",
+--- cccd-0.3beta4.orig/cddb.c
++++ cccd-0.3beta4/cddb.c
+@@ -113,7 +113,7 @@
+ 
+ 
+ enum errors remote_lookup(const char *cd_id, int tracknum,
+-			  long int offset[tracknum], int duration,
++			  long int offset[], int duration,
+ 			  const char *server, short int port,
+ 			  enum lookup_protocol proto, char **result)
+ {
+--- cccd-0.3beta4.orig/info.c
++++ cccd-0.3beta4/info.c
+@@ -841,7 +841,7 @@
+   GtkWidget *window, *box, *clist, *button;
+ 
+   alternate_selected = matches;
+-  window = gtk_window_new(GTK_WINDOW_DIALOG);
++  window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
+   gtk_signal_connect(GTK_OBJECT(window), "destroy",
+ 		     GTK_SIGNAL_FUNC(alternate_quit), NULL);
+   gtk_window_set_title(GTK_WINDOW(window), "Select Category");
+--- cccd-0.3beta4.orig/cddbp.c
++++ cccd-0.3beta4/cddbp.c
+@@ -54,11 +54,9 @@
+ 
+   /* Greetings! */
+ #ifdef DEBUG
+-  printf("=> cddb hello %s %s %s %s\n",
+-	 getenv("USER"), getenv("HOSTNAME"), clientname, version);
++  printf("=> cddb hello unknown localhost %s %s\n", clientname, version);
+ #endif
+-  fprintf(socket, "cddb hello %s %s %s %s\n",
+-	  getenv("USER"), getenv("HOSTNAME"), clientname, version);
++  fprintf(socket, "cddb hello unknown localhost %s %s\n", clientname, version);
+ 
+   buffer = get_string_piece(socket, '\n');
+ #ifdef DEBUG
+@@ -74,7 +72,7 @@
+ 
+ 
+ int cddbp_query(FILE * socket, const char *disk_id, int tracknum,
+-		long int offset[tracknum], int duration, int *matches,
++		long int offset[], int duration, int *matches,
+ 		char ***category_buffer, char ***title_buffer,
+ 		char ***id_buffer)
+ {
+@@ -169,7 +167,7 @@
+ {
+   char *buffer;
+   int code;
+-/* int i; /* debugging aid */
++/* int i; */ /* debugging aid */
+ 
+ #ifdef DEBUG
+   printf("=> cddb read %s %s\n", category, disk_id);
+@@ -195,7 +193,7 @@
+     buffer = get_string_piece(socket, '\n');
+ #ifdef DEBUG
+     printf("<= %s", buffer);
+-/* for (i=0; buffer[i] != '\0'; i++) printf("%x ",buffer[i]); /* we want hex */
++/* for (i=0; buffer[i] != '\0'; i++) printf("%x ",buffer[i]); */ /* we want hex */
+ #endif
+     string_append(result_buffer, buffer);
+     free(buffer);
+@@ -249,7 +247,7 @@
+ 
+ 
+ int http_query(const char *server, int port, const char *URL,
+-	       const char *cd_id, int tracknum, long int offset[tracknum],
++	       const char *cd_id, int tracknum, long int offset[],
+ 	       int duration, int *matches,
+ 	       char ***category_buffer, char ***title_buffer,
+ 	       char ***id_buffer, const char *client, const char *version)
+@@ -266,8 +264,8 @@
+     strcpy(tmp, "");
+   }
+ 
+-  sprintf(tmp, "+%d&hello=%s+%s+%s+%s&proto=1 HTTP/1.0\r\n\r\n", duration,
+-	  getenv("USER"), getenv("HOST"), client, version);
++  sprintf(tmp, "+%d&hello=unknown+localhost+%s+%s&proto=1 HTTP/1.0\r\n\r\n",
++          duration, client, version);
+   strcat(buffer, tmp);
+   free(tmp);
+ 
+@@ -358,16 +356,11 @@
+   FILE *sock;
+ 
+ #ifdef DEBUG
+-  printf("=> GET /%s?cmd=cddb+read+%s+%s&hello=%s+%s+%s+%s&proto=1 HTTP/1.0\r\n\r\n",
+-	 URL, category, disk_id, getenv("USER"), getenv("HOST"), client,
+-	 version);
++  printf("=> GET /%s?cmd=cddb+read+%s+%s&hello=unknown+localhost+%s+%s&proto=1 HTTP/1.0\r\n\r\n", URL, category, disk_id, client, version);
+ #endif
+ 
+   sock = socket_init(server, port);
+-  fprintf(sock,
+-   "GET /%s?cmd=cddb+read+%s+%s&hello=%s+%s+%s+%s&proto=1 HTTP/1.0\r\n\r\n",
+-	  URL, category, disk_id, getenv("USER"), getenv("HOST"), client,
+-	  version);
++  fprintf(sock, "GET /%s?cmd=cddb+read+%s+%s&hello=unknown+localhost+%s+%s&proto=1 HTTP/1.0\r\n\r\n", URL, category, disk_id, client, version);
+ 
+   buffer = get_ascii_file(sock);
+ #ifdef DEBUG
+@@ -409,13 +402,11 @@
+   FILE *sock;
+ 
+ #ifdef DEBUG
+-  printf("=> GET /%s?cmd=stat&hello=%s+%s+%s+%s&proto=1 HTTP/1.0\r\n\r\n",
+-	 URL, getenv("USER"), getenv("HOST"), client, version);
++  printf("=> GET /%s?cmd=stat&hello=unknown+localhost+%s+%s&proto=1 HTTP/1.0\r\n\r\n", URL, client, version);
+ #endif
+ 
+   sock = socket_init(server, port);
+-  fprintf(sock, "GET /%s?cmd=stat&hello=%s+%s+%s+%s&proto=1 HTTP/1.0\r\n\r\n",
+-	  URL, getenv("USER"), getenv("HOST"), client, version);
++  fprintf(sock, "GET /%s?cmd=stat&hello=unknown+localhost+%s+%s&proto=1 HTTP/1.0\r\n\r\n", URL, client, version);
+ 
+   buffer = get_ascii_file(sock);
+ #ifdef DEBUG

@@ -1,0 +1,72 @@
+#!/usr/bin/make -f
+# -*- mode: makefile; coding: utf-8 -*-
+
+DPKG_EXPORT_BUILDFLAGS = 1
+DEB_CPPFLAGS_MAINT_APPEND = -I/usr/include/rtmidi -I/usr/include/rtaudio
+
+include /usr/share/dpkg/default.mk
+
+CONFIGURE_FLAGS =
+
+ifeq ($(DEB_HOST_ARCH_OS),linux)
+CONFIGURE_FLAGS += --with-jack --with-alsa --with-oss
+STK_REALTIME = yes
+else
+CONFIGURE_FLAGS += --disable-realtime
+STK_REALTIME =no
+endif
+
+export STK_REALTIME
+
+
+RAWWAVE_PATH = /usr/share/stk/rawwaves/
+
+CONFIGURE_FLAGS += RAWWAVE_PATH=$(RAWWAVE_PATH) --enable-shared --disable-static
+
+MOVE_FILES = include/RtAudio.h include/RtMidi.h include/RtError.h \
+	       projects/examples/libMakefile
+
+move_file = [ ! -f $(1) ] || mv $(1) $(2)
+
+%:
+	dh $@
+
+override_dh_auto_configure-arch:
+	for file in $(MOVE_FILES); do \
+		$(call move_file , $${file}, $${file}.bak); \
+	done
+	dh_auto_configure -- $(CONFIGURE_FLAGS)
+	mkdir -p src/Release
+	mkdir -p projects/demo/Release
+
+override_dh_auto_configure-indep:
+
+override_dh_auto_build-arch:
+	dh_auto_build
+
+override_dh_auto_build-indep:
+	cd doc/doxygen && doxygen
+
+override_dh_link:
+	dh_link
+# Cleanup realtime-related files
+ifeq ($(STK_REALTIME),no)
+	rm -rf debian/stk/usr/share/menu
+	rm -rf debian/stk/usr/share/man
+endif
+
+override_dh_installchangelogs:
+	dh_installchangelogs doc/ReleaseNotes.txt
+
+override_dh_auto_clean:
+	dh_auto_clean
+	for file in $(MOVE_FILES); do \
+		$(call move_file, $${file}.bak, $${file}); \
+	done
+	rm -rf doc/html
+	rm -rf projects/demo/Release/ projects/examples/libMakefile src/Release/
+
+
+override_dh_missing:
+	dh_missing --fail-missing
+

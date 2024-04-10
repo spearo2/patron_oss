@@ -1,0 +1,309 @@
+dcraw (9.28-3) unstable; urgency=medium
+
+  * Written wrappers of fread(),fwrite(),fseek() library functions which
+    checks their return values. If an input/output failure is detected,
+    dcraw immediately exits with non-zero status and prints a descriptive
+    message. Closes: #478701, #914447, #914453, #914454, #914459, #984761
+  * Updated links; upstream has been moved to a new site.
+  * Updated packaging: evolving standards, added metadata, lintian.
+
+ -- Filip Hroch <hroch@physics.muni.cz>  Sun, 21 Nov 2021 23:15:39 +0100
+
+dcraw (9.28-2) unstable; urgency=low
+
+  * Fixed: stack-based buffer overflow bug. Closes: #906529
+  * Fixed: NULL dereference bug. Closes: #906530
+  * Bugfixes has been reported to upstream author Mr. Dave Coffin.
+
+ -- Filip Hroch <hroch@physics.muni.cz>  Thu, 23 Aug 2018 18:07:41 +0200
+
+dcraw (9.28-1) unstable; urgency=low
+
+  * New upstream version.
+  * Updated to latest Debian standards.
+  * Updated autotools patch.
+  * Added lcms2 library into configure.ac (Ubuntu bug no.1611001).
+  * Added hardening options to debian/rules.
+  * Switch-on high level of optimisation as upstream author recommends.
+  * Removed obsolete --with-autoreconf option in debian/rules.
+  * Fixed the bug CVE-2013-1438: dcraw (multiple vulnerabilities) mostly
+    in JPEG/TIFF write routines. The patch has been applied by hand
+    to reflect latest upstream source code changes. Closes: #721232
+  * Fixed Index overflow in smal_decode_segment() bug. I patched also
+    by hand. No tests performed (no data available). Closes: #864168
+  * Funny false warning: lintian reports "spelling-error-in-binary
+    usr/bin/dcraw Optio Option". The character string is correct
+    designating Pentax Optio cameras.
+
+ -- Filip Hroch <hroch@physics.muni.cz>  Tue, 31 Jul 2018 11:13:05 +0200
+
+dcraw (9.27-1) unstable; urgency=medium
+
+  [ Tobias Frost ]
+  * dccleancrw: Patch to bail out if file cannot be opened. Closes: #715777
+
+  [ Filip Hroch ]
+  * New upstream version.
+  * Removed dependency on Jasper. Closes: #818195
+  * Improved autotools control files.
+  * Updated (due git capabilities) getsource script.
+  * Integrated CI test suite.
+
+ -- Filip Hroch <hroch@physics.muni.cz>  Sun, 29 May 2016 19:02:56 +0200
+
+dcraw (9.26-1) unstable; urgency=medium
+
+  * QA upload.
+  * Setting maintainer to QA.
+  * New upstream version. Closes: #754388, #785019
+  * New upstream version fixes CVE-2015-3885.
+  * Refesh patch remove_LO_line_from_manpage.diff
+  * Update d/copyright and add missing licenses. Closes: #634924
+  * Bump SV to 3.9.8 -- no changes required.
+  * Created git repository on collab-maint.
+  * Include NMU changelogs. Closes: #750858
+  * Change package priority to optional. Closes: #819652
+  * Fix typo in manpage dcparse.1
+
+ -- Tobias Frost <tobi@debian.org>  Sat, 30 Apr 2016 23:26:42 +0200
+
+dcraw (9.21-0.2) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Upload to unstable.
+
+ -- Andreas Metzler <ametzler@debian.org>  Thu, 19 Jun 2014 07:52:40 +0200
+
+dcraw (9.21-0.1) experimental; urgency=medium
+
+  * Non-maintainer upload.
+  * New upstream version. Closes: #743597
+  * New upstream has lcms2 support, update add_autotools.diff and b-d to
+    use it. Closes: #743598    LP: #885324
+  * Sync from Ubuntu: Adjust autotools patch to work with ld --as-needed.
+    (Thanks, Micah Gersten) Closes: #717471
+
+ -- Andreas Metzler <ametzler@debian.org>  Sat, 07 Jun 2014 18:35:56 +0200
+
+dcraw (9.19-1.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * New upstream release (Closes: #617543)
+  * Use Autoconf for the build system
+  * Clean up debian/rules
+  * depend on debhelper >= 9, to fix a lintian warning
+  * Switch to 3.0 (quilt); all previous patches
+    are in a single patch
+  * Convert copyright file to DEB-5 format
+  * Increase debian/format to '9', no changes
+  * Enable hardening compiler flags
+  * Properly escape 'minus' signs in man page dcfujiturn.1
+  * Remove compiler flag -include netinet/in.h from fuji_green.c.
+    Apparently it is not needed.
+  * Update to standards version 3.9.4: no changes
+  * Add targets build-arch and build-indep. They are not actually
+    needed, and hence only forward to build-stamp
+  * debian/control: remove Priority field for the binary package,
+    it is inherited from the source package
+  * Build-depend on libjasper-dev
+  * Move getsource script from orig.tar.gz into debian directory,
+     because it is not from upstream
+  * Fix code in getsource that parses upstream version number
+  * Remove example file 'badpixels'
+  * Updated README.Debian
+
+ -- Oliver Sander <sander@igpm.rwth-aachen.de>  Sat, 20 Jul 2013 18:35:51 +0200
+
+dcraw (8.99-1) unstable; urgency=low
+
+  * New upstream version. (Closes: #506705, #523789, #519604)
+
+ -- Steve King <debian@invux.com>  Fri, 12 Feb 2010 14:29:24 +0000
+
+dcraw (8.86-1) unstable; urgency=low
+
+  * New upstream version. (Closes: #489931)
+  * Remove .LO lines from man pages
+  * Added Homepage reference to source stanza
+
+ -- Steve King <debian@invux.com>  Fri, 25 Jul 2008 09:58:25 +0100
+
+dcraw (8.80-1) unstable; urgency=low
+
+  * Modified Makefile: -O4 instead of -03
+  * Modified Makefile: removed "-s" flag from $(CC) lines
+  * Closes: #411920
+  * Closes: #436707
+  * Now distributed under a different license
+  * Closes: #431883
+  * Closes: #424663
+  * New upstream version
+
+ -- Steve King <debian@invux.com>  Wed, 14 Nov 2007 10:01:57 +0000
+
+dcraw (8.39-1) unstable; urgency=low
+
+  * New upstream version
+  * Maintainer email change
+
+ -- Steve King <debian@invux.com>  Sun, 24 Sep 2006 21:27:50 +0100
+
+dcraw (8.38-1) unstable; urgency=low
+
+  * New upstream version
+  * Packaged .badpixels as examples/badpixels
+
+ -- Steve King <debian@twobit.demon.co.uk>  Sun, 17 Sep 2006 20:34:11 +0100
+
+dcraw (8.23-1) unstable; urgency=low
+
+  * Removed substvars
+  * Made compliant to debian-policy 3.7.2.1
+  * Removed build dependancy on libc6-dev
+  * Added fujiturn/fuji_green and clean_crw (Closes: #351364)
+  * New upsream version (Closes: #368856)
+  * Removed dcfixdates, dcwrap (no longer maintained upstream)
+
+ -- Steve King <debian@twobit.demon.co.uk>  Mon, 26 Jun 2006 13:48:05 +0000
+
+dcraw (7.94-1) unstable; urgency=low
+
+  * New upstream version (Closes: #341370)
+  * Checked against debian policy and debhelper and a few minor corrections made
+  * Added build script "getsource" installed in examples (should be considered
+  *  alpha quality)
+
+ -- Steve King <debian@twobit.demon.co.uk>  Wed, 21 Dec 2005 16:01:39 +0000
+
+dcraw (7.17-1) unstable; urgency=low
+
+  *  New upstream version (Close: #306606)
+
+ -- Steve King <debian@twobit.demon.co.uk>  Sat, 30 Apr 2005 19:17:37 +0100
+
+dcraw (7.02-1) unstable; urgency=low
+
+  * New upstream version
+  * Fixes a typo in the Makefile which caused dcparse to be installed with an
+    absolute path. (Closes: #300105)
+  * Modified source priority to extra
+
+ -- Steve King <debian@twobit.demon.co.uk>  Sat, 19 Mar 2005 09:26:21 +0000
+
+dcraw (7.00-1) unstable; urgency=low
+
+  * New upstream version
+  * Support for automatically or manually rotating images (if your
+  *  camera has support)
+  * Support for Canon D20 (among others)
+  * Closes: #274603
+  * Modified synopsis to remove initial capital letter
+  * Closes: #293383
+  * Includes the fixdates and parse binaries for reading internal dates
+  *  and retriving thumbnail images from certain files (experts only)
+  * Added /usr/share/doc/dcraw/examples/dcrwap, from D. Coffin's web site
+
+ -- Steve King <debian@twobit.demon.co.uk>  Thu, 10 Mar 2005 22:40:54 +0000
+
+dcraw (5.88-1) unstable; urgency=low
+
+  * New upstream version
+  * Closes: #241165: Produces wrong color in output file
+  * Closes: #258298: Please package new version
+
+ -- Steve King <debian@twobit.demon.co.uk>  Fri,  6 Aug 2004 20:52:50 +0100
+
+dcraw (5.73-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Steve King <debian@twobit.demon.co.uk>  Sat, 17 Apr 2004 09:46:51 +0100
+
+dcraw (5.71-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Steve King <debian@twobit.demon.co.uk>  Tue,  6 Apr 2004 19:55:33 +0100
+
+dcraw (5.53-1) unstable; urgency=low
+
+  * New upstream version:
+  * New Camera Support: Pentax Optio S4,
+  *  Nikon D70, Minolta DiMAGE A2, and Olympus C8080WZ
+  * Significant speed improvements (Uses about 70% of cpu time compared
+  *  with 5.43-1 on my data)
+  * Native support for cameras using lossless jpeg
+  *  (Avoids licensing problems with 3rd party lossless jpeg support)
+
+ -- Steve King <debian@twobit.demon.co.uk>  Sun, 22 Feb 2004 08:02:24 +0000
+
+dcraw (5.43-1) unstable; urgency=low
+
+  * New upstream version (support for Sony DSC-F828)
+
+ -- Steve King <debian@twobit.demon.co.uk>  Sat, 10 Jan 2004 14:25:19 +0000
+
+dcraw (5.18-1) unstable; urgency=low
+
+  * New upstream version (support for Phase One medium format digital backs)
+  * Changed Makefile to -O3 for slightly faster operation
+  * Patch for Segfault on 64bit architectures
+
+ -- Steve King <debian@twobit.demon.co.uk>  Fri, 21 Nov 2003 14:35:04 +0000
+
+dcraw (5.08-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Steve King <debian@twobit.demon.co.uk>  Wed, 15 Oct 2003 14:40:25 +0100
+
+dcraw (5.05-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Steve King <debian@twobit.demon.co.uk>  Sun, 12 Oct 2003 15:44:12 +0100
+
+dcraw (5.02-1) unstable; urgency=low
+
+  * New upstream version
+  * Removed reference to lossless jpeg support in debian/control description
+  * Changed source http reference and upstream authors contact details
+  * Removed the Makefile from _orig.tar.gz. Makefile was added by me.
+  * Changed debian/control dependance from libc6 to ${shlibs:Depends} for ia64
+  * closes: Bug#213473
+
+ -- Steve King <debian@twobit.demon.co.uk>  Tue, 30 Sep 2003 18:42:11 +0100
+
+dcraw (4.88-4) unstable; urgency=low
+
+  * Built on an unstable system
+  * Removed lossless jpeg support due to licensing (See README.Debian)
+
+ -- Steve King <debian@twobit.demon.co.uk>  Sun, 31 Aug 2003 20:13:23 +0100
+
+dcraw (4.88-3) unstable; urgency=low
+
+  * Removed debian/compat and added "export DH_COMPAT=3W to debian/rules
+
+ -- Steve King <debian@twobit.demon.co.uk>  Thu, 31 Jul 2003 07:27:08 +0100
+
+dcraw (4.88-2) unstable; urgency=low
+
+  * Reworded debian/copyright file
+  * Removed some unnecessary cruft from debian/rules
+  * Modified Makefile to install man page into /usr/share/man/man1
+
+ -- Steve King <debian@twobit.demon.co.uk>  Wed, 30 Jul 2003 18:04:07 +0100
+
+dcraw (4.88-1) unstable; urgency=low
+
+  * Upstream update
+
+ -- Steve King <debian@twobit.demon.co.uk>  Tue, 29 Jul 2003 21:56:12 +0100
+
+dcraw (4.87-1) unstable; urgency=low
+
+  * Initial Release.
+  * closes: Bug#194280
+
+ -- Steve King <debian@twobit.demon.co.uk>  Thu, 10 Jul 2003 10:55:29 +0100

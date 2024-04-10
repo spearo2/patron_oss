@@ -1,0 +1,54 @@
+0.3beta4: (not announced)
+ - fixed initialisation of progress bar
+ - got rid of some warnings
+ - changed default to use freedb.org
+ - wrote a kind of manpage
+
+0.3beta3: (posted on freshmeat.net)
+ - fixed compiling on kernel 2.1.1xx/glibc (thanks to Petteri Kangaslampi)
+ - longer track titles are now supported
+ - no more GTK+-warnings
+ - some bugs fixed
+ - RPM spec file supplied
+
+0.3alpha2: (posted on freshmeat.net)
+ - cleaned up dead childs (no more zombies)
+ - more robust when started without CD in drive
+ - made saved CDDB entries comply with CDDB file format
+ - Track remain display was off by about 2sec
+ - fixed playmodes, cleaned up in update_display()
+ - minor Makefile changes
+ - added stuff for handling of mixed mode CDs (CD-Extra,
+   CD-Plus)
+ - cleaned up CDDB disk id calculation, tray open detection
+
+0.3alpha1: (posted on freshmeat.net)
+ - version was chosen badly for last release
+ - mistyped URL in about tab
+ - rudimentary install target in Makefile
+ - program crashed when closing display window, fixed
+ - CDDB submit and local save can be aborted by closing
+   category select window
+ - display window was not updated after CDDB lookup completed
+ - program would submit bad entry for CDDB, sanity checks
+ - fixed hangs after ejecting CD and then trying to play
+
+0.3pre1: (not widely released)
+ - took over from Sven Riedel
+ - cleaned up Makefile
+ - playing without PLAYTRKIND was broken, rudimentary fixes (needs more work)
+ - display window not properly initialized at startup
+ - lost stop functionality somehow (needs more work)
+ - better look and more info for control and display windows
+ - about-tab added to info dialog
+
+0.3alpha:
+ - Fixed playing for drives that don't support PLAYTRKIND
+ - Fixed glitches that made cccd not work with the 2.1 kernel tree 
+	(thanks go to chexum for the diff)
+ - Fixed bug in local lookups, that caused a lock
+ - Fixed bug in the Save Dialog
+ - Added Sending/Submit to Remote Database Support
+ - Fixed bug in eject code
+ - Changed name to "cccd" (CDDB Capable CD player) (ok, so you can see a cccp 
+	in there too. kill me)

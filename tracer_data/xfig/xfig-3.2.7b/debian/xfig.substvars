@@ -1,0 +1,3 @@
+shlibs:Depends=libc6 (>= 2.29), libjpeg8 (>= 8c), libpng16-16 (>= 1.6.2-1), libx11-6, libxi6, libxpm4, libxt6, xaw3dg (>= 1.5+E-1)
+misc:Depends=
+misc:Pre-Depends=

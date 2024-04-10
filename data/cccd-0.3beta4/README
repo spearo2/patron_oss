@@ -1,0 +1,39 @@
+CCCD 0.3beta4
+
+This is a maintenance release. Sven Riedel, the original author has passed
+cccd over to me, and I have started working on it. Please refer to 
+README.original for usage hints.
+
+Installation for RPM based systems:
+Use rpm -tb cccd-0.3beta4.tar.gz to build a binary RPM for cccd. Use
+rpm -i or your favourite tool to install.
+
+Installation without RPM:
+1. Review the Makefile. Check the location of the "mail" command and
+   choose the CFLAGS to suite your taste. 
+2. A different installation directory can be specified by using
+   make install prefix=/your/dir
+
+Additional hints:
+1. Make sure you have read permissions for the CD drive, not only
+   for /dev/cdrom (usually a link)
+2. If you want to store CDDB entries on your local disk, configure a path
+   location via the CDDB tab of the info dialog (e.g. /home/yourname/.cddb).
+   Create this path and some subdirectories, which will act as category
+   folders. You do not need to follow the original CDDB categories.
+
+Limitations:
+o CDDB related GUI elements need checking (done)
+o spits out tons of ugly debug messages (switched off in Makefile)
+o handling of multisession CDs needs more testing
+o no CDDB through a proxy/firewall
+
+Known bugs:
+Yes, there are some. They used to be on 
+http://home.pages.de/~jst/cccd/bugs.html.
+
+If you find a bug or problem, please report it to me using the form 
+found in BUGREPORT. Also coding help is welcome.
+
+Jochen A. Stein
+jst@writeme.com

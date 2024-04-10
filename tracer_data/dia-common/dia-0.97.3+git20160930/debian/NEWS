@@ -1,0 +1,8 @@
+dia (0.97.3+git20160930-8.2) unstable; urgency=medium
+
+  The python interface to dia has been disabled since Python 2 will
+  soon go end of life. If you have a need for the python interface
+  you might want to investigate if the dia flatpak can suit your needs,
+  as that (still as of right now) seems to carry the python2 parts.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Fri, 25 Oct 2019 09:21:38 +0200

@@ -1,0 +1,93 @@
+Source: xfig
+Section: graphics
+Priority: optional
+Maintainer: Roland Rosenfeld <roland@debian.org>
+Standards-Version: 4.4.1
+Build-Depends: debhelper-compat (= 12),
+               desktop-file-utils,
+               dpkg (>= 1.7.2),
+               fig2dev,
+               groff,
+               imagemagick,
+               libjpeg-dev,
+               libpng-dev,
+               libx11-dev,
+               libxaw7-dev,
+               libxi-dev,
+               libxpm-dev,
+               libxt-dev,
+               man-db,
+               xaw3dg-dev (>= 1.5+E-2),
+               xutils-dev
+Homepage: https://sourceforge.net/projects/mcj/
+Vcs-Git: https://salsa.debian.org/debian/xfig.git
+Vcs-Browser: https://salsa.debian.org/debian/xfig
+Rules-Requires-Root: no
+
+Package: xfig
+Architecture: any
+Depends: fig2dev | transfig (>= 1:3.2.5-alpha4-1),
+         sensible-utils,
+         ${misc:Depends},
+         ${shlibs:Depends}
+Recommends: xfig-libs
+Suggests: cups-client | lpr,
+          ghostscript,
+          gimp,
+          gsfonts-x11 (>= 0.7),
+          netpbm,
+          spell,
+          xfig-doc (>= 1:3.2.5-alpha4-1)
+Breaks: transfig (<< 1:3.2.5-alpha4-1), xfig-doc (<< 1:3.2.5-alpha4-1)
+Description: Facility for Interactive Generation of figures under X11
+ XFig is a menu-driven tool that allows the user to draw and
+ manipulate objects interactively in an X window.  The resulting
+ pictures can be saved.  If the fig2dev program is installed, which is
+ contained in the fig2dev package, the pictures can be printed on
+ postscript printers or converted to a variety of other formats (e.g.
+ to allow inclusion in LaTeX documents or web pages).
+ .
+ This package contains the xfig program itself.
+ .
+ You should think about installing the fig2dev package to export the
+ graphics to several common formats.  You should also think about
+ installing xfig-doc, which contains the documentation and xfig-libs,
+ which contains several clip art libraries.
+
+Package: xfig-doc
+Section: doc
+Architecture: all
+Depends: ${misc:Depends}
+Suggests: firefox-esr | www-browser, xfig, xpdf | pdf-viewer
+Description: XFig on-line documentation and examples
+ XFig is a menu-driven tool that allows the user to draw and
+ manipulate objects interactively in an X window.  The resulting
+ pictures can be saved.  If the fig2dev program is installed, which is
+ contained in the fig2dev package, the pictures can be printed on
+ postscript printers or converted to a variety of other formats (e.g.
+ to allow inclusion in LaTeX documents or web pages).
+ .
+ This package contains on-line documentation in HTML and PDF formats
+ as well as the graphics examples distributed with XFig.
+
+Package: xfig-libs
+Architecture: all
+Depends: ${misc:Depends}
+Suggests: xfig (>= 1:3.2.5-alpha4-1)
+Breaks: xfig (<< 1:3.2.5-alpha4-1)
+Multi-Arch: foreign
+Description: XFig image libraries and examples
+ XFig is a menu-driven tool that allows the user to draw and
+ manipulate objects interactively in an X window.  The resulting
+ pictures can be saved.  If the fig2dev program is installed, which is
+ contained in the fig2dev package, the pictures can be printed on
+ postscript printers or converted to a variety of other formats (e.g.
+ to allow inclusion in LaTeX documents or web pages).
+ .
+ This package contains several clip art libraries including arrows,
+ flowcharts, charts, labels, knitting, GUI, chemical process
+ flowsheets, logic, digital signal processing, Entity Relationship
+ diagrams, UML, electronic, electrical, hospital equipment, structural
+ analysis, optics, audiovisual objects, computers, networks,
+ mechanical (DIN), music, welding, office equipment, furniture,
+ buildings, flags, maps and several examples.

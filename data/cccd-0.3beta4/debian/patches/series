@@ -1,0 +1,5 @@
+10_gtk2_port.patch
+20_manpage_fixes.patch
+30_makefile_fixes.patch
+40_fix_hurd_build.patch
+gcc4.7.patch

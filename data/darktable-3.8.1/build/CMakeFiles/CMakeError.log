@@ -1,0 +1,924 @@
+Detecting C OpenMP failed with the following output:
+Change Dir: /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_f6f25/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_f6f25.dir/build.make CMakeFiles/cmTC_f6f25.dir/build
+gmake[1]: Entering directory '/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f6f25.dir/OpenMPTryFlag.c.o
+/usr/bin/cc   -fopenmp-version=45 -fopenmp=libomp -v -fPIE -MD -MT CMakeFiles/cmTC_f6f25.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_f6f25.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_f6f25.dir/OpenMPTryFlag.c.o -c /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c
+Ubuntu clang version 13.0.1-2ubuntu2.2
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ (in-process)
+ "/usr/lib/llvm-13/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -fno-rounding-math -mconstructor-aliases -munwind-tables -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -v -fcoverage-compilation-dir=/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp -resource-dir /usr/lib/llvm-13/lib/clang/13.0.1 -dependency-file CMakeFiles/cmTC_f6f25.dir/OpenMPTryFlag.c.o.d -MT CMakeFiles/cmTC_f6f25.dir/OpenMPTryFlag.c.o -sys-header-deps -internal-isystem /usr/lib/llvm-13/lib/clang/13.0.1/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir=/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fopenmp -fopenmp-version=45 -fgnuc-version=4.2.1 -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_f6f25.dir/OpenMPTryFlag.c.o -x c /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c
+clang -cc1 version 13.0.1 based upon LLVM 13.0.1 default target x86_64-pc-linux-gnu
+ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/lib/llvm-13/lib/clang/13.0.1/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+#include <omp.h>
+         ^~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_f6f25.dir/build.make:79: CMakeFiles/cmTC_f6f25.dir/OpenMPTryFlag.c.o] Error 1
+gmake[1]: Leaving directory '/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_f6f25/fast] Error 2
+
+
+
+Detecting C OpenMP failed with the following output:
+Change Dir: /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_eba22/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_eba22.dir/build.make CMakeFiles/cmTC_eba22.dir/build
+gmake[1]: Entering directory '/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_eba22.dir/OpenMPTryFlag.c.o
+/usr/bin/cc   -fopenmp-version=45 -fopenmp=libiomp5 -v -fPIE -MD -MT CMakeFiles/cmTC_eba22.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_eba22.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_eba22.dir/OpenMPTryFlag.c.o -c /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c
+Ubuntu clang version 13.0.1-2ubuntu2.2
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ (in-process)
+ "/usr/lib/llvm-13/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -fno-rounding-math -mconstructor-aliases -munwind-tables -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -v -fcoverage-compilation-dir=/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp -resource-dir /usr/lib/llvm-13/lib/clang/13.0.1 -dependency-file CMakeFiles/cmTC_eba22.dir/OpenMPTryFlag.c.o.d -MT CMakeFiles/cmTC_eba22.dir/OpenMPTryFlag.c.o -sys-header-deps -internal-isystem /usr/lib/llvm-13/lib/clang/13.0.1/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir=/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fopenmp -fopenmp-version=45 -fgnuc-version=4.2.1 -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_eba22.dir/OpenMPTryFlag.c.o -x c /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c
+clang -cc1 version 13.0.1 based upon LLVM 13.0.1 default target x86_64-pc-linux-gnu
+ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/lib/llvm-13/lib/clang/13.0.1/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+#include <omp.h>
+         ^~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_eba22.dir/build.make:79: CMakeFiles/cmTC_eba22.dir/OpenMPTryFlag.c.o] Error 1
+gmake[1]: Leaving directory '/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_eba22/fast] Error 2
+
+
+
+Detecting C OpenMP failed with the following output:
+Change Dir: /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_92183/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_92183.dir/build.make CMakeFiles/cmTC_92183.dir/build
+gmake[1]: Entering directory '/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_92183.dir/OpenMPTryFlag.c.o
+/usr/bin/cc   -fopenmp-version=45 -fopenmp -v -fPIE -MD -MT CMakeFiles/cmTC_92183.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_92183.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_92183.dir/OpenMPTryFlag.c.o -c /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c
+Ubuntu clang version 13.0.1-2ubuntu2.2
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ (in-process)
+ "/usr/lib/llvm-13/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -fno-rounding-math -mconstructor-aliases -munwind-tables -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -v -fcoverage-compilation-dir=/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp -resource-dir /usr/lib/llvm-13/lib/clang/13.0.1 -dependency-file CMakeFiles/cmTC_92183.dir/OpenMPTryFlag.c.o.d -MT CMakeFiles/cmTC_92183.dir/OpenMPTryFlag.c.o -sys-header-deps -internal-isystem /usr/lib/llvm-13/lib/clang/13.0.1/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir=/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fopenmp -fopenmp-version=45 -fgnuc-version=4.2.1 -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_92183.dir/OpenMPTryFlag.c.o -x c /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c
+clang -cc1 version 13.0.1 based upon LLVM 13.0.1 default target x86_64-pc-linux-gnu
+ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/lib/llvm-13/lib/clang/13.0.1/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+#include <omp.h>
+         ^~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_92183.dir/build.make:79: CMakeFiles/cmTC_92183.dir/OpenMPTryFlag.c.o] Error 1
+gmake[1]: Leaving directory '/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_92183/fast] Error 2
+
+
+
+Detecting C OpenMP failed with the following output:
+Change Dir: /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_b2b6d/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_b2b6d.dir/build.make CMakeFiles/cmTC_b2b6d.dir/build
+gmake[1]: Entering directory '/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b2b6d.dir/OpenMPTryFlag.c.o
+/usr/bin/cc   -fopenmp-version=45 -Xclang -fopenmp -v -fPIE -MD -MT CMakeFiles/cmTC_b2b6d.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_b2b6d.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_b2b6d.dir/OpenMPTryFlag.c.o -c /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c
+Ubuntu clang version 13.0.1-2ubuntu2.2
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ (in-process)
+ "/usr/lib/llvm-13/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -fno-rounding-math -mconstructor-aliases -munwind-tables -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -v -fcoverage-compilation-dir=/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp -resource-dir /usr/lib/llvm-13/lib/clang/13.0.1 -dependency-file CMakeFiles/cmTC_b2b6d.dir/OpenMPTryFlag.c.o.d -MT CMakeFiles/cmTC_b2b6d.dir/OpenMPTryFlag.c.o -sys-header-deps -internal-isystem /usr/lib/llvm-13/lib/clang/13.0.1/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir=/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fopenmp-version=45 -fgnuc-version=4.2.1 -fopenmp -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_b2b6d.dir/OpenMPTryFlag.c.o -x c /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c
+clang -cc1 version 13.0.1 based upon LLVM 13.0.1 default target x86_64-pc-linux-gnu
+ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/lib/llvm-13/lib/clang/13.0.1/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+#include <omp.h>
+         ^~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_b2b6d.dir/build.make:79: CMakeFiles/cmTC_b2b6d.dir/OpenMPTryFlag.c.o] Error 1
+gmake[1]: Leaving directory '/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_b2b6d/fast] Error 2
+
+
+
+Detecting CXX OpenMP failed with the following output:
+Change Dir: /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_f04b6/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_f04b6.dir/build.make CMakeFiles/cmTC_f04b6.dir/build
+gmake[1]: Entering directory '/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_f04b6.dir/OpenMPTryFlag.cpp.o
+/usr/bin/c++   -fopenmp-version=45 -fopenmp=libomp -v -fPIE -MD -MT CMakeFiles/cmTC_f04b6.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_f04b6.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_f04b6.dir/OpenMPTryFlag.cpp.o -c /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
+Ubuntu clang version 13.0.1-2ubuntu2.2
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ (in-process)
+ "/usr/lib/llvm-13/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -fno-rounding-math -mconstructor-aliases -munwind-tables -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -v -fcoverage-compilation-dir=/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp -resource-dir /usr/lib/llvm-13/lib/clang/13.0.1 -dependency-file CMakeFiles/cmTC_f04b6.dir/OpenMPTryFlag.cpp.o.d -MT CMakeFiles/cmTC_f04b6.dir/OpenMPTryFlag.cpp.o -sys-header-deps -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/backward -internal-isystem /usr/lib/llvm-13/lib/clang/13.0.1/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir=/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fopenmp -fopenmp-version=45 -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_f04b6.dir/OpenMPTryFlag.cpp.o -x c++ /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
+clang -cc1 version 13.0.1 based upon LLVM 13.0.1 default target x86_64-pc-linux-gnu
+ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/backward
+ /usr/lib/llvm-13/lib/clang/13.0.1/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+#include <omp.h>
+         ^~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_f04b6.dir/build.make:79: CMakeFiles/cmTC_f04b6.dir/OpenMPTryFlag.cpp.o] Error 1
+gmake[1]: Leaving directory '/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_f04b6/fast] Error 2
+
+
+
+Detecting CXX OpenMP failed with the following output:
+Change Dir: /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_dc370/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_dc370.dir/build.make CMakeFiles/cmTC_dc370.dir/build
+gmake[1]: Entering directory '/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_dc370.dir/OpenMPTryFlag.cpp.o
+/usr/bin/c++   -fopenmp-version=45 -fopenmp=libiomp5 -v -fPIE -MD -MT CMakeFiles/cmTC_dc370.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_dc370.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_dc370.dir/OpenMPTryFlag.cpp.o -c /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
+Ubuntu clang version 13.0.1-2ubuntu2.2
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ (in-process)
+ "/usr/lib/llvm-13/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -fno-rounding-math -mconstructor-aliases -munwind-tables -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -v -fcoverage-compilation-dir=/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp -resource-dir /usr/lib/llvm-13/lib/clang/13.0.1 -dependency-file CMakeFiles/cmTC_dc370.dir/OpenMPTryFlag.cpp.o.d -MT CMakeFiles/cmTC_dc370.dir/OpenMPTryFlag.cpp.o -sys-header-deps -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/backward -internal-isystem /usr/lib/llvm-13/lib/clang/13.0.1/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir=/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fopenmp -fopenmp-version=45 -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_dc370.dir/OpenMPTryFlag.cpp.o -x c++ /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
+clang -cc1 version 13.0.1 based upon LLVM 13.0.1 default target x86_64-pc-linux-gnu
+ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/backward
+ /usr/lib/llvm-13/lib/clang/13.0.1/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+#include <omp.h>
+         ^~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_dc370.dir/build.make:79: CMakeFiles/cmTC_dc370.dir/OpenMPTryFlag.cpp.o] Error 1
+gmake[1]: Leaving directory '/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_dc370/fast] Error 2
+
+
+
+Detecting CXX OpenMP failed with the following output:
+Change Dir: /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_61fce/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_61fce.dir/build.make CMakeFiles/cmTC_61fce.dir/build
+gmake[1]: Entering directory '/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_61fce.dir/OpenMPTryFlag.cpp.o
+/usr/bin/c++   -fopenmp-version=45 -fopenmp -v -fPIE -MD -MT CMakeFiles/cmTC_61fce.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_61fce.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_61fce.dir/OpenMPTryFlag.cpp.o -c /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
+Ubuntu clang version 13.0.1-2ubuntu2.2
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ (in-process)
+ "/usr/lib/llvm-13/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -fno-rounding-math -mconstructor-aliases -munwind-tables -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -v -fcoverage-compilation-dir=/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp -resource-dir /usr/lib/llvm-13/lib/clang/13.0.1 -dependency-file CMakeFiles/cmTC_61fce.dir/OpenMPTryFlag.cpp.o.d -MT CMakeFiles/cmTC_61fce.dir/OpenMPTryFlag.cpp.o -sys-header-deps -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/backward -internal-isystem /usr/lib/llvm-13/lib/clang/13.0.1/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir=/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fopenmp -fopenmp-version=45 -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_61fce.dir/OpenMPTryFlag.cpp.o -x c++ /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
+clang -cc1 version 13.0.1 based upon LLVM 13.0.1 default target x86_64-pc-linux-gnu
+ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/backward
+ /usr/lib/llvm-13/lib/clang/13.0.1/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+#include <omp.h>
+         ^~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_61fce.dir/build.make:79: CMakeFiles/cmTC_61fce.dir/OpenMPTryFlag.cpp.o] Error 1
+gmake[1]: Leaving directory '/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_61fce/fast] Error 2
+
+
+
+Detecting CXX OpenMP failed with the following output:
+Change Dir: /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_40330/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_40330.dir/build.make CMakeFiles/cmTC_40330.dir/build
+gmake[1]: Entering directory '/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_40330.dir/OpenMPTryFlag.cpp.o
+/usr/bin/c++   -fopenmp-version=45 -Xclang -fopenmp -v -fPIE -MD -MT CMakeFiles/cmTC_40330.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_40330.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_40330.dir/OpenMPTryFlag.cpp.o -c /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
+Ubuntu clang version 13.0.1-2ubuntu2.2
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ (in-process)
+ "/usr/lib/llvm-13/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -fno-rounding-math -mconstructor-aliases -munwind-tables -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -v -fcoverage-compilation-dir=/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp -resource-dir /usr/lib/llvm-13/lib/clang/13.0.1 -dependency-file CMakeFiles/cmTC_40330.dir/OpenMPTryFlag.cpp.o.d -MT CMakeFiles/cmTC_40330.dir/OpenMPTryFlag.cpp.o -sys-header-deps -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/backward -internal-isystem /usr/lib/llvm-13/lib/clang/13.0.1/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir=/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fopenmp-version=45 -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -fopenmp -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_40330.dir/OpenMPTryFlag.cpp.o -x c++ /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
+clang -cc1 version 13.0.1 based upon LLVM 13.0.1 default target x86_64-pc-linux-gnu
+ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/backward
+ /usr/lib/llvm-13/lib/clang/13.0.1/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+#include <omp.h>
+         ^~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_40330.dir/build.make:79: CMakeFiles/cmTC_40330.dir/OpenMPTryFlag.cpp.o] Error 1
+gmake[1]: Leaving directory '/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_40330/fast] Error 2
+
+
+
+Detecting C OpenMP failed with the following output:
+Change Dir: /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_ce95e/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_ce95e.dir/build.make CMakeFiles/cmTC_ce95e.dir/build
+gmake[1]: Entering directory '/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ce95e.dir/OpenMPTryFlag.c.o
+/usr/bin/cc   -fopenmp-version=45 -fopenmp=libomp -v -fPIE -MD -MT CMakeFiles/cmTC_ce95e.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_ce95e.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_ce95e.dir/OpenMPTryFlag.c.o -c /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c
+Ubuntu clang version 13.0.1-2ubuntu2.2
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ (in-process)
+ "/usr/lib/llvm-13/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -fno-rounding-math -mconstructor-aliases -munwind-tables -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -v -fcoverage-compilation-dir=/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp -resource-dir /usr/lib/llvm-13/lib/clang/13.0.1 -dependency-file CMakeFiles/cmTC_ce95e.dir/OpenMPTryFlag.c.o.d -MT CMakeFiles/cmTC_ce95e.dir/OpenMPTryFlag.c.o -sys-header-deps -internal-isystem /usr/lib/llvm-13/lib/clang/13.0.1/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir=/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fopenmp -fopenmp-version=45 -fgnuc-version=4.2.1 -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_ce95e.dir/OpenMPTryFlag.c.o -x c /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c
+clang -cc1 version 13.0.1 based upon LLVM 13.0.1 default target x86_64-pc-linux-gnu
+ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/lib/llvm-13/lib/clang/13.0.1/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+#include <omp.h>
+         ^~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_ce95e.dir/build.make:79: CMakeFiles/cmTC_ce95e.dir/OpenMPTryFlag.c.o] Error 1
+gmake[1]: Leaving directory '/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_ce95e/fast] Error 2
+
+
+
+Detecting C OpenMP failed with the following output:
+Change Dir: /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_8dab6/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_8dab6.dir/build.make CMakeFiles/cmTC_8dab6.dir/build
+gmake[1]: Entering directory '/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8dab6.dir/OpenMPTryFlag.c.o
+/usr/bin/cc   -fopenmp-version=45 -fopenmp=libiomp5 -v -fPIE -MD -MT CMakeFiles/cmTC_8dab6.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_8dab6.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_8dab6.dir/OpenMPTryFlag.c.o -c /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c
+Ubuntu clang version 13.0.1-2ubuntu2.2
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ (in-process)
+ "/usr/lib/llvm-13/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -fno-rounding-math -mconstructor-aliases -munwind-tables -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -v -fcoverage-compilation-dir=/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp -resource-dir /usr/lib/llvm-13/lib/clang/13.0.1 -dependency-file CMakeFiles/cmTC_8dab6.dir/OpenMPTryFlag.c.o.d -MT CMakeFiles/cmTC_8dab6.dir/OpenMPTryFlag.c.o -sys-header-deps -internal-isystem /usr/lib/llvm-13/lib/clang/13.0.1/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir=/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fopenmp -fopenmp-version=45 -fgnuc-version=4.2.1 -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_8dab6.dir/OpenMPTryFlag.c.o -x c /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c
+clang -cc1 version 13.0.1 based upon LLVM 13.0.1 default target x86_64-pc-linux-gnu
+ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/lib/llvm-13/lib/clang/13.0.1/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+#include <omp.h>
+         ^~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_8dab6.dir/build.make:79: CMakeFiles/cmTC_8dab6.dir/OpenMPTryFlag.c.o] Error 1
+gmake[1]: Leaving directory '/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_8dab6/fast] Error 2
+
+
+
+Detecting C OpenMP failed with the following output:
+Change Dir: /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_99559/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_99559.dir/build.make CMakeFiles/cmTC_99559.dir/build
+gmake[1]: Entering directory '/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_99559.dir/OpenMPTryFlag.c.o
+/usr/bin/cc   -fopenmp-version=45 -fopenmp -v -fPIE -MD -MT CMakeFiles/cmTC_99559.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_99559.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_99559.dir/OpenMPTryFlag.c.o -c /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c
+Ubuntu clang version 13.0.1-2ubuntu2.2
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ (in-process)
+ "/usr/lib/llvm-13/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -fno-rounding-math -mconstructor-aliases -munwind-tables -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -v -fcoverage-compilation-dir=/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp -resource-dir /usr/lib/llvm-13/lib/clang/13.0.1 -dependency-file CMakeFiles/cmTC_99559.dir/OpenMPTryFlag.c.o.d -MT CMakeFiles/cmTC_99559.dir/OpenMPTryFlag.c.o -sys-header-deps -internal-isystem /usr/lib/llvm-13/lib/clang/13.0.1/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir=/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fopenmp -fopenmp-version=45 -fgnuc-version=4.2.1 -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_99559.dir/OpenMPTryFlag.c.o -x c /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c
+clang -cc1 version 13.0.1 based upon LLVM 13.0.1 default target x86_64-pc-linux-gnu
+ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/lib/llvm-13/lib/clang/13.0.1/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+#include <omp.h>
+         ^~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_99559.dir/build.make:79: CMakeFiles/cmTC_99559.dir/OpenMPTryFlag.c.o] Error 1
+gmake[1]: Leaving directory '/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_99559/fast] Error 2
+
+
+
+Detecting C OpenMP failed with the following output:
+Change Dir: /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_47d55/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_47d55.dir/build.make CMakeFiles/cmTC_47d55.dir/build
+gmake[1]: Entering directory '/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_47d55.dir/OpenMPTryFlag.c.o
+/usr/bin/cc   -fopenmp-version=45 -Xclang -fopenmp -v -fPIE -MD -MT CMakeFiles/cmTC_47d55.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_47d55.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_47d55.dir/OpenMPTryFlag.c.o -c /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c
+Ubuntu clang version 13.0.1-2ubuntu2.2
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ (in-process)
+ "/usr/lib/llvm-13/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -fno-rounding-math -mconstructor-aliases -munwind-tables -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -v -fcoverage-compilation-dir=/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp -resource-dir /usr/lib/llvm-13/lib/clang/13.0.1 -dependency-file CMakeFiles/cmTC_47d55.dir/OpenMPTryFlag.c.o.d -MT CMakeFiles/cmTC_47d55.dir/OpenMPTryFlag.c.o -sys-header-deps -internal-isystem /usr/lib/llvm-13/lib/clang/13.0.1/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir=/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fopenmp-version=45 -fgnuc-version=4.2.1 -fopenmp -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_47d55.dir/OpenMPTryFlag.c.o -x c /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c
+clang -cc1 version 13.0.1 based upon LLVM 13.0.1 default target x86_64-pc-linux-gnu
+ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/lib/llvm-13/lib/clang/13.0.1/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+#include <omp.h>
+         ^~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_47d55.dir/build.make:79: CMakeFiles/cmTC_47d55.dir/OpenMPTryFlag.c.o] Error 1
+gmake[1]: Leaving directory '/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_47d55/fast] Error 2
+
+
+
+Detecting CXX OpenMP failed with the following output:
+Change Dir: /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_6e109/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_6e109.dir/build.make CMakeFiles/cmTC_6e109.dir/build
+gmake[1]: Entering directory '/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_6e109.dir/OpenMPTryFlag.cpp.o
+/usr/bin/c++   -fopenmp-version=45 -fopenmp=libomp -v -fPIE -MD -MT CMakeFiles/cmTC_6e109.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_6e109.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_6e109.dir/OpenMPTryFlag.cpp.o -c /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
+Ubuntu clang version 13.0.1-2ubuntu2.2
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ (in-process)
+ "/usr/lib/llvm-13/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -fno-rounding-math -mconstructor-aliases -munwind-tables -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -v -fcoverage-compilation-dir=/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp -resource-dir /usr/lib/llvm-13/lib/clang/13.0.1 -dependency-file CMakeFiles/cmTC_6e109.dir/OpenMPTryFlag.cpp.o.d -MT CMakeFiles/cmTC_6e109.dir/OpenMPTryFlag.cpp.o -sys-header-deps -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/backward -internal-isystem /usr/lib/llvm-13/lib/clang/13.0.1/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir=/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fopenmp -fopenmp-version=45 -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_6e109.dir/OpenMPTryFlag.cpp.o -x c++ /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
+clang -cc1 version 13.0.1 based upon LLVM 13.0.1 default target x86_64-pc-linux-gnu
+ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/backward
+ /usr/lib/llvm-13/lib/clang/13.0.1/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+#include <omp.h>
+         ^~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_6e109.dir/build.make:79: CMakeFiles/cmTC_6e109.dir/OpenMPTryFlag.cpp.o] Error 1
+gmake[1]: Leaving directory '/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_6e109/fast] Error 2
+
+
+
+Detecting CXX OpenMP failed with the following output:
+Change Dir: /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_95051/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_95051.dir/build.make CMakeFiles/cmTC_95051.dir/build
+gmake[1]: Entering directory '/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_95051.dir/OpenMPTryFlag.cpp.o
+/usr/bin/c++   -fopenmp-version=45 -fopenmp=libiomp5 -v -fPIE -MD -MT CMakeFiles/cmTC_95051.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_95051.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_95051.dir/OpenMPTryFlag.cpp.o -c /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
+Ubuntu clang version 13.0.1-2ubuntu2.2
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ (in-process)
+ "/usr/lib/llvm-13/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -fno-rounding-math -mconstructor-aliases -munwind-tables -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -v -fcoverage-compilation-dir=/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp -resource-dir /usr/lib/llvm-13/lib/clang/13.0.1 -dependency-file CMakeFiles/cmTC_95051.dir/OpenMPTryFlag.cpp.o.d -MT CMakeFiles/cmTC_95051.dir/OpenMPTryFlag.cpp.o -sys-header-deps -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/backward -internal-isystem /usr/lib/llvm-13/lib/clang/13.0.1/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir=/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fopenmp -fopenmp-version=45 -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_95051.dir/OpenMPTryFlag.cpp.o -x c++ /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
+clang -cc1 version 13.0.1 based upon LLVM 13.0.1 default target x86_64-pc-linux-gnu
+ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/backward
+ /usr/lib/llvm-13/lib/clang/13.0.1/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+#include <omp.h>
+         ^~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_95051.dir/build.make:79: CMakeFiles/cmTC_95051.dir/OpenMPTryFlag.cpp.o] Error 1
+gmake[1]: Leaving directory '/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_95051/fast] Error 2
+
+
+
+Detecting CXX OpenMP failed with the following output:
+Change Dir: /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_c7280/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_c7280.dir/build.make CMakeFiles/cmTC_c7280.dir/build
+gmake[1]: Entering directory '/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_c7280.dir/OpenMPTryFlag.cpp.o
+/usr/bin/c++   -fopenmp-version=45 -fopenmp -v -fPIE -MD -MT CMakeFiles/cmTC_c7280.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_c7280.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_c7280.dir/OpenMPTryFlag.cpp.o -c /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
+Ubuntu clang version 13.0.1-2ubuntu2.2
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ (in-process)
+ "/usr/lib/llvm-13/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -fno-rounding-math -mconstructor-aliases -munwind-tables -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -v -fcoverage-compilation-dir=/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp -resource-dir /usr/lib/llvm-13/lib/clang/13.0.1 -dependency-file CMakeFiles/cmTC_c7280.dir/OpenMPTryFlag.cpp.o.d -MT CMakeFiles/cmTC_c7280.dir/OpenMPTryFlag.cpp.o -sys-header-deps -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/backward -internal-isystem /usr/lib/llvm-13/lib/clang/13.0.1/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir=/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fopenmp -fopenmp-version=45 -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_c7280.dir/OpenMPTryFlag.cpp.o -x c++ /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
+clang -cc1 version 13.0.1 based upon LLVM 13.0.1 default target x86_64-pc-linux-gnu
+ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/backward
+ /usr/lib/llvm-13/lib/clang/13.0.1/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+#include <omp.h>
+         ^~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_c7280.dir/build.make:79: CMakeFiles/cmTC_c7280.dir/OpenMPTryFlag.cpp.o] Error 1
+gmake[1]: Leaving directory '/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_c7280/fast] Error 2
+
+
+
+Detecting CXX OpenMP failed with the following output:
+Change Dir: /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_2ecea/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_2ecea.dir/build.make CMakeFiles/cmTC_2ecea.dir/build
+gmake[1]: Entering directory '/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_2ecea.dir/OpenMPTryFlag.cpp.o
+/usr/bin/c++   -fopenmp-version=45 -Xclang -fopenmp -v -fPIE -MD -MT CMakeFiles/cmTC_2ecea.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_2ecea.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_2ecea.dir/OpenMPTryFlag.cpp.o -c /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
+Ubuntu clang version 13.0.1-2ubuntu2.2
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ (in-process)
+ "/usr/lib/llvm-13/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -fno-rounding-math -mconstructor-aliases -munwind-tables -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -v -fcoverage-compilation-dir=/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp -resource-dir /usr/lib/llvm-13/lib/clang/13.0.1 -dependency-file CMakeFiles/cmTC_2ecea.dir/OpenMPTryFlag.cpp.o.d -MT CMakeFiles/cmTC_2ecea.dir/OpenMPTryFlag.cpp.o -sys-header-deps -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/backward -internal-isystem /usr/lib/llvm-13/lib/clang/13.0.1/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir=/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fopenmp-version=45 -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -fopenmp -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_2ecea.dir/OpenMPTryFlag.cpp.o -x c++ /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
+clang -cc1 version 13.0.1 based upon LLVM 13.0.1 default target x86_64-pc-linux-gnu
+ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/backward
+ /usr/lib/llvm-13/lib/clang/13.0.1/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+#include <omp.h>
+         ^~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_2ecea.dir/build.make:79: CMakeFiles/cmTC_2ecea.dir/OpenMPTryFlag.cpp.o] Error 1
+gmake[1]: Leaving directory '/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_2ecea/fast] Error 2
+
+
+
+Detecting C OpenMP failed with the following output:
+Change Dir: /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_768de/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_768de.dir/build.make CMakeFiles/cmTC_768de.dir/build
+gmake[1]: Entering directory '/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_768de.dir/OpenMPTryFlag.c.o
+/usr/bin/cc   -fopenmp-version=45 -fopenmp=libomp -v -fPIE -MD -MT CMakeFiles/cmTC_768de.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_768de.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_768de.dir/OpenMPTryFlag.c.o -c /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c
+Ubuntu clang version 13.0.1-2ubuntu2.2
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ (in-process)
+ "/usr/lib/llvm-13/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -fno-rounding-math -mconstructor-aliases -munwind-tables -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -v -fcoverage-compilation-dir=/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp -resource-dir /usr/lib/llvm-13/lib/clang/13.0.1 -dependency-file CMakeFiles/cmTC_768de.dir/OpenMPTryFlag.c.o.d -MT CMakeFiles/cmTC_768de.dir/OpenMPTryFlag.c.o -sys-header-deps -internal-isystem /usr/lib/llvm-13/lib/clang/13.0.1/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir=/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fopenmp -fopenmp-version=45 -fgnuc-version=4.2.1 -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_768de.dir/OpenMPTryFlag.c.o -x c /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c
+clang -cc1 version 13.0.1 based upon LLVM 13.0.1 default target x86_64-pc-linux-gnu
+ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/lib/llvm-13/lib/clang/13.0.1/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+#include <omp.h>
+         ^~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_768de.dir/build.make:79: CMakeFiles/cmTC_768de.dir/OpenMPTryFlag.c.o] Error 1
+gmake[1]: Leaving directory '/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_768de/fast] Error 2
+
+
+
+Detecting C OpenMP failed with the following output:
+Change Dir: /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_cc231/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_cc231.dir/build.make CMakeFiles/cmTC_cc231.dir/build
+gmake[1]: Entering directory '/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_cc231.dir/OpenMPTryFlag.c.o
+/usr/bin/cc   -fopenmp-version=45 -fopenmp=libiomp5 -v -fPIE -MD -MT CMakeFiles/cmTC_cc231.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_cc231.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_cc231.dir/OpenMPTryFlag.c.o -c /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c
+Ubuntu clang version 13.0.1-2ubuntu2.2
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ (in-process)
+ "/usr/lib/llvm-13/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -fno-rounding-math -mconstructor-aliases -munwind-tables -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -v -fcoverage-compilation-dir=/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp -resource-dir /usr/lib/llvm-13/lib/clang/13.0.1 -dependency-file CMakeFiles/cmTC_cc231.dir/OpenMPTryFlag.c.o.d -MT CMakeFiles/cmTC_cc231.dir/OpenMPTryFlag.c.o -sys-header-deps -internal-isystem /usr/lib/llvm-13/lib/clang/13.0.1/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir=/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fopenmp -fopenmp-version=45 -fgnuc-version=4.2.1 -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_cc231.dir/OpenMPTryFlag.c.o -x c /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c
+clang -cc1 version 13.0.1 based upon LLVM 13.0.1 default target x86_64-pc-linux-gnu
+ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/lib/llvm-13/lib/clang/13.0.1/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+#include <omp.h>
+         ^~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_cc231.dir/build.make:79: CMakeFiles/cmTC_cc231.dir/OpenMPTryFlag.c.o] Error 1
+gmake[1]: Leaving directory '/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_cc231/fast] Error 2
+
+
+
+Detecting C OpenMP failed with the following output:
+Change Dir: /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_6d73f/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_6d73f.dir/build.make CMakeFiles/cmTC_6d73f.dir/build
+gmake[1]: Entering directory '/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6d73f.dir/OpenMPTryFlag.c.o
+/usr/bin/cc   -fopenmp-version=45 -fopenmp -v -fPIE -MD -MT CMakeFiles/cmTC_6d73f.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_6d73f.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_6d73f.dir/OpenMPTryFlag.c.o -c /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c
+Ubuntu clang version 13.0.1-2ubuntu2.2
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ (in-process)
+ "/usr/lib/llvm-13/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -fno-rounding-math -mconstructor-aliases -munwind-tables -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -v -fcoverage-compilation-dir=/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp -resource-dir /usr/lib/llvm-13/lib/clang/13.0.1 -dependency-file CMakeFiles/cmTC_6d73f.dir/OpenMPTryFlag.c.o.d -MT CMakeFiles/cmTC_6d73f.dir/OpenMPTryFlag.c.o -sys-header-deps -internal-isystem /usr/lib/llvm-13/lib/clang/13.0.1/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir=/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fopenmp -fopenmp-version=45 -fgnuc-version=4.2.1 -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_6d73f.dir/OpenMPTryFlag.c.o -x c /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c
+clang -cc1 version 13.0.1 based upon LLVM 13.0.1 default target x86_64-pc-linux-gnu
+ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/lib/llvm-13/lib/clang/13.0.1/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+#include <omp.h>
+         ^~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_6d73f.dir/build.make:79: CMakeFiles/cmTC_6d73f.dir/OpenMPTryFlag.c.o] Error 1
+gmake[1]: Leaving directory '/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_6d73f/fast] Error 2
+
+
+
+Detecting C OpenMP failed with the following output:
+Change Dir: /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_bb27a/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_bb27a.dir/build.make CMakeFiles/cmTC_bb27a.dir/build
+gmake[1]: Entering directory '/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_bb27a.dir/OpenMPTryFlag.c.o
+/usr/bin/cc   -fopenmp-version=45 -Xclang -fopenmp -v -fPIE -MD -MT CMakeFiles/cmTC_bb27a.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_bb27a.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_bb27a.dir/OpenMPTryFlag.c.o -c /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c
+Ubuntu clang version 13.0.1-2ubuntu2.2
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ (in-process)
+ "/usr/lib/llvm-13/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -fno-rounding-math -mconstructor-aliases -munwind-tables -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -v -fcoverage-compilation-dir=/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp -resource-dir /usr/lib/llvm-13/lib/clang/13.0.1 -dependency-file CMakeFiles/cmTC_bb27a.dir/OpenMPTryFlag.c.o.d -MT CMakeFiles/cmTC_bb27a.dir/OpenMPTryFlag.c.o -sys-header-deps -internal-isystem /usr/lib/llvm-13/lib/clang/13.0.1/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir=/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fopenmp-version=45 -fgnuc-version=4.2.1 -fopenmp -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_bb27a.dir/OpenMPTryFlag.c.o -x c /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c
+clang -cc1 version 13.0.1 based upon LLVM 13.0.1 default target x86_64-pc-linux-gnu
+ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/lib/llvm-13/lib/clang/13.0.1/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+#include <omp.h>
+         ^~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_bb27a.dir/build.make:79: CMakeFiles/cmTC_bb27a.dir/OpenMPTryFlag.c.o] Error 1
+gmake[1]: Leaving directory '/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_bb27a/fast] Error 2
+
+
+
+Detecting CXX OpenMP failed with the following output:
+Change Dir: /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_07bea/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_07bea.dir/build.make CMakeFiles/cmTC_07bea.dir/build
+gmake[1]: Entering directory '/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_07bea.dir/OpenMPTryFlag.cpp.o
+/usr/bin/c++   -fopenmp-version=45 -fopenmp=libomp -v -fPIE -MD -MT CMakeFiles/cmTC_07bea.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_07bea.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_07bea.dir/OpenMPTryFlag.cpp.o -c /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
+Ubuntu clang version 13.0.1-2ubuntu2.2
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ (in-process)
+ "/usr/lib/llvm-13/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -fno-rounding-math -mconstructor-aliases -munwind-tables -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -v -fcoverage-compilation-dir=/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp -resource-dir /usr/lib/llvm-13/lib/clang/13.0.1 -dependency-file CMakeFiles/cmTC_07bea.dir/OpenMPTryFlag.cpp.o.d -MT CMakeFiles/cmTC_07bea.dir/OpenMPTryFlag.cpp.o -sys-header-deps -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/backward -internal-isystem /usr/lib/llvm-13/lib/clang/13.0.1/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir=/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fopenmp -fopenmp-version=45 -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_07bea.dir/OpenMPTryFlag.cpp.o -x c++ /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
+clang -cc1 version 13.0.1 based upon LLVM 13.0.1 default target x86_64-pc-linux-gnu
+ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/backward
+ /usr/lib/llvm-13/lib/clang/13.0.1/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+#include <omp.h>
+         ^~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_07bea.dir/build.make:79: CMakeFiles/cmTC_07bea.dir/OpenMPTryFlag.cpp.o] Error 1
+gmake[1]: Leaving directory '/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_07bea/fast] Error 2
+
+
+
+Detecting CXX OpenMP failed with the following output:
+Change Dir: /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_baa10/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_baa10.dir/build.make CMakeFiles/cmTC_baa10.dir/build
+gmake[1]: Entering directory '/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_baa10.dir/OpenMPTryFlag.cpp.o
+/usr/bin/c++   -fopenmp-version=45 -fopenmp=libiomp5 -v -fPIE -MD -MT CMakeFiles/cmTC_baa10.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_baa10.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_baa10.dir/OpenMPTryFlag.cpp.o -c /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
+Ubuntu clang version 13.0.1-2ubuntu2.2
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ (in-process)
+ "/usr/lib/llvm-13/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -fno-rounding-math -mconstructor-aliases -munwind-tables -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -v -fcoverage-compilation-dir=/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp -resource-dir /usr/lib/llvm-13/lib/clang/13.0.1 -dependency-file CMakeFiles/cmTC_baa10.dir/OpenMPTryFlag.cpp.o.d -MT CMakeFiles/cmTC_baa10.dir/OpenMPTryFlag.cpp.o -sys-header-deps -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/backward -internal-isystem /usr/lib/llvm-13/lib/clang/13.0.1/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir=/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fopenmp -fopenmp-version=45 -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_baa10.dir/OpenMPTryFlag.cpp.o -x c++ /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
+clang -cc1 version 13.0.1 based upon LLVM 13.0.1 default target x86_64-pc-linux-gnu
+ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/backward
+ /usr/lib/llvm-13/lib/clang/13.0.1/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+#include <omp.h>
+         ^~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_baa10.dir/build.make:79: CMakeFiles/cmTC_baa10.dir/OpenMPTryFlag.cpp.o] Error 1
+gmake[1]: Leaving directory '/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_baa10/fast] Error 2
+
+
+
+Detecting CXX OpenMP failed with the following output:
+Change Dir: /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_1efdf/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_1efdf.dir/build.make CMakeFiles/cmTC_1efdf.dir/build
+gmake[1]: Entering directory '/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_1efdf.dir/OpenMPTryFlag.cpp.o
+/usr/bin/c++   -fopenmp-version=45 -fopenmp -v -fPIE -MD -MT CMakeFiles/cmTC_1efdf.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_1efdf.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_1efdf.dir/OpenMPTryFlag.cpp.o -c /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
+Ubuntu clang version 13.0.1-2ubuntu2.2
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ (in-process)
+ "/usr/lib/llvm-13/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -fno-rounding-math -mconstructor-aliases -munwind-tables -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -v -fcoverage-compilation-dir=/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp -resource-dir /usr/lib/llvm-13/lib/clang/13.0.1 -dependency-file CMakeFiles/cmTC_1efdf.dir/OpenMPTryFlag.cpp.o.d -MT CMakeFiles/cmTC_1efdf.dir/OpenMPTryFlag.cpp.o -sys-header-deps -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/backward -internal-isystem /usr/lib/llvm-13/lib/clang/13.0.1/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir=/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fopenmp -fopenmp-version=45 -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_1efdf.dir/OpenMPTryFlag.cpp.o -x c++ /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
+clang -cc1 version 13.0.1 based upon LLVM 13.0.1 default target x86_64-pc-linux-gnu
+ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/backward
+ /usr/lib/llvm-13/lib/clang/13.0.1/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+#include <omp.h>
+         ^~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_1efdf.dir/build.make:79: CMakeFiles/cmTC_1efdf.dir/OpenMPTryFlag.cpp.o] Error 1
+gmake[1]: Leaving directory '/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_1efdf/fast] Error 2
+
+
+
+Detecting CXX OpenMP failed with the following output:
+Change Dir: /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_1db20/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_1db20.dir/build.make CMakeFiles/cmTC_1db20.dir/build
+gmake[1]: Entering directory '/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_1db20.dir/OpenMPTryFlag.cpp.o
+/usr/bin/c++   -fopenmp-version=45 -Xclang -fopenmp -v -fPIE -MD -MT CMakeFiles/cmTC_1db20.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_1db20.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_1db20.dir/OpenMPTryFlag.cpp.o -c /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
+Ubuntu clang version 13.0.1-2ubuntu2.2
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+Found candidate GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ (in-process)
+ "/usr/lib/llvm-13/bin/clang" -cc1 -triple x86_64-pc-linux-gnu -emit-obj -mrelax-all --mrelax-relocations -disable-free -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -fno-rounding-math -mconstructor-aliases -munwind-tables -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -v -fcoverage-compilation-dir=/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp -resource-dir /usr/lib/llvm-13/lib/clang/13.0.1 -dependency-file CMakeFiles/cmTC_1db20.dir/OpenMPTryFlag.cpp.o.d -MT CMakeFiles/cmTC_1db20.dir/OpenMPTryFlag.cpp.o -sys-header-deps -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11 -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/backward -internal-isystem /usr/lib/llvm-13/lib/clang/13.0.1/include -internal-isystem /usr/local/include -internal-isystem /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir=/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fopenmp-version=45 -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -fopenmp -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_1db20.dir/OpenMPTryFlag.cpp.o -x c++ /root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
+clang -cc1 version 13.0.1 based upon LLVM 13.0.1 default target x86_64-pc-linux-gnu
+ignoring nonexistent directory "/usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"
+ignoring nonexistent directory "/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11
+ /usr/bin/../lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/backward
+ /usr/lib/llvm-13/lib/clang/13.0.1/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+#include <omp.h>
+         ^~~~~~~
+1 error generated.
+gmake[1]: *** [CMakeFiles/cmTC_1db20.dir/build.make:79: CMakeFiles/cmTC_1db20.dir/OpenMPTryFlag.cpp.o] Error 1
+gmake[1]: Leaving directory '/root/oss-experiment/data/darktable-3.8.1/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_1db20/fast] Error 2
+
+
+

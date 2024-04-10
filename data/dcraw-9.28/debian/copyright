@@ -1,0 +1,67 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: dcraw
+Upstream-Contact: Dave Coffin <dcoffin a dechifro period org>
+Source:
+ dcraw code was downloaded from:
+  https://www.dechifro.org/dcraw/dcraw.c
+  https://www.dechifro.org/dcraw/dcraw.1
+
+Files: *
+Copyright: 1997-2018 by Dave Coffin
+License: dcraw
+  dcraw.c -- Dave Coffin's raw photo decoder
+   Copyright 1997-2018 by Dave Coffin, dcoffin a cybercom o net
+   .
+   This is a command-line ANSI C program to convert raw photos from
+   any digital camera on any computer running any operating system.
+   .
+   No license is required to download and use dcraw.c.  However,
+   to lawfully redistribute dcraw, you must either (a) offer, at
+   no extra charge, full source code* for all executable files
+   containing RESTRICTED functions, (b) distribute this code under
+   the GPL Version 2 or later, (c) remove all RESTRICTED functions,
+   re-implement them, or copy them from an earlier, unrestricted
+   Revision of dcraw.c, or (d) purchase a license from the author.
+   .
+   The functions that process Foveon images have been RESTRICTED
+   since Revision 1.237.  All other code remains free for all uses.
+   .
+   *If you have not modified dcraw.c in any way, a link to my
+   homepage qualifies as "full source code".
+
+Files: clean_crw.c parse.c fujiturn.c fuji_green.c .badpixels
+Copyright: 2004-2018 by Dave Coffin
+Comment: Website says: Unless otherwise noted in the source code, these
+ programs are free for all uses.
+License: Permissive
+ Free for all uses.
+
+Files: debian/*
+Copyright: 2003 - 2010 Steve King <debian@invux.com>
+           2013 Oliver Sander <sander@igpm.rwth-aachen.de>
+           2014 Andreas Metzler <ametzler@debian.org>
+           2016 Tobias Frost <tobi@debian.org>
+           2016 - 2021 Filip Hroch <hroch@physics.muni.cz>
+License: GPL-2+
+
+License: GPL-2+
+ This program is free software; you can redistribute it
+ and/or modify it under the terms of the GNU General Public
+ License as published by the Free Software Foundation; either
+ version 2 of the License, or (at your option) any later
+ version.
+ .
+ This program is distributed in the hope that it will be
+ useful, but WITHOUT ANY WARRANTY; without even the implied
+ warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+ PURPOSE.  See the GNU General Public License for more
+ details.
+ .
+ You should have received a copy of the GNU General Public
+ License along with this package; if not, write to the Free
+ Software Foundation, Inc., 51 Franklin St, Fifth Floor,
+ Boston, MA  02110-1301 USA
+ .
+ On Debian systems, the full text of the GNU General Public
+ License version 2 can be found in the file
+ `/usr/share/common-licenses/GPL-2'.

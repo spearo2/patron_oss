@@ -1,0 +1,21 @@
+From: Felipe Sateler <fsateler@debian.org>
+Date: Mon, 21 Sep 2015 09:20:07 -0300
+Subject: Rename demo to stk-demo
+
+---
+ Makefile.in | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Makefile.in b/Makefile.in
+index f4f04ec..5afd13e 100644
+--- a/Makefile.in
++++ b/Makefile.in
+@@ -6,7 +6,7 @@ REALTIME = @realtime@
+ 
+ all :
+ 	cd src && $(MAKE)
+-	cd projects/demo && $(MAKE) libdemo
++	cd projects/demo && $(MAKE) stk-demo
+ ifeq ($(REALTIME),yes)
+ 	cd projects/effects && $(MAKE) libeffects
+ 	cd projects/ragamatic && $(MAKE) libragamat

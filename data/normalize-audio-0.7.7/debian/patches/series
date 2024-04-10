@@ -1,0 +1,11 @@
+compressed-wav-files.patch
+rename-binary.patch
+fix-exdev-error.patch
+fix-flac.patch
+fix-manpage.patch
+fix-encoder-decoder-detection.patch
+fix-configure-ac.patch
+fix-zero-power-handling.patch
+fix-doc-audio-file-types.patch
+fix-parallel-test-suite.patch
+improve-normalize-ogg-showstats-962236.patch

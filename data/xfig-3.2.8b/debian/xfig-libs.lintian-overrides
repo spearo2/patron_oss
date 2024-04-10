@@ -1,0 +1,36 @@
+# The README files only tell us the name of the author and what this
+# library contains, so it does not fit into /usr/share/doc.
+xfig-libs: package-contains-documentation-outside-usr-share-doc usr/share/xfig/Libraries/Arrows/README
+xfig-libs: package-contains-documentation-outside-usr-share-doc usr/share/xfig/Libraries/Audiovisual/README
+xfig-libs: package-contains-documentation-outside-usr-share-doc usr/share/xfig/Libraries/Buildings/README
+xfig-libs: package-contains-documentation-outside-usr-share-doc usr/share/xfig/Libraries/Charts/README
+xfig-libs: package-contains-documentation-outside-usr-share-doc usr/share/xfig/Libraries/Computers/README
+xfig-libs: package-contains-documentation-outside-usr-share-doc usr/share/xfig/Libraries/DSP/README
+xfig-libs: package-contains-documentation-outside-usr-share-doc usr/share/xfig/Libraries/ERD/README
+xfig-libs: package-contains-documentation-outside-usr-share-doc usr/share/xfig/Libraries/Electrical/README
+xfig-libs: package-contains-documentation-outside-usr-share-doc usr/share/xfig/Libraries/Electronic/Physical/README
+xfig-libs: package-contains-documentation-outside-usr-share-doc usr/share/xfig/Libraries/Electronic/README
+xfig-libs: package-contains-documentation-outside-usr-share-doc usr/share/xfig/Libraries/Electronic/Schematic/Classic/README
+xfig-libs: package-contains-documentation-outside-usr-share-doc usr/share/xfig/Libraries/Fasteners/README
+xfig-libs: package-contains-documentation-outside-usr-share-doc usr/share/xfig/Libraries/Flags/NorthAmerica/USA/README
+xfig-libs: package-contains-documentation-outside-usr-share-doc usr/share/xfig/Libraries/Flags/README
+xfig-libs: package-contains-documentation-outside-usr-share-doc usr/share/xfig/Libraries/Flowchart/README
+xfig-libs: package-contains-documentation-outside-usr-share-doc usr/share/xfig/Libraries/Furniture/README
+xfig-libs: package-contains-documentation-outside-usr-share-doc usr/share/xfig/Libraries/GUI/README
+xfig-libs: package-contains-documentation-outside-usr-share-doc usr/share/xfig/Libraries/Hospital/README
+xfig-libs: package-contains-documentation-outside-usr-share-doc usr/share/xfig/Libraries/Knitting/README
+xfig-libs: package-contains-documentation-outside-usr-share-doc usr/share/xfig/Libraries/Labels/README
+xfig-libs: package-contains-documentation-outside-usr-share-doc usr/share/xfig/Libraries/Logic/README
+xfig-libs: package-contains-documentation-outside-usr-share-doc usr/share/xfig/Libraries/Maps/README
+xfig-libs: package-contains-documentation-outside-usr-share-doc usr/share/xfig/Libraries/Maps/USA/README
+xfig-libs: package-contains-documentation-outside-usr-share-doc usr/share/xfig/Libraries/Mechanical_DIN/README
+xfig-libs: package-contains-documentation-outside-usr-share-doc usr/share/xfig/Libraries/Miscellaneous/Astrology/README
+xfig-libs: package-contains-documentation-outside-usr-share-doc usr/share/xfig/Libraries/Miscellaneous/README
+xfig-libs: package-contains-documentation-outside-usr-share-doc usr/share/xfig/Libraries/Music/README
+xfig-libs: package-contains-documentation-outside-usr-share-doc usr/share/xfig/Libraries/Networks/README
+xfig-libs: package-contains-documentation-outside-usr-share-doc usr/share/xfig/Libraries/Optics/README
+xfig-libs: package-contains-documentation-outside-usr-share-doc usr/share/xfig/Libraries/Origami/README
+xfig-libs: package-contains-documentation-outside-usr-share-doc usr/share/xfig/Libraries/ProcessFlowsheet/README
+xfig-libs: package-contains-documentation-outside-usr-share-doc usr/share/xfig/Libraries/Structural_Analysis/README
+xfig-libs: package-contains-documentation-outside-usr-share-doc usr/share/xfig/Libraries/UML/README
+xfig-libs: package-contains-documentation-outside-usr-share-doc usr/share/xfig/Libraries/Welding/README

@@ -1,0 +1,24 @@
+From: Felipe Sateler <fsateler@debian.org>
+Date: Sat, 23 Jul 2016 11:26:07 -0400
+Subject: Do not override user-supplied CXXFLAGS
+
+Prepend local flags to that
+---
+ configure.ac | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/configure.ac b/configure.ac
+index 80a8a0f..95e558d 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -99,8 +99,8 @@ fi
+ # For -I and -D flags
+ CPPFLAGS="$CPPFLAGS $cppflag"
+ 
+-# For debugging and optimization ... overwrite default because it has both -g and -O2
+-CXXFLAGS="$cxxflag"
++# For debugging and optimization ...
++CXXFLAGS="$cxxflag $CXXFLAGS"
+ 
+ # Check compiler and use -Wall if gnu.
+ if [test $GXX = "yes" ;] then

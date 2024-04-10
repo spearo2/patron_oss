@@ -1,0 +1,72 @@
+Description: Correct typos in manpages
+Author: Jörg Frings-Fürst <debian@jff-webhosting.net>
+Bug-Debian: https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=612686
+Forwarded: not-needed
+Last-Update: 2014-12-03
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+Index: trunk/doc/scanadf.man
+===================================================================
+--- trunk.orig/doc/scanadf.man
++++ trunk/doc/scanadf.man
+@@ -162,7 +162,7 @@ information about the parameters of the
+ 
+ .PP
+ If the
+-.B --scipt-wait
++.B --script-wait
+ option is given, scanadf will wait until all scan-scripts have been finished before
+ exiting. That will be useful if scanadf is used in conjunction with tools to modify
+ the scanned images.
+@@ -210,7 +210,7 @@ invoke
+ via a command-line of the form:
+ .PP
+ .RS
+-scanadf --help --device
++scanadf \-\-help \-\-device
+ .I dev
+ .RE
+ .PP
+@@ -256,12 +256,12 @@ work at this time are:
+ .br
+ .B sane-hp
+ - Hewlett Packard scanners.  A patch to the sane-hp backend 
+-is necessary.  The --scantype=ADF option must be specified (earlier
+-versions of the backend used the --scan-from-adf option, instead).
++is necessary.  The \-\-scantype=ADF option must be specified (earlier
++versions of the backend used the \-\-scan-from-adf option, instead).
+ .br
+ .B sane-umax
+ - UMAX scanners.  Support exists in build 12 and later.
+-The --source="Automatic Document Feeder" option must be specified.
++The \-\-source="Automatic Document Feeder" option must be specified.
+ .br
+ .RE
+ 
+Index: trunk/doc/xscanimage.man
+===================================================================
+--- trunk.orig/doc/xscanimage.man
++++ trunk/doc/xscanimage.man
+@@ -15,7 +15,7 @@ xscanimage \- scan an image
+ .B xscanimage
+ provides a graphical user-interface to control an image
+ acquisition device such as a flatbed scanner or a camera.  It allows
+-previewing and scanning invidual images and can be invoked either
++previewing and scanning individual images and can be invoked either
+ directly from the command-line or through The GIMP image manipulation
+ program.  In the former case,
+ .B xscanimage
+@@ -45,11 +45,11 @@ simply copy it to one of the
+ plug-ins directories.  If you want to conserve disk-space, you can
+ create a symlink instead.  For example, for gimp-1.0.x the command
+ .PP
+-ln -s @BINDIR@/xscanimage ~/.gimp/plug-ins/
++ln \-s @BINDIR@/xscanimage ~/.gimp/plug-ins/
+ .PP
+ and for gimp-1.2.x the command
+ .PP
+-ln -s @BINDIR@/xscanimage ~/.gimp-1.2/plug-ins/
++ln \-s @BINDIR@/xscanimage ~/.gimp-1.2/plug-ins/
+ .PP
+ adds a symlink for the
+ .B xscanimage

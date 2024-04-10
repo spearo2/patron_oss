@@ -1,0 +1,11 @@
+0001-fix_missing_sane-config.patch
+0100-xcam.c_dead_code.patch
+0105-scanadf_options_fix.patch
+0110-cap_always_settable.patch
+0115-xcam_off_by_one.patch
+0120-word_list_fix.patch
+0125-scanadf-SIGCHLD.patch
+0130-gimp_init.patch
+0135-xscanimage_c-out-of-bounds.patch
+0600-xcam_man_typo.patch
+0605-manpages-typo.patch

@@ -1,0 +1,22 @@
+Author: Francesco Poli <invernomuto@paranoici.org>
+Description: Improve the statistics output of normalize-ogg (see: #962236).
+Index: normalize-audio/src/normalize-mp3.in
+===================================================================
+--- normalize-audio.orig/src/normalize-mp3.in
++++ normalize-audio/src/normalize-mp3.in
+@@ -574,11 +574,11 @@ if ($batch_mode || $mix_mode) {
+ 	    if (/^ADJUST_NEEDED /) {
+ 		($dummy, $adjust_needed_here) = split;
+ 		$adjust_needed = $adjust_needed || $adjust_needed_here;
+-	    } elsif (/^LEVEL /) {
++	    }
++            unless (/^[A-Z_]+ /) {
+ 		unless ($do_adjust) {
+-		    # with -n specified, the line following a LEVEL line
+-		    # is the "level peak gain" line, so print it out
+-		    $_ = <NORM>;
++		    # with -n specified, print out everything which is
++		    # not feedback for the frontend
+ 		    print;
+ 		}
+ 	    }

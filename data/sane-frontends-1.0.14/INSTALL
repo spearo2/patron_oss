@@ -1,0 +1,61 @@
+How to configure, build, and install SANE-FRONTENDS.
+
+Quick install:
+==============
+
+./configure
+make
+make install        
+
+
+Type `./configure --help' for a list of options.
+
+Prerequisites:
+
+- GNU make version 3.70 or later and an ANSI C-Compiler (e.g. gcc) is needed
+  for compilation. It may be necessary to specify the path to GNU make and the
+  compiler by setting the environment variables MAKE and CC before running
+  configure.
+
+- You must install the sane-backends package before you can configure this
+  package. If you use pre-compiled binaries (e.g. from your distribution) you
+  will also have to install the SANE headers (maybe in a package called
+  sane-devel or similar). In this case you also need the -devel packages for
+  all the software sane-backends depends on (e.g. libusb). If you're lucky,
+  your distribution took care of that. Otherwise run sane-config --libs and
+  make sure that the -devel packages for all the libraries mentioned in the
+  output are installed.
+
+- For xscanimage and xcam you need the X Window libraries and headers.
+  Furthermore GTK version 0.99.13 (or 1.0.*, 1.2.*, 2.0.*) must be installed
+  together with its header files. GTK can be found at http://www.gtk.org/. For
+  some operating systems it's necessary to set the path to gtk-config
+  explicitely. This can be done by using the environment variable
+  GTK_CONFIG. For FreeBSD try `GTK_CONFIG=/usr/X11R6/bin/gtk12-config'.
+
+- If you want to use xscanimage as a GIMP plug-in, the GIMP libraries and
+  headers are necessary. See http://www.gimp.org/. See also `man xscanimage'.
+  Versions 1.2.*, and 2.0.* are known to work.
+
+- If you get an error message that libsane-dll.so.1 or libsane-so.1 is not
+  found, you have to tell your system where the SANE-libraries are installed.
+  On some systems the library directory `/usr/local/lib' is not searched by
+  the system's dynamic library loader. If SANE is installed in `/usr/local/...'
+  you have to tell your system's dynamic library loader to search in
+  `/usr/local/lib'. For Linux: add the path `/usr/local/lib' to
+  /etc/ld.so.conf and call ldconfig (as root). Another approach is to set the
+  environment variable LD_LIBRARY_PATH (or the equivalent on other operating
+  systems) to `/usr/local/lib'.
+
+- OS/2: If you get errors like this one: "xcam.o: Undefined symbol
+  _pthread_write referenced from text segment", libpthread must be linked.
+  Find "gtk-config" on your system and add "-lpthreads" to the list of
+  libraries.
+
+Uninstall
+=========
+
+To uninstall the binaries and manual pages, type `make uninstall'.
+
+
+See also the PROBLEMS and README files.

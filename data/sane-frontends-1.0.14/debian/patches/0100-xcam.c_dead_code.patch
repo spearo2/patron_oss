@@ -1,0 +1,25 @@
+Author: <jblache@debian.org>
+Description: Remove dead code in src/xcam.c::load_defaults()
+Index: trunk/src/xcam.c
+===================================================================
+--- trunk.orig/src/xcam.c
++++ trunk/src/xcam.c
+@@ -536,16 +536,14 @@ static void
+ load_defaults (int silent)
+ {
+   char filename[PATH_MAX];
+-  int fd;
+ 
+   DBG (DBG_debug, "xcam, load_defaults: enter\n");
+   if (make_default_filename (sizeof (filename), filename, dialog->dev_name)
+       < 0)
+     return;
+-  if (fd < 0)
+-    return;
++
+   load_settings (filename, silent);
+-  sanei_load_values (fd, dialog->dev);
++
+   DBG (DBG_debug, "xcam, load_defaults: exit\n");
+ }
+ 

@@ -1,0 +1,45 @@
+From: Roland Rosenfeld <roland@debian.org>
+Date: Wed, 01 Nov 2017 12:44:41 +0100
+Subject: Replace external and no longer available
+ http://epb.lbl.gov/xfig/libraries frame by a minmal local frame.
+ Embedding an external web page in a frame was a potential privacy breach.
+Forwarded: Thomas Loimer <thomas.loimer@tuwien.ac.at> on Sat, 14 Apr 2018 19:42:48 +0200
+
+--- a/doc/html/japanese/frm_object_libraries.html
++++ b/doc/html/japanese/frm_object_libraries.html
+@@ -6,7 +6,7 @@
+ 
+ <frameset cols="172,*">
+   <frame src="but_frm_object_libraries.html" marginheight=10 marginwidth=4>
+-  <frame src="http://epb.lbl.gov/xfig/libraries" name="contents">
++  <frame src="libraries.html" name="contents">
+   <noframes>
+     Jump to <a href="contents.html">no frame version</a>.
+   </noframes>
+--- /dev/null
++++ b/doc/html/japanese/libraries.html
+@@ -0,0 +1,24 @@
++<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
++<html>
++<head>
++<title>Fig Object Libraries</title>
++</head>
++
++<body>
++<a href="contents.html"><img src="images/xfig-title.png"
++  alt="XFIG Users Manual" border=0></a>
++
++<hr>
++
++<h1>Fig Object Libraries</h1>
++The libraries of Fig objects are available in the Xfig distribution.
++<br>
++On a Debian system simply install package xfig-libs.
++<p>
++To find out how to make your own libraries,
++click <a href="drawing.html#makelibrary">here</a>.
++<p>
++Contributions to all libraries are most welcome.
++
++</body>
++</html>

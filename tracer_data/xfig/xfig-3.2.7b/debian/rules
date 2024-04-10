@@ -1,0 +1,112 @@
+#!/usr/bin/make -f
+#
+# (C) 1999-2019 Roland Rosenfeld <roland@debian.org>, based on
+# sample debian/rules that uses debhelper.
+# This file is public domain software, originally written by Joey Hess.
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+INSTDIR=`pwd`/debian/xfig
+DOCINSTDIR=`pwd`/debian/xfig-doc
+LIBINSTDIR=`pwd`/debian/xfig-libs
+
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+
+%:
+	dh $@
+
+override_dh_auto_configure:
+#	backup version.m4:
+	if ! test -e version.m4.dh-orig; then \
+		cp -f version.m4 version.m4.dh-orig; \
+	fi
+
+	dh_auto_configure -- --enable-splash --enable-tablet
+
+override_dh_auto_build:
+	dh_auto_build
+
+override_dh_clean:
+	dh_clean
+
+	rm -f doc/xfig_man.html
+
+#	restore version.m4:
+	if test -e version.m4.dh-orig; then \
+		mv -f version.m4.dh-orig version.m4; \
+	fi
+
+override_dh_install-indep:
+	dh_install --indep
+
+#	remove the just installed ERD/GUI license files, because they are
+#	already in debian/copyright included:
+	rm -f $(LIBINSTDIR)/usr/share/xfig/Libraries/ERD/LICENSE
+	rm -f $(LIBINSTDIR)/usr/share/xfig/Libraries/GUI/LICENSE
+
+#	move Libraries/README to share/doc/xfig-libs:
+	mv $(LIBINSTDIR)/usr/share/xfig/Libraries/README \
+	   $(LIBINSTDIR)/usr/share/doc/xfig-libs/README
+
+#	Remove duplicate installed xfig-title.png:
+	rm -f `pwd`/debian/tmp/usr/share/doc/xfig/xfig-title.png
+
+#	Remove xfig-title.fig.in:
+	rm -f $(DOCINSTDIR)/usr/share/doc/xfig/html/images/xfig-title.fig.in
+
+override_dh_install-arch:
+	dh_install --arch
+
+# 	install wrapper as xfig:
+	install -m755 debian/xfig-wrapper $(INSTDIR)/usr/bin/xfig
+
+#	install japanese app-defaults:
+	install -m644 app-defaults/Fig \
+		$(INSTDIR)/etc/X11/ja_JP.eucJP/app-defaults/Fig
+	echo 'Fig.international: true' >> \
+		$(INSTDIR)/etc/X11/ja_JP.eucJP/app-defaults/Fig
+	echo 'Fig*international: false' >> \
+		$(INSTDIR)/etc/X11/ja_JP.eucJP/app-defaults/Fig
+	echo 'Fig.japanese: true' >> \
+		$(INSTDIR)/etc/X11/ja_JP.eucJP/app-defaults/Fig
+	echo 'Fig.inputStyle: OffTheSpot' >> \
+		$(INSTDIR)/etc/X11/ja_JP.eucJP/app-defaults/Fig
+
+	install -m644 app-defaults/Fig \
+		$(INSTDIR)/etc/X11/ko_KR.eucKR/app-defaults/Fig
+	echo 'Fig.international: true' >> \
+		$(INSTDIR)/etc/X11/ko_KR.eucKR/app-defaults/Fig
+	echo 'Fig*international: false' >> \
+		$(INSTDIR)/etc/X11/ko_KR.eucKR/app-defaults/Fig
+	echo 'Fig.korean: true' >> \
+		$(INSTDIR)/etc/X11/ko_KR.eucKR/app-defaults/Fig
+	echo 'Fig.inputStyle: OverTheSpot' >> \
+		$(INSTDIR)/etc/X11/ko_KR.eucKR/app-defaults/Fig
+
+#	Install xpm icons and backward compatibility links
+	for i in xfig16x16.xpm xfig32x32.xpm xfig64x64.xpm \
+		xfig16x16cmap.xpm  xfig32x32cmap.xpm xfig66x62cmap.xpm; do \
+	    install -m644 debian/$$i \
+		$(INSTDIR)/usr/share/pixmaps/$$i; \
+	done
+	(cd $(INSTDIR)/usr/share/pixmaps; \
+	 ln -s xfig64x64.xpm big-xfig.xpm; \
+	 ln -s xfig32x32.xpm xfig.xpm; \
+	 ln -s xfig16x16.xpm mini-xfig.xpm)
+
+# 	Scale and install PNG desktop icons:
+	convert doc/html/images/xfig-logo.png -geometry 16x16 \
+		$(INSTDIR)/usr/share/icons/hicolor/16x16/apps/xfig.png
+	convert doc/html/images/xfig-logo.png -geometry 22x22 \
+		$(INSTDIR)/usr/share/icons/hicolor/22x22/apps/xfig.png
+	convert doc/html/images/xfig-logo.png -geometry 48x48 \
+		$(INSTDIR)/usr/share/icons/hicolor/48x48/apps/xfig.png
+	install -m644 doc/html/images/xfig-logo.png \
+		$(INSTDIR)/usr/share/icons/hicolor/64x64/apps/xfig.png
+
+override_dh_installchangelogs:
+	dh_installchangelogs -k CHANGES
+
+override_dh_compress:
+	dh_compress -X.pdf

@@ -1,0 +1,142 @@
+Author: Filip Hroch <hroch@physics.muni.cz>
+Description: Added configure.ac and Makefile.am for a rudimentary AutoTools build system
+Index: dcraw/Makefile.am
+===================================================================
+--- /dev/null
++++ dcraw/Makefile.am
+@@ -0,0 +1,18 @@
++
++
++bin_PROGRAMS = dcraw dcparse dcfujiturn dcfujiturn16 dcfujigreen dccleancrw
++
++dcraw_SOURCES = dcraw.c
++dcraw_CFLAGS = -DNO_JASPER
++dcraw_LDFLAGS = -ljpeg -llcms2 -lm
++
++dcparse_SOURCES = parse.c
++
++dcfujiturn_SOURCES = fujiturn.c
++
++dcfujiturn16_SOURCES = fujiturn.c
++dcfujiturn16_CFLAGS = -D_16BIT
++
++dcfujigreen_SOURCES = fuji_green.c
++
++dccleancrw_SOURCES = clean_crw.c
+Index: dcraw/configure.ac
+===================================================================
+--- /dev/null
++++ dcraw/configure.ac
+@@ -0,0 +1,19 @@
++dnl Process this file with autoconf to produce a configure script.
++AC_PREREQ([2.69])
++AC_INIT([dcraw],[9.28],[hroch@physics.muni.cz])
++AM_INIT_AUTOMAKE
++
++dnl Checks for programs.
++AC_PROG_CC
++AC_PROG_INSTALL
++
++dnl Checks for libraries.
++AC_CHECK_LIB([m], [pow])
++
++AC_CHECK_HEADERS([jpeglib.h])
++AC_CHECK_LIB([jpeg],[jpeg_std_error])
++
++AC_CHECK_HEADERS([lcms2.h])
++AC_CHECK_LIB([lcms2],[cmsCloseProfile])
++
++AC_OUTPUT(Makefile)
+Index: dcraw/AUTHORS
+===================================================================
+--- /dev/null
++++ dcraw/AUTHORS
+@@ -0,0 +1,12 @@
++
++Author of dcraw is
++
++   Dave Coffin <dcoffin a dechifro period org>
++
++please see dcraw homepage
++
++   https://www.dechifro.org/dcraw/
++
++
++
++Debian packaging by Steve King <debian@invux.com> and many others.
+Index: dcraw/ChangeLog
+===================================================================
+--- /dev/null
++++ dcraw/ChangeLog
+@@ -0,0 +1,4 @@
++
++Please see homepage of dcraw:
++
++	https://www.dechifro.org/dcraw/
+Index: dcraw/NEWS
+===================================================================
+--- /dev/null
++++ dcraw/NEWS
+@@ -0,0 +1,6 @@
++
++This NEWS file is required by autoconfigure machinery
++and one has been developed as side part of Debian packaging.
++For news about dcraw see:
++
++  https://www.dechifro.org/dcraw/
+Index: dcraw/README
+===================================================================
+--- /dev/null
++++ dcraw/README
+@@ -0,0 +1,4 @@
++
++Homepage:
++
++   https://www.dechifro.org/dcraw/
+Index: dcraw/COPYING
+===================================================================
+--- /dev/null
++++ dcraw/COPYING
+@@ -0,0 +1,42 @@
++Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
++Upstream-Name: dcraw
++Upstream-Contact: Dave Coffin <dcoffin a dechifro period org>
++Source:
++ dcraw code was downloaded from:
++  https://www.dechifro.org/dcraw/dcraw.c
++  https://www.dechifro.org/dcraw/dcraw.1
++
++Files: *
++Copyright: 1997-2018 by Dave Coffin
++License: dcraw
++  dcraw.c -- Dave Coffin's raw photo decoder
++   Copyright 1997-2018 by Dave Coffin, dcoffin a cybercom o net
++
++   This is a command-line ANSI C program to convert raw photos from
++   any digital camera on any computer running any operating system.
++
++   No license is required to download and use dcraw.c.  However,
++   to lawfully redistribute dcraw, you must either (a) offer, at
++   no extra charge, full source code* for all executable files
++   containing RESTRICTED functions, (b) distribute this code under
++   the GPL Version 2 or later, (c) remove all RESTRICTED functions,
++   re-implement them, or copy them from an earlier, unrestricted
++   Revision of dcraw.c, or (d) purchase a license from the author.
++
++   The functions that process Foveon images have been RESTRICTED
++   since Revision 1.237.  All other code remains free for all uses.
++
++   *If you have not modified dcraw.c in any way, a link to my
++   homepage qualifies as "full source code".
++
++Files: clean_crw.c parse.c rawphoto.c
++Copyright: 2004-2018 by Dave Coffin
++Comment: Website says: Unless otherwise noted in the source code, these
++ programs are free for all uses.
++License: Permissive
++ Free for all uses.
++
++Files: debian/*
++Copyright: Steve King <debian@invux.com>
++License: GPL-2+
++   /usr/share/common-licenses/GPL-2

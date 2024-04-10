@@ -1,0 +1,34 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+SOURCEPKG=$(shell dpkg-parsechangelog | sed  -n 's/^Source: \(.*\)/\1/p')
+UPSTREAM=$(shell dpkg-parsechangelog |  sed -n 's/^Version: \(.*\)-[^-]*/\1/p')
+SHA1=$(lastword $(subst ~g, ,$(UPSTREAM)))
+ORIG=${SOURCEPKG}_${UPSTREAM}.orig.tar.gz
+
+export CONFIG_SHELL=/bin/bash
+
+ifneq (,$(filter noopt,$(DEB_BUILD_OPTIONS)))
+	export DEB_CFLAGS_MAINT_APPEND=-O0
+	export DEB_CXXFLAGS_MAINT_APPEND=-O0
+else
+	export DEB_CFLAGS_MAINT_APPEND=-O3
+	export DEB_CXXFLAGS_MAINT_APPEND=-O3
+endif
+
+%:
+	dh $@
+
+override_dh_auto_configure: cmake/version.cmake
+	dh_auto_configure -- -DBINARY_PACKAGE_BUILD=1 -DCMAKE_BUILD_TYPE=Release -DRAWSPEED_ENABLE_LTO=ON
+
+describe-current-version:
+	git describe --tags upstream | sed 's,^release-,,;s,-,+,;s,-,~,;'
+
+get-orig-source:
+	git archive --format=tar $(SHA1) | gzip -9 > ../$(ORIG)
+
+.PHONY: describe-current-version git-orig-source
+
+cmake/version.cmake:
+	echo "set(PROJECT_VERSION \"${UPSTREAM}\")" > $@

@@ -1,0 +1,49 @@
+#!/usr/bin/make -f
+
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+
+# exiv2 uses std::auto_ptr<> a lot, so avoid the lots of deprecation warnings
+export DEB_CXXFLAGS_MAINT_APPEND = -Wno-deprecated-declarations
+
+CMAKE_COMMON_ARGS = \
+	-DEXIV2_ENABLE_BMFF=ON \
+	-DEXIV2_ENABLE_NLS=ON \
+	-DEXIV2_ENABLE_VIDEO=ON \
+	-DEXIV2_ENABLE_WEBREADY=ON \
+	-DEXIV2_BUILD_SAMPLES=OFF
+
+%:
+	dh $@ --with pkgkde_symbolshelper --buildsystem cmake
+
+override_dh_auto_configure-indep:
+	dh_auto_configure -- \
+	    $(CMAKE_COMMON_ARGS) \
+	    -DEXIV2_BUILD_DOC=ON \
+	    -DCMAKE_INSTALL_DOCDIR=/usr/share/doc/exiv2/html
+
+override_dh_auto_configure-arch:
+	dh_auto_configure -a -- \
+	    $(CMAKE_COMMON_ARGS)
+
+override_dh_install:
+	dh_install
+	find $(CURDIR)/debian -type f -name exiv2 | xargs /usr/bin/chrpath -d
+
+override_dh_auto_build-indep:
+	dh_auto_build
+	dh_auto_build -- doc
+
+override_dh_installdocs:
+	dh_installdocs -A -Xcmd.txt -XMakefile -Xtemplates -XChangeLog
+	find $(CURDIR)/debian -name jquery.js -exec ln -sfv /usr/share/javascript/jquery/jquery.js {} \;
+	find $(CURDIR)/debian \( -name '*.map' -o -name '*.md5' \) -delete
+
+override_dh_installchangelogs:
+	dh_installchangelogs -A doc/ChangeLog
+
+override_dh_compress:
+	dh_compress -X.xls -X.js -X.idx -X.xml -X.php -X.cpp
+
+override_dh_fixperms-indep:
+	dh_fixperms -i
+	find $(CURDIR)/debian/libexiv2-doc -name '*.ini' -exec chmod -x {} \;

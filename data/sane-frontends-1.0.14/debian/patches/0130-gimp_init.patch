@@ -1,0 +1,30 @@
+Description: Enable GIMP interface
+Author: Jörg Frings-Fürst <debian@jff-webhosting.net>
+Bug: https://alioth.debian.org/tracker/index.php?func=detail&aid=313616&group_id=30186&atid=410366
+Bug-Debian: https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=682540
+Forwarded: https://alioth.debian.org/tracker/index.php?func=detail&aid=313616&group_id=30186&atid=410366
+Last-Update: 2015-05-09
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+Index: trunk/src/xscanimage.c
+===================================================================
+--- trunk.orig/src/xscanimage.c
++++ trunk/src/xscanimage.c
+@@ -320,7 +320,7 @@ query (void)
+ 			  "Andy Beck, Tristan Tarrant, and David Mosberger",
+ 			  "8th June 1997",
+ 			  "<Toolbox>/File/Acquire/xscanimage/Device dialog...",
+-			  "RGB, GRAY",
++			  0,
+ 			  GIMP_EXTENSION,
+ 			  nargs, nreturn_vals, args, return_vals);
+ 
+@@ -365,7 +365,7 @@ query (void)
+ 	 "interface.",
+ 	 "Andy Beck, Tristan Tarrant, and David Mosberger",
+ 	 "Andy Beck, Tristan Tarrant, and David Mosberger",
+-	 "8th June 1997", mpath, "RGB, GRAY", GIMP_EXTENSION,
++	 "8th June 1997", mpath, 0, GIMP_EXTENSION,
+ 	 nargs, nreturn_vals, args, return_vals);
+     }
+   sane_exit ();

@@ -1,0 +1,13 @@
+Package: xfig-dbgsym
+Package-Type: ddeb
+Source: xfig
+Version: 1:3.2.7b-2
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Roland Rosenfeld <roland@debian.org>
+Installed-Size: 1072
+Depends: xfig (= 1:3.2.7b-2)
+Section: debug
+Priority: optional
+Description: debug symbols for xfig
+Build-Ids: 4f47b49a3ef7911fb759e81a693d67c702c0a7e2

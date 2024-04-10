@@ -1,0 +1,45 @@
+Please use this form to report a problem to me. Thanks.
+
+Bug number: [assigned for you]
+
+State: open
+
+Abstract: [Short description, one line only please]
+
+Your name:
+
+Your email:
+
+Detailed description:
+
+
+
+
+
+Component: [ ] CD control
+           [ ] User interface
+           [ ] CDDB functionality
+           [ ] Documentation
+           [ ] I don't know
+
+Severity: 
+(1: Crashes X
+ 2: Crashes
+ 3: Something is broken, but workaround is available
+ 4: Cosmetic fault
+ 5: Suggestion)
+
+Software used: cccd version:
+               Linux Kernel version:
+               libc version:
+               GTK+ version:
+
+Drive hardware used: [ ] SCSI CD
+                     [ ] ATAPI CD
+                     [ ] other SCSI device (CD-R, ...)
+                     [ ] other ATAPI device (CD-R, ...)
+
+Mail the completed form to jst@writeme.com. If the problem only occurs on
+a specific CD, please insert the CDDB record into the description field.
+
+Remarks: [will be filled in later by me]

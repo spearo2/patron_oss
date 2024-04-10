@@ -1,0 +1,138 @@
+cccd (0.3beta4-7.1build1) bionic; urgency=high
+
+  * No change rebuild to pick up -fPIE compiler default
+
+ -- Balint Reczey <rbalint@ubuntu.com>  Tue, 03 Apr 2018 12:16:27 +0000
+
+cccd (0.3beta4-7.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Fix "FTBFS: cddbp.c:100:3: error: format not a string literal and no
+    format arguments [-Werror=format-security]" Applied Patch by Sebastian
+    Ramacher (Closes: #669445)
+
+ -- Bastian Venthur <venthur@debian.org>  Mon, 06 Aug 2012 11:39:46 +0200
+
+cccd (0.3beta4-7) unstable; urgency=low
+
+  * Acknowledge NMUs (thanks Barry deFreese and Ben Hutchings).
+  * Repackage from scratch using cdbs + debhelper >= 8.
+  * Standards-Version: 3.9.2 (no changes required).
+  * Minor package description fix to silence lintian.
+  * debian/watch: Add file (unused, no upstream available at the moment).
+  * debian/copyright: Use DEP-5 format.
+  * debian/rules: Reduce the number of unneeded dependencies with --as-needed.
+  * Fix hurd-i386 FTBFS (Closes: #647967).
+    Thanks Samuel Thibault <sthibault@debian.org> for the patch.
+
+ -- Uwe Hermann <uwe@debian.org>  Sun, 08 Apr 2012 23:24:18 +0200
+
+cccd (0.3beta4-6.2) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Fix event mask for window, thanks to Adam Majer (Closes: #589443)
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Mon, 26 Jul 2010 02:30:34 +0100
+
+cccd (0.3beta4-6.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+    + With permission from maintainer.
+  * Build with Gtk2.
+    + Build-dep libgtk2.0-dev instead of libgtk1.2-dev.
+    + Thanks to Lars Friedrichs for the patch.
+  * Bump debhelper build-dep and compat to 5.
+  * Make clean not ignore errors.
+  * Fix copyright holders in debian/copyright.
+  * Bump Standards Version to 3.8.0.
+    + Menu policy transition.
+
+ -- Barry deFreese <bdefreese@debian.org>  Sun, 18 Jan 2009 12:43:00 -0500
+
+cccd (0.3beta4-6) unstable; urgency=low
+
+  * Fix debian/copyright (Closes: #302936). Actually this was fixed already,
+    I simply forgot to close the respective bug.
+  * Removed emacs cruft from debian/changelog.
+  * Upgraded to debhelper v4.
+
+ -- Uwe Hermann <uwe@debian.org>  Fri,  3 Mar 2006 21:23:21 +0100
+
+cccd (0.3beta4-5) unstable; urgency=low
+
+  * Updated FSF address in debian/copyright (lintian).
+  * Standards-Version: 3.6.2.0 (no changes required).
+
+ -- Uwe Hermann <uwe@debian.org>  Sun, 23 Oct 2005 16:04:44 +0200
+
+cccd (0.3beta4-4) unstable; urgency=low
+
+  * Fixed typos in manpage (Closes: #311242).
+
+ -- Uwe Hermann <uwe@debian.org>  Sun,  5 Jun 2005 14:41:40 +0200
+
+cccd (0.3beta4-3) unstable; urgency=low
+
+  * Applied patch by Andreas Jochens which fixes a FTBFS bug
+    with gcc-3.4, thanks (Closes: #258561).
+  * debian/menu: Added missing quotes.
+  * Standards-Version: 3.6.1.0 (no changes required).
+
+ -- Uwe Hermann <uwe@debian.org>  Sun, 20 Mar 2005 22:49:44 +0100
+
+cccd (0.3beta4-2) unstable; urgency=low
+
+  * Applied patch from eperez@dei.inf.uc3m.es, which fixes cccd so that it
+    doesn't send the user's email address upon cddb requests (Closes: #139307).
+
+ -- Uwe Hermann <uwe@debian.org>  Fri, 22 Mar 2002 14:13:15 +0100
+
+cccd (0.3beta4-1) unstable; urgency=low
+
+  * New maintainer (Closes: #87150).
+  * New upstream release (Closes: #112809).
+  * Repackaged from scratch using debhelper v3.
+  * debian/control:
+     + Removed unnecessary Build-Depends libglib1.2-dev, xlib6g-dev, xlibs-dev.
+     + The debhelper Build-Dependency is versioned (>> 3.0.0) now.
+     + Standards-Version: 3.5.6.0
+        + Added support for DEB_BUILD_OPTIONS.
+     + Some small fixes in the package description.
+  * debian/copyright:
+     + Display the standard GPL header.
+     + Updated the email address of the upstream author.
+     + There's no upstream homepage at the moment.
+  * debian/rules: Removed some obsolete calls, e.g. dh_suidregister...
+  * Fixed two compiler warnings.
+  * Fixed some things in the manpage, added some new stuff.
+
+ -- Uwe Hermann <uwe@debian.org>  Mon,  7 Jan 2002 17:59:07 +0100
+
+cccd (0.3beta3-4) unstable; urgency=low
+
+  * Added Build-Depends (closes: #70217).
+  * Set maintainer to Debian QA Group (relates: #87150).
+  * Indent list in extended description.
+  * Binary now in /usr/bin instead of /usr/X11R6/bin
+
+ -- Peter Palfrader <weasel@debian.org>  Sat, 24 Feb 2001 00:28:52 +0000
+
+cccd (0.3beta3-3) unstable; urgency=low
+
+  * Recompiled with latest libraries.
+  * Upgraded Standards-Version.
+
+ -- Robert S. Edmonds <edmonds@debian.org>  Mon, 16 Oct 2000 22:53:45 +0000
+
+cccd (0.3beta3-2) unstable; urgency=low
+
+  * suid root flag removed from binary.
+
+ -- Robert S. Edmonds <edmonds@debian.org>  Mon,  5 Apr 1999 16:17:49 -0400
+
+cccd (0.3beta3-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Robert S. Edmonds <stu@novare.net>  Mon, 22 Mar 1999 20:15:23 -0500
+
